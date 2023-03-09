@@ -1,0 +1,727 @@
+CRITICAL - 2023-03-09 13:40:30 --> Undefined variable $url
+in APPPATH\Views\principal\nosotros.php on line 3.
+ 1 APPPATH\Views\principal\nosotros.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $url', 'APPPATH\\Views\\principal\\nosotros.php', 3)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\nosotros.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/nosotros', [], true)
+ 5 APPPATH\Controllers\Principal.php(21): view('/principal/nosotros')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->nosotros()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:54:06 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:54:10 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:55:16 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:55:17 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:55:17 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:55:17 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:55:18 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:55:21 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 13:55:21 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:01:44 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:01:55 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:03:04 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:03:46 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:03:47 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:03:47 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:03:47 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:03:52 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:04:06 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:04:06 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:04:07 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:04:07 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:04:07 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:04:08 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:04:37 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:05:37 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:07:01 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:07:26 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:07:27 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:07:27 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:07:28 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:07:37 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(15): view('/principal/principal')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:08:40 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:08:43 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:08:44 --> Undefined variable $titulo
+in APPPATH\Views\principal\principal.php on line 2.
+ 1 APPPATH\Views\principal\principal.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\principal.php', 2)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(16): view('/principal/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-09 14:49:48 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_taller', 3306, '', 0)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#3 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#7 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-09 14:49:48 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*
+FROM `empleados`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-09 14:49:49 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_taller', 3306, '', 0)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#3 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#7 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-09 14:49:49 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*
+FROM `empleados`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-09 14:49:50 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_taller', 3306, '', 0)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#3 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#7 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-09 14:49:50 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*
+FROM `empleados`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-09 14:49:58 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_taller', 3306, '', 0)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#3 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#7 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-09 14:49:58 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*
+FROM `empleados`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-09 14:51:21 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_taller', 3306, '', 0)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#3 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#7 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-09 14:51:21 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*
+FROM `empleados`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-09 14:51:26 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_taller', 3306, '', 0)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#3 C:\xampp\htdocs\bd_taller\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bd_taller\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#7 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-09 14:51:26 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*
+FROM `empleados`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\ClientesModel.php(29): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 14:52:42 --> Undefined variable $titulo
+in APPPATH\Views\principal\header.php on line 11.
+ 1 APPPATH\Views\principal\header.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'APPPATH\\Views\\principal\\header.php', 11)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/header', [], true)
+ 5 APPPATH\Controllers\Principal.php(17): view('/principal/header')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-09 15:03:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'bd_taller', 3306, '', 0)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#4 C:\xampp\htdocs\bd_taller\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\bd_taller\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#10 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: NO) in C:\xampp\htdocs\bd_taller\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\bd_taller\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\bd_taller\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `emplead...', Array, false)
+#3 C:\xampp\htdocs\bd_taller\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\bd_taller\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\bd_taller\app\Models\ClientesModel.php(29): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\bd_taller\app\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+#7 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(934): App\Controllers\Principal->index()
+#8 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+#9 C:\xampp\htdocs\bd_taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\bd_taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-03-09 15:03:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT `empleados`.*
+FROM `empleados`
+ LIMIT 1', [], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\ClientesModel.php(29): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Principal.php(16): App\Models\ClientesModel->obtenerClientes()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 15:09:15 --> Undefined variable $Principal
+in APPPATH\Views\principal\principal.php on line 19.
+ 1 APPPATH\Views\principal\principal.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Principal', 'APPPATH\\Views\\principal\\principal.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(19): view('/principal/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-09 15:09:16 --> Undefined variable $Principal
+in APPPATH\Views\principal\principal.php on line 19.
+ 1 APPPATH\Views\principal\principal.php(19): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $Principal', 'APPPATH\\Views\\principal\\principal.php', 19)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\principal\\principal.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/principal/principal', [], true)
+ 5 APPPATH\Controllers\Principal.php(19): view('/principal/principal', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:80px;
+    background-color:red;
+}
+
+.logo-empresa img{
+    width: 150px;
+}
+.logo-sena img{
+    width: 80px;
+}
+.info-page{
+    text-align: center;
+}
