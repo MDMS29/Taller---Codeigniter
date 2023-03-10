@@ -1,21 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-header{
+
+/* -- HEADER --*/
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height:80px;
-    background-color:red;
+    height: 80px;
+    background-color: #168309;
 }
-
-.logo-empresa img{
+.logo-empresa img {
     width: 150px;
 }
-.logo-sena img{
+.logo-sena img {
     width: 80px;
 }
-.info-page{
+.info-page {
+    color: #fff;
     text-align: center;
+}
+
+/* -- PAGE PRINCIPAL --*/
+.tituloPrin{
+    text-align: center;
+    text-transform: uppercase;
 }
