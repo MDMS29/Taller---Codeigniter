@@ -4,7 +4,7 @@ namespace App\Models; //Reservamos el espacio de nombre de la ruta app\models
 
 use CodeIgniter\Model;
 
-class ClientesModel extends Model
+class EmpleadosModel extends Model
 {
     protected $table = 'empleados'; /* nombre de la tabla modelada/*/
     protected $primaryKey = 'id';
@@ -25,24 +25,18 @@ class ClientesModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerClientes()   
+    public function obtenerClientes()
     {
-        $this->table('empleados');
-        $datos = $this->get()->getResult();
+        $this->select('empleados.*');
+        // $this->where('id', 7);
+        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }
 
 
-/* public function update($nombre, $id){
+    /* public function update($nombre, $id){
 $this->update('cargos');
 $this->set('nombre', $nombre);
 $this->where('id_cargo', $id);
 } */
-// public function buscaCargo($id){
-//     $this->select('clientes.*');
-//     $this->where('Id_cliente', $id);
-//     $datos = $this->first();  // nos trae el registro que cumpla con una condicion dada 
-//     return $datos;
-// }
-
 }

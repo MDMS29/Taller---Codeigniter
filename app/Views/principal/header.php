@@ -3,25 +3,73 @@
 
 <head>
     <meta charset="utf-8" />
-    <link href="<?php echo base_url(); ?>assets/bootstrap-5/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?php base_url(); ?>assets/css/principal.css">
-    <link rel="icon" href="<?php base_url(); ?>assets/img/logoEmpresa.png">
-    <title><?php echo $titulo ?></title>
+    <link href="<?= base_url(); ?>assets/bootstrap-5/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/css/principal.css">
+    <link rel="icon" href="<?= base_url(); ?>assets/img/logoEmpresa.png">
+    <!-- <link href="https://cdn.datatables.net/v/dt/dt-1.13.3/datatables.min.css" rel="stylesheet"/> -->
+    <title><?= $titulo ?></title>
+
+    <!-- SCRIPTS GLOBALES -->
+    <script src="<?= base_url(); ?>assets/bootstrap-5/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.3/datatables.min.js"></script> -->
 </head>
 
 <header>
-    <div class="logo-empresa">
+    <a class="logo-empresa" href="<?= base_url() ?>">
         <img src="assets/img/logoEmpresa.png" alt="logo empresa">
-    </div>
-    <div class="info-page">
-        <h1>
-            <?php echo $titulo ?>
+    </a>
+    <div class="info-page ">
+        <h1 class="m-0">
+            <?= $titulo ?>
         </h1>
         <h3>
-            <?php echo $nombre ?>
+            <?= $nombre ?>
         </h3>
     </div>
-    <div class="logo-sena">
-        <img src="<?php base_url(); ?>assets/img/logoSenaBlanco.png" alt="logo sena">
-    </div>
+    <a class="logo-sena" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="_blank">
+        <img src="<?= base_url(); ?>assets/img/logoSenaBlanco.png" alt="logo sena">
+    </a>
 </header>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item hover:dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Ubicación
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>paises">Paises</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>departamentos">Departamentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>municipios">Municipios</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="<?= base_url() ?>cargos">Cargos</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Empleados
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>empleados">Administrar</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -29,8 +29,18 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//Principal Vista
 $routes->get('/', 'Principal::index');
-$routes->post('/ver-empleados', 'Principal::verEmpleados');
+
+
+//Empleados Vista
+$routes->get('/empleados', 'Empleados::index');
+
+
+//Paises Vista
+$routes->get('/paises', 'Paises::index');
+
 
 /*
  * --------------------------------------------------------------------
