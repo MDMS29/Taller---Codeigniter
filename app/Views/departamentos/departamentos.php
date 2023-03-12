@@ -1,6 +1,6 @@
 <div class="container card my-4">
     <div>
-        <h1 class="titulo_Vista"><?php echo $titulo?></h1>
+        <h1 class="titulo_Vista text-center"><?php echo $titulo?></h1>
     </div>
     <div>
         <button type="button" class="btn btn-success">Agregar</button>
