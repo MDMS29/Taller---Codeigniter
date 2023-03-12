@@ -14,7 +14,7 @@ class EmpleadosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['id', 'nombres', 'apellidos', 'id_municipio', 'nacimientoAno', 'id_cargo']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombres', 'apellidos', 'id_municipio', 'nacimientoAno', 'id_cargo', 'estado']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = ''; /*fecha automatica para la creacion */
@@ -25,18 +25,14 @@ class EmpleadosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerClientes()
+    public function obtenerEmpleados()
     {
-        $this->select('empleados.*');
-        // $this->where('id', 7);
+        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo');
+        $this->join('municipios', 'municipios.id = empleados.id_municipio');
+        $this->join('cargos', 'cargos.id = empleados.id_cargo');
+        $this->where('empleados.estado', 'A');
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }
 
-
-    /* public function update($nombre, $id){
-$this->update('cargos');
-$this->set('nombre', $nombre);
-$this->where('id_cargo', $id);
-} */
 }

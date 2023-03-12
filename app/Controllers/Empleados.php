@@ -7,21 +7,17 @@ use App\Models\EmpleadosModel;
 
 class Empleados extends BaseController
 {
+    protected $empleados;
     public function __construct()
     {
+        $this->empleados = new EmpleadosModel();
     }
-    function verEmpleados()
-    {
-        $modelo = new EmpleadosModel();
-        $empleados = $modelo->obtenerClientes();
-        echo json_encode($empleados);
-        
-    }
-
     public function index()
     {
-        $data = ['titulo' => 'Proyecto Taller', 'nombre' => 'Moises Mazo', 'tituloPrin' => 'Principal'];
+        $empleados = $this->empleados->obtenerEmpleados();
+
+        $data = ['titulo' => 'Administrar Empleados', 'nombre' => 'Moises Mazo', 'datos' => $empleados];
         echo view('/principal/header', $data);
-        echo view('/empleados/empleados');
+        echo view('/empleados/empleados', $data);
     }
 }

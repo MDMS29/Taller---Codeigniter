@@ -14,35 +14,25 @@
             <thead>
                 <tr style="color:#98040a;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>Id</th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th>Municipio</th>
-                    <th>Año Nacimiento</th>
-                    <th>Cargo</th>
+                    <th>Departamento</th>
+                    <th>Pais</th>
                     <th colspan="2">Acciones</th>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
-                <?php foreach ($datos as $x => $valor) { ?>
+                
+            <?php foreach ($datos as $x => $valor) { ?>
                     <tr>
                         <th class="text-center">
                             <?php echo $valor['id']; ?>
                         </th>
                         <th class="text-center">
-                            <?php echo $valor['nombres']; ?>
+                            <?php echo $valor['nombre']; ?>
                         </th>
                         <th class="text-center">
-                            <?php echo $valor['apellidos']; ?>
+                            <?php echo $valor['nombrePais']; ?>
                         </th>
-                        <th class="text-center">
-                            <?php echo $valor['nombreMuni']; ?>
-                        </th>
-                        <th class="text-center">
-                            <?php echo $valor['nacimientoAno']; ?>
-                        </th>
-                        <th class="text-center">
-                            <?php echo $valor['nombreCargo']; ?>
-                        </th>
+                        
                         <th class="grid grid" colspan="2">
                             <button class="btn btn-primary" data-id="<?php echo $valor['id']; ?>">Editar</button>
                             <button class="btn btn-danger">Eliminar</button>
@@ -50,7 +40,6 @@
 
                     </tr>
                 <?php } ?>
-
             </tbody>
         </table>
     </div>

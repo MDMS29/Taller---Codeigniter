@@ -33,15 +33,6 @@ $routes->setAutoRoute(true);
 //Principal Vista
 $routes->get('/', 'Principal::index');
 
-
-//Empleados Vista
-$routes->get('/empleados', 'Empleados::index');
-
-
-//Paises Vista
-$routes->get('/paises', 'Paises::index');
-
-
 /*
  * --------------------------------------------------------------------
  * Additional Routing

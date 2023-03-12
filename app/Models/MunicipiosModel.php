@@ -4,9 +4,9 @@ namespace App\Models; //Reservamos el espacio de nombre de la ruta app\models
 
 use CodeIgniter\Model;
 
-class PaisesModel extends Model
+class MunicipiosModel extends Model
 {
-    protected $table = 'paises'; /* nombre de la tabla modelada/*/
+    protected $table = 'municipios'; /* nombre de la tabla modelada/*/
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
@@ -14,10 +14,10 @@ class PaisesModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombre', 'estado', 'codigo','fechaCrea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombres', 'id_dpto', 'estado']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
-    protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
+    protected $createdField = ''; /*fecha automatica para la creacion */
     protected $updatedField = ''; /*fecha automatica para la edicion */
     protected $deletedField = ''; /*no se usara, es para la eliminacion fisica */
 
@@ -25,11 +25,12 @@ class PaisesModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerPaises()
+    public function obtenerMunicipios()
     {
-        $this->select('paises.*');
-        $this->where('estado', 'A');
-        $datos = $this->findAll();
+        $this->select('municipios.*,departamentos.nombre as nombreDeparta');
+        $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
+        $this->where('municipios.estado', 'A');
+        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }
 
