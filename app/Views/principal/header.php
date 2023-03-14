@@ -6,13 +6,11 @@
     <link href="<?= base_url(); ?>assets/bootstrap-5/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/principal.css">
     <link rel="icon" href="<?= base_url(); ?>assets/img/logoEmpresa.png">
-    <!-- <link href="https://cdn.datatables.net/v/dt/dt-1.13.3/datatables.min.css" rel="stylesheet"/> -->
     <title><?= $titulo ?></title>
 
     <!-- SCRIPTS GLOBALES -->
     <script src="<?= base_url(); ?>assets/bootstrap-5/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/v/dt/jq-3.6.0/dt-1.13.3/datatables.min.js"></script> -->
+    <script script src="<?php echo base_url(); ?>assets/jQuery/jquery-3.6.0.js"></script> 
 </head>
 
 <header>

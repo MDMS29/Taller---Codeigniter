@@ -21,4 +21,28 @@ class Paises extends BaseController
         echo view('/principal/header', $data);
         echo view('/paises/paises', $data);
     }
+    function insertar()
+    {
+        if ($this->request->getMethod() == 'post') {
+            $codigo = $this->request->getPost('codigo');
+            $nombre = $this->request->getPost('nombre');
+            $res = $this->pais->insertarPais($codigo, $nombre);
+            if ($res == 1) {
+                return redirect()->to(base_url('/paises'));
+            }
+        }
+    }
+    function buscarPais($id)
+    {
+        $dataArray = array();
+        $pais = $this->pais->buscarPais($id);
+        if (!empty($pais)) {
+            array_push($dataArray, $pais);
+        }
+        echo json_encode($pais);
+    }
+    function actualizarPais($data)
+    {
+        echo $data;
+    }
 }

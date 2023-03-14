@@ -20,4 +20,14 @@ class Cargos extends BaseController
         echo view('/principal/header', $data);
         echo view('/cargos/cargos', $data);
     }
+    function insertar()
+    {
+        if($this->request->getMethod() == 'post'){
+            $nombre = $this->request->getPost('nombre');
+            $res = $this->cargos->insertarCargo($nombre);
+            if($res == 1){
+                return redirect()->to(base_url('/cargos'));
+            }
+        }
+    }
 }

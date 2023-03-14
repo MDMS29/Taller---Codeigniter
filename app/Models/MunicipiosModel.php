@@ -14,7 +14,7 @@ class MunicipiosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombres', 'id_dpto', 'estado']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombre', 'id_dpto', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = ''; /*fecha automatica para la creacion */
@@ -33,5 +33,12 @@ class MunicipiosModel extends Model
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }
-
+    public function insertarMunicipio($departamento, $nombre)
+    {
+        $this->save([
+            'id_dpto' => $departamento,
+            'nombre' => $nombre
+        ]);
+        return 1;
+    }
 }

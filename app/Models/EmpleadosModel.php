@@ -14,10 +14,10 @@ class EmpleadosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombres', 'apellidos', 'id_municipio', 'nacimientoAno', 'id_cargo', 'estado']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombres', 'apellidos', 'id_municipio', 'nacimientoAno', 'id_cargo', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
-    protected $createdField = ''; /*fecha automatica para la creacion */
+    protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
     protected $updatedField = ''; /*fecha automatica para la edicion */
     protected $deletedField = ''; /*no se usara, es para la eliminacion fisica */
 
@@ -27,12 +27,31 @@ class EmpleadosModel extends Model
 
     public function obtenerEmpleados()
     {
-        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo');
+        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, salarios.sueldo as salario');
         $this->join('municipios', 'municipios.id = empleados.id_municipio');
         $this->join('cargos', 'cargos.id = empleados.id_cargo');
+        $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
         $this->where('empleados.estado', 'A');
+        $this->orderBy('id');
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }
 
+    public function insertarEmpleado($data)
+    {
+        $nombres = $data['nombres'];
+        $apellidos = $data['apellidos'];
+        $id_municipio = $data['municipio'];
+        $nacimientoAno = $data['anoNac'];
+        $id_cargo = $data['cargo'];
+
+        $this->save([   
+            'nombres' => $nombres,
+            'apellidos' => $apellidos,
+            'id_municipio' => $id_municipio,
+            'nacimientoAno' => $nacimientoAno,
+            'id_cargo' => $id_cargo
+        ]);
+        return 1;
+    }
 }

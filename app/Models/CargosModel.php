@@ -14,10 +14,10 @@ class CargosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombre', 'estado']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombre', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
-    protected $createdField = ''; /*fecha automatica para la creacion */
+    protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
     protected $updatedField = ''; /*fecha automatica para la edicion */
     protected $deletedField = ''; /*no se usara, es para la eliminacion fisica */
 
@@ -32,5 +32,11 @@ class CargosModel extends Model
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
     }
-
+    public function insertarCargo($nombre)
+    {
+        $this->save([
+            'nombre' => $nombre
+        ]);
+        return 1;
+    }
 }
