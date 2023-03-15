@@ -29,7 +29,7 @@
                         <td class="text-center"><?php echo $valor['estado']; ?></td>
                         <td class="text-center" colspan="2">
                             <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input id="eliminarPais" href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                            <input href="#" data-href="<?php echo base_url('/paises/eliminar') . '/' . $valor['id'] . '/' . 'E'; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
                         </td>
                     </tr>
                 <?php } ?>
@@ -43,6 +43,8 @@
 <!-- MODAL AGREGAR - EDITAR PAIS -->
 <form method="POST" action="<?php echo base_url('paises/insertar'); ?>" autocomplete="off">
     <div class="modal fade" id="AgregarPais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <input type="text" name="id" id="idPais" hidden>
+        <input type="text" name="tipe" id="tipeFunct" hidden>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -54,7 +56,6 @@
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Codigo de País:</label>
                             <input type="number" name="codigo" class="form-control" id="codigoPais">
-                            <input type="hidden" name="tipe" id="tipe">
                         </div>
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Nombre:</label>
@@ -71,6 +72,26 @@
     </div>
 </form>
 
+<!-- Modal Confirma Eliminar -->
+<div class="modal fade" id="eliminarPais" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div style="text-align:center;" class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminación de Registro</h5>
+
+            </div>
+            <div class="modal-body">
+                <p>Seguro Desea Eliminar éste Registro?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</button>
+                <a class="btn btn-danger btn-ok">Si</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Elimina -->
+
 <script type="text/javascript">
     function seleccionaPais(id, tp) {
         if (tp == 2) {
@@ -79,33 +100,21 @@
                 url: "<?php echo base_url('paises/buscarPais'); ?>" + "/" + id,
                 dataType: "json",
                 success: function(rs) {
-                    $("#tipe").val(2);
+                    $("#tipeFunct").val(tp);
+                    $("#idPais").val(rs[0]['id']);
                     $("#tituloModal").text('Editar Pais ' + rs[0]['nombre'])
+                    $("#btnGuardar").text('Actualizar');
                     $("#codigoPais").val(rs[0]['codigo']);
                     $("#nombrePais").val(rs[0]['nombre']);
-                    $("#btnGuardar").text('Actualizar');
                     $("#AgregarPais").modal("show");
                 }
             })
         } else {
+            $("#id").val('');
             $("#tituloModal").text('Agregar Pais')
-            $("#tipe").val(1);
+            $("#tipeFunct").val(tp);
             $("#codigoPais").val('');
             $("#nombrePais").val('')
         }
     }
-    $('#btnGuardar').on('click', function(e) {
-        e.preventDefault()
-        codigo = $("#codigoPais").val();
-        nombre = $("#nombrePais").val();
-        data = [codigo, nombre]
-        $.ajax({
-            type: "POST",
-            url: "<?php echo base_url('paises/actualizarPais'); ?>" + "/" + data,
-            dataType: "json",
-            success: function(rs) {
-
-            }
-        })
-    })
 </script>

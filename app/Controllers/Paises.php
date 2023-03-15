@@ -23,11 +23,18 @@ class Paises extends BaseController
     }
     function insertar()
     {
-        if ($this->request->getMethod() == 'post') {
-            $codigo = $this->request->getPost('codigo');
-            $nombre = $this->request->getPost('nombre');
+        $tipe = $this->request->getPost('tipe');
+        $id = $this->request->getPost('id');
+        $codigo = $this->request->getPost('codigo');
+        $nombre = $this->request->getPost('nombre');
+        if ($tipe == 1) {
             $res = $this->pais->insertarPais($codigo, $nombre);
-            if ($res == 1) {
+            if ($res == 'y') {
+                return redirect()->to(base_url('/paises'));
+            }
+        } else {
+            $res = $this->pais->actualizarPais($codigo, $nombre, $id);
+            if ($res == 'y') {
                 return redirect()->to(base_url('/paises'));
             }
         }
@@ -40,9 +47,5 @@ class Paises extends BaseController
             array_push($dataArray, $pais);
         }
         echo json_encode($pais);
-    }
-    function actualizarPais($data)
-    {
-        echo $data;
     }
 }

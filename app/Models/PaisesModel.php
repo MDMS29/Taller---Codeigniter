@@ -38,7 +38,7 @@ class PaisesModel extends Model
             'codigo' => $codigo,
             'nombre' => $nombre
         ]);
-        return 1;
+        return 'y';
     }
     public function buscarPais($id)
     {
@@ -47,5 +47,13 @@ class PaisesModel extends Model
         $this->where('estado', 'A');
         $datos = $this->findAll();
         return $datos;
+    }
+    public function actualizarPais($codigo, $nombre, $id)
+    {
+        $this->update($id,[
+            'codigo' => $codigo,
+            'nombre' => $nombre
+        ]);
+        return 'y';
     }
 }

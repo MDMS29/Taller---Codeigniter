@@ -26,16 +26,17 @@ class DepartamentosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
+    //TOMAR TODOS LOS DEPARTAMENTOS
     public function obtenerDepartamentos()
     {
         $this->select('departamentos.*,paises.nombre as nombrePais');
         $this->join('paises', 'paises.id = departamentos.id_pais');
         $this->where('departamentos.estado', 'A');
         $this->orderBy('id');
-        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+        $datos = $this->findAll();
         return $datos;
     }
-
+    //GUARDAR EL DEPARTAMENTO
     public function insertarDepartamento($pais, $nombre)
     {
         $this->save([
@@ -44,12 +45,31 @@ class DepartamentosModel extends Model
         ]);
         return 1;
     }
-
+    //OBTENER LOS DEPARTAMENTOS SEGUN EL ID DEL PAIS
     public function obtenerDepartamentosPais($id)
     {
         $this->select('departamentos.*');
         $this->where('id_pais', $id);
         $datos = $this->findAll();
         return $datos;
+    }
+
+    //OBTENER EL DEPARTAMENTO SEGUN SU ID
+    public function buscarDepartamento($id)
+    {
+        $this->select('departamentos.*');
+        $this->where('id', $id);
+        $this->where('estado', 'A');
+        $datos = $this->findAll();
+        return $datos;
+    }
+    //ACTUALIZAR EL DEPARTAMENTO SEGUN SU ID
+    public function actualizarDepartamento($id, $pais, $nombre)
+    {
+        $this->update($id,[
+            'id_pais' => $pais,
+            'nombre' => $nombre
+        ]);
+        return 1;
     }
 }

@@ -26,13 +26,29 @@ class Departamentos extends BaseController
     }
     function insertar()
     {
-        if ($this->request->getMethod() == 'post') {
-            $pais = $this->request->getPost('pais');
-            $nombre = $this->request->getPost('nombre');
+        $tipe = $this->request->getPost('tipe');
+        $id = $this->request->getPost('id');
+        $pais = $this->request->getPost('pais');
+        $nombre = $this->request->getPost('nombre');
+        if ($tipe == 1) {
             $res = $this->departamentos->insertarDepartamento($pais, $nombre);
             if ($res == 1) {
                 return redirect()->to(base_url('/departamentos'));
             }
+        } else {
+            $res = $this->departamentos->actualizarDepartamento($id, $pais, $nombre);
+            if ($res == 1) {
+                return redirect()->to(base_url('/departamentos'));
+            }
         }
+    }
+    function buscarDepartamento($id)
+    {
+        $dataArray = array();
+        $departamentos = $this->departamentos->buscarDepartamento($id);
+        if (!empty($departamentos)) {
+            array_push($dataArray, $departamentos);
+        }
+        echo json_encode($departamentos);
     }
 }
