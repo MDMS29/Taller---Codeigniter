@@ -51,4 +51,33 @@ class Departamentos extends BaseController
         }
         echo json_encode($departamentos);
     }
+    //ELIMINAR Y RESTAURAR EL PAIS
+    function eliminarResLogic($id, $estado, $tipo)
+    {
+        //ELIMINAR
+        if ($tipo == 1) {
+            if ($id && $estado) {
+                $res = $this->departamentos->eliminarResModelDpto($id, $estado);
+                echo "Hi";
+                if ($res == 1) {
+                    return redirect()->to(base_url('/departamentos'));
+                }
+            }
+        }
+        //RESTAURAR
+        else {
+            $res = $this->departamentos->eliminarResModelDpto($id, $estado);
+            if ($res == 1) {
+                return redirect()->to(base_url('/departamentos/eliminados'));
+            }
+        }
+    }
+
+    public function eliminados()
+    {
+        $departamentos = $this->departamentos->obtenerEliminados();
+        $data = ['titulo' => 'Administrar Departamentos Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $departamentos];
+        echo view('/principal/header', $data);
+        echo view('/departamentos/departamentosEliminados', $data);
+    }
 }

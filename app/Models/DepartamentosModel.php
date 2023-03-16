@@ -45,7 +45,7 @@ class DepartamentosModel extends Model
         ]);
         return 1;
     }
-    //OBTENER LOS DEPARTAMENTOS SEGUN EL ID DEL PAIS
+    //OBTENER LOS DEPARTAMENTOS DE UN PAIS SEGUN EL ID DEL PAIS
     public function obtenerDepartamentosPais($id)
     {
         $this->select('departamentos.*');
@@ -71,5 +71,21 @@ class DepartamentosModel extends Model
             'nombre' => $nombre
         ]);
         return 1;
+    }
+    public function eliminarResModelDpto($id, $estado)
+    {
+        $this->update($id, [
+            'estado' => $estado
+        ]);
+        return 1;
+    }
+    public function obtenerEliminados()
+    {
+        $this->select('departamentos.*,paises.nombre as nombrePais');
+        $this->join('paises', 'paises.id = departamentos.id_pais');
+        $this->where('departamentos.estado', 'I');
+        $this->orderBy('id');
+        $datos = $this->findAll();
+        return $datos;
     }
 }

@@ -4,7 +4,7 @@
     </div>
     <div>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarPais" onclick="seleccionaPais(<?php echo 1 . ',' . 1 ?>);">Agregar</button>
-        <button type="button" class="btn btn-secondary">Eliminados</button>
+        <a href="<?php echo base_url('/paises/eliminados'); ?>" type="button" class="btn btn-secondary">Eliminados</a>
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
 
@@ -29,7 +29,7 @@
                         <td class="text-center"><?php echo $valor['estado']; ?></td>
                         <td class="text-center" colspan="2">
                             <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#" data-href="<?php echo base_url('/paises/eliminar') . '/' . $valor['id'] . '/' . 'E'; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                            <input href="#" data-href="<?php echo base_url('/paises/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
                         </td>
                     </tr>
                 <?php } ?>
@@ -72,7 +72,7 @@
     </div>
 </form>
 
-<!-- Modal Confirma Eliminar -->
+<!-- MODAL ELIMINAR PAISES -->
 <div class="modal fade" id="eliminarPais" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -90,7 +90,6 @@
         </div>
     </div>
 </div>
-<!-- Modal Elimina -->
 
 <script type="text/javascript">
     function seleccionaPais(id, tp) {
@@ -117,4 +116,8 @@
             $("#nombrePais").val('')
         }
     }
+
+    $('#eliminarPais').on('show.bs.modal', function(e) {
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
+    })
 </script>

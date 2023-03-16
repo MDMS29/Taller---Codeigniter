@@ -4,7 +4,7 @@
     </div>
     <div>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarDepartamento" onclick="seleccionaDepartamento(<?php echo 1 . ',' . 1 ?>);">Agregar</button>
-        <button type="button" class="btn btn-secondary">Eliminados</button>
+        <a href="<?php echo base_url('dptopEliminados'); ?>" class="btn btn-secondary">Eliminados</a>
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
 
@@ -20,7 +20,6 @@
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
-
                 <?php foreach ($datos as $x => $valor) { ?>
                     <tr>
                         <td class="text-center">
@@ -33,11 +32,10 @@
                             <?php echo $valor['nombrePais']; ?>
                         </td>
 
-                        <td style="height:0.2rem;width:1rem;">
-                            <input href="#" onclick="seleccionaDepartamento(<?php echo $valor['id'] . ',' . 2 ?>);" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="16" height="16" title="Editar Registro"></input>
-                            <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="16" height="16" title="Eliminar Registro"></input>
+                        <td class="text-center" colspan="2">
+                            <input href="#" onclick="seleccionaDepartamento(<?php echo $valor['id'] . ',' . 2 ?>);" data-toggle="modal" data-target="#AgregarDepartamento" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="16" height="16" title="Editar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('/departamentos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarDpto" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="16" height="16" title="Eliminar Registro"></input>
                         </td>
-
                     </tr>
                 <?php } ?>
             </tbody>
@@ -50,8 +48,8 @@
 <!-- MODAL AGREGAR DEPARTAMENTO -->
 <form method="POST" action="<?php echo base_url('departamentos/insertar'); ?>" autocomplete="off">
     <div class="modal fade" id="AgregarDepartamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <input type="text" name="id" id="i+dDpto">
-        <input type="text" name="tipe" id="tipeFunct">
+        <input hidden name="id" id="idDpto">
+        <input hidden name="tipe" id="tipeFunct">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
@@ -84,25 +82,23 @@
     </div>
 </form>
 
-<!-- Modal Confirma Eliminar -->
-<div class="modal fade" id="modal-confirma" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- MODAL ELIMINAR DEPARTAMENTO -->
+<div class="modal fade" id="eliminarDpto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div style="text-align:center;" class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Eliminación de Registro</h5>
-
             </div>
             <div class="modal-body">
                 <p>Seguro Desea Eliminar éste Registro?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary close" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</button>
                 <a class="btn btn-danger btn-ok">Si</a>
             </div>
         </div>
     </div>
 </div>
-<!-- Modal Elimina -->
 
 <script type="text/javascript">
     function seleccionaDepartamento(id, tp) {
@@ -127,4 +123,7 @@
             $("#tipeFunct").val(tp);
         }
     }
+    $('#eliminarDpto').on('show.bs.modal', function(e) {
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
+    })
 </script>

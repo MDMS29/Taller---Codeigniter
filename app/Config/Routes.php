@@ -33,6 +33,10 @@ $routes->setAutoRoute(true);
 //Principal Vista
 $routes->get('/', 'Principal::index');
 
+
+$routes->get('/dptoActivos', 'Departamentos::index');
+$routes->get('/dptopEliminados', 'Departamentos::eliminados');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

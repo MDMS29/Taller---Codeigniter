@@ -45,13 +45,16 @@ class EmpleadosModel extends Model
         $nacimientoAno = $data['anoNac'];
         $id_cargo = $data['cargo'];
 
-        $this->save([   
+        $this->save([
             'nombres' => $nombres,
             'apellidos' => $apellidos,
             'id_municipio' => $id_municipio,
             'nacimientoAno' => $nacimientoAno,
             'id_cargo' => $id_cargo
         ]);
-        return 1;
+
+        $id = $this->getInsertID();
+
+        return $id;
     }
 }

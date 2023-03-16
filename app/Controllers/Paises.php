@@ -48,4 +48,31 @@ class Paises extends BaseController
         }
         echo json_encode($pais);
     }
+    //ELIMINAR Y RESTAURAR EL PAIS
+    function eliminarResLogic($id, $estado, $tipo)
+    {
+        //ELIMINAR
+        if ($tipo == 1) {
+            if ($id && $estado) {
+                $res = $this->pais->eliminarResModelDpto($id, $estado);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/paises'));
+                }
+            }
+        } 
+        //RESTAURAR
+        else {
+            $res = $this->pais->eliminarResModelDpto($id, $estado);
+            if ($res == 1) {
+                return redirect()->to(base_url('/paises/eliminados'));
+            }
+        }
+    }
+    public function eliminados()
+    {
+        $pais = $this->pais->obtenerEliminados();
+        $data = ['titulo' => 'Administrar Países Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $pais];
+        echo view('/principal/header', $data);
+        echo view('/paises/paisesEliminados', $data);
+    }
 }

@@ -60,7 +60,7 @@
     </div>
 </div>
 <!-- MODAL AGREGAR EMPLEADO -->
-<form method="POST" action="<?php echo base_url('empleados/insertar')?>">
+<form method="POST" action="<?php echo base_url('empleados/insertar') ?>">
     <div class="modal fade" id="AgregarEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -105,6 +105,25 @@
                                     <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
                                 <?php } ?>
                             </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message-text" class="col-form-label">Salario:</label>
+                            <div class="flex ">
+                                <label for="salario">$</label>
+                                <input type="number" name="salario" class="form-control" id="salario">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="periodo" class="col-form-label">Periodo (Salario):</label>
+                            <div class="flex ">
+                                <select class="form-select" name="periodo" aria-label="periodo" id="periodo">
+                                    <option selected>-- Seleccionar Año --</option>
+                                    <?php $years = range(strftime("%Y", time()), 1940); ?>
+                                    <?php foreach ($years as $year) : ?>
+                                        <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
                         </div>
                     </form>
                 </div>

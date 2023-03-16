@@ -6,18 +6,22 @@ use App\Controllers\BaseController;
 use App\Models\EmpleadosModel;
 use App\Models\CargosModel;
 use App\Models\MunicipiosModel;
+use App\Models\SalariosModel;
 
 class Empleados extends BaseController
 {
     protected $empleados;
     protected $cargos;
     protected $municipios;
+    protected $salarios;
 
     public function __construct()
     {
         $this->empleados = new EmpleadosModel();
         $this->cargos = new CargosModel();
         $this->municipios = new MunicipiosModel();
+        $this->salarios = new SalariosModel();
+
     }
     public function index()
     {
@@ -40,6 +44,9 @@ class Empleados extends BaseController
             $apellidos = $this->request->getPost('apellidos');
             $anoNac = $this->request->getPost('anoNac');
             $municipio = $this->request->getPost('municipio');
+            $salario = $this->request->getPost('salario');
+            $periodo = $this->request->getPost('periodo');
+
             $data = [
                 'cargo' => $cargo,
                 'nombres' => $nombres,
@@ -47,7 +54,16 @@ class Empleados extends BaseController
                 'anoNac' => $anoNac,
                 'municipio' => $municipio
             ];
-            $res = $this->empleados->insertarEmpleado($data);
+
+            $idEmple = $this->empleados->insertarEmpleado($data);
+            //INSERTAR SALARIO DENTRO DEL EMPLEADO REGISTRADO
+            $dataSalario = [
+                'id' => $idEmple,
+                'salario' => $salario,
+                'periodo' => $periodo
+            ];
+            $res = $this->salarios->insertarSalario($dataSalario);
+
             if ($res == 1) {
                 return redirect()->to(base_url('/empleados'));
             }

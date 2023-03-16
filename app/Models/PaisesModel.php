@@ -50,10 +50,24 @@ class PaisesModel extends Model
     }
     public function actualizarPais($codigo, $nombre, $id)
     {
-        $this->update($id,[
+        $this->update($id, [
             'codigo' => $codigo,
             'nombre' => $nombre
         ]);
         return 'y';
+    }
+    public function eliminarResModelDpto($id, $estado)
+    {
+        $this->update($id, [
+            'estado' => $estado
+        ]);
+        return 1;
+    }
+    public function obtenerEliminados()
+    {
+        $this->select('paises.*');
+        $this->where('estado', 'I');
+        $datos = $this->findAll();
+        return $datos;
     }
 }
