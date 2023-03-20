@@ -3,8 +3,7 @@
         <h1 class="titulo_Vista text-center"><?php echo $titulo ?></h1>
     </div>
     <div>
-        <a href="<?php echo base_url('dptoActivos'); ?>" class="btn btn-secondary">Activos</a>
-        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
+        <a href="<?php echo base_url('dptoActivos'); ?>" class="btn btn-secondary">Regresar</a>
     </div>
 
     <br>
@@ -12,17 +11,18 @@
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
                 <tr style="color:#98040a;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
-                    <th>Id</th>
+                    <th>#</th>
                     <th>Departamento</th>
                     <th>Pais</th>
                     <th colspan="2">Acciones</th>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
+            <?php $contador = 0;   ?>
                 <?php foreach ($datos as $x => $valor) { ?>
                     <tr>
                         <td class="text-center">
-                            <?php echo $valor['id']; ?>
+                        <?php echo $contador += 1;   ?>
                         </td>
                         <td class="text-center">
                             <?php echo $valor['nombre']; ?>

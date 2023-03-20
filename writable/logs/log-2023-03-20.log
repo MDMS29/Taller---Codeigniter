@@ -1,0 +1,1078 @@
+CRITICAL - 2023-03-20 03:07:35 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:07:35 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:09:46 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 35.
+ 1 APPPATH\Controllers\Paises.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:09:46 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:10:20 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 35.
+ 1 APPPATH\Controllers\Paises.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:10:20 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:11:31 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:11:31 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:11:32 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:11:32 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:11:33 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:11:33 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:12:55 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:12:55 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:09 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:10 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:10 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:10 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:10 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:10 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:11 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:36 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:13:37 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(60): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:30:32 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:30:32 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:30:43 --> Undefined array key 0
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:30:43 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:07 --> Undefined array key 0
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:08 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:30 --> Undefined array key 0
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:30 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:35 --> Undefined array key 0
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:36 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:41 --> Undefined array key "codigo"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:42 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:42 --> Undefined array key "codigo"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:43 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:46 --> Undefined array key "codigo"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "codigo"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:47 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:51 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:31:51 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:34:24 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:34:24 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:34:28 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:34:29 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:42:21 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 33.
+ 1 APPPATH\Controllers\Paises.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:42:21 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:43:05 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 33.
+ 1 APPPATH\Controllers\Paises.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:43:05 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:43:14 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 33.
+ 1 APPPATH\Controllers\Paises.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 33)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:43:14 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:11 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 APPPATH\Controllers\Paises.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 34)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:11 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:29 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:29 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:30 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:30 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:45 --> Undefined array key 0
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:45 --> Undefined array key 0
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:45 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:55 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:44:55 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:17 --> Undefined array key "nombre"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:17 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:18 --> Undefined array key "nombre"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:18 --> Undefined array key "nombre"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:18 --> Undefined array key "nombre"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:19 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:27 --> Undefined array key "nombre"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:27 --> Undefined array key "nombre"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:27 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:27 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:34 --> Undefined array key "nombre"
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombre"', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:45:34 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(44): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:46:16 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:46:16 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(42): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:46:37 --> Array to string conversion
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 APPPATH\Controllers\Paises.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Paises.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:46:37 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:46:44 --> Cannot use [] for reading
+in APPPATH\Controllers\Paises.php on line 32.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-03-20 03:46:44 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(62): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(43): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:47:35 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:47:35 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:51:28 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:51:29 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:51:54 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:51:54 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:52:56 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:52:57 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:53:09 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:53:09 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:53:28 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:53:28 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:53:59 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:53:59 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:54:35 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:54:35 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:55:03 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:55:03 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:57:26 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:57:26 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:18 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:18 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:23 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:23 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:24 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:24 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:24 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:25 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:25 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:25 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:39 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:40 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(42): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:58 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:58 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:58 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(42): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:58 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:58 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:58 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(42): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 03:58:59 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(42): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:03:53 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:03:53 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(42): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:03:58 --> Unsupported operand types: string + string
+in APPPATH\Controllers\Paises.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:03:59 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(63): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(42): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:09:44 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:09:44 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:09:57 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:09:57 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:19:13 --> Undefined variable $data
+in APPPATH\Views\errors\error.php on line 6.
+ 1 APPPATH\Views\errors\error.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\errors\\error.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 5 APPPATH\Controllers\Principal.php(23): view('/errors/error')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:19:13 --> Undefined variable $data
+in APPPATH\Views\errors\error.php on line 6.
+ 1 APPPATH\Views\errors\error.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\errors\\error.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 5 APPPATH\Controllers\Principal.php(23): view('/errors/error')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:21:01 --> Undefined variable $data
+in APPPATH\Views\errors\error.php on line 6.
+ 1 APPPATH\Views\errors\error.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\errors\\error.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 5 APPPATH\Controllers\Principal.php(24): view('/errors/error')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error('!No se puede insetar un pais con un codigo ya ingresado!')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:21:01 --> Undefined variable $data
+in APPPATH\Views\errors\error.php on line 6.
+ 1 APPPATH\Views\errors\error.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\errors\\error.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 5 APPPATH\Controllers\Principal.php(24): view('/errors/error')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error('FCPATH\\assets', 'img', 'logoEmpresa.png')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:21:01 --> Undefined variable $data
+in APPPATH\Views\errors\error.php on line 6.
+ 1 APPPATH\Views\errors\error.php(6): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\errors\\error.php', 6)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 5 APPPATH\Controllers\Principal.php(24): view('/errors/error')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error('!No se puede insetar un pais con un codigo ya ingresado!')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:22:57 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 04:22:57 --> Too few arguments to function App\Controllers\Principal::error(), 0 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Principal.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 15:45:25 --> Too few arguments to function App\Models\PaisesModel::buscarPais(), 1 passed in C:\xampp\htdocs\taller\app\Controllers\Paises.php on line 51 and exactly 2 expected
+in APPPATH\Models\PaisesModel.php on line 0.
+ 1 APPPATH\Controllers\Paises.php(51): App\Models\PaisesModel->buscarPais('1')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->buscarPais('1', '0')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 15:45:27 --> Too few arguments to function App\Models\PaisesModel::buscarPais(), 1 passed in C:\xampp\htdocs\taller\app\Controllers\Paises.php on line 51 and exactly 2 expected
+in APPPATH\Models\PaisesModel.php on line 0.
+ 1 APPPATH\Controllers\Paises.php(51): App\Models\PaisesModel->buscarPais('2')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->buscarPais('2', '0')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 15:45:30 --> Too few arguments to function App\Models\PaisesModel::buscarPais(), 1 passed in C:\xampp\htdocs\taller\app\Controllers\Paises.php on line 51 and exactly 2 expected
+in APPPATH\Models\PaisesModel.php on line 0.
+ 1 APPPATH\Controllers\Paises.php(51): App\Models\PaisesModel->buscarPais('3')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->buscarPais('3', '0')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 16:55:40 --> Undefined variable $urlBack
+in APPPATH\Views\errors\error.php on line 8.
+ 1 APPPATH\Views\errors\error.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $urlBack', 'APPPATH\\Views\\errors\\error.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 5 APPPATH\Controllers\Principal.php(33): view('/errors/error', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error('¡Error al insertar un Departamento con un nombre ya registrado!')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-20 16:55:40 --> Undefined variable $urlBack
+in APPPATH\Views\errors\error.php on line 8.
+ 1 APPPATH\Views\errors\error.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $urlBack', 'APPPATH\\Views\\errors\\error.php', 8)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 5 APPPATH\Controllers\Principal.php(33): view('/errors/error', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error('¡Error al insertar un Departamento con un nombre ya registrado!')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

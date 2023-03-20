@@ -31,9 +31,15 @@ class Departamentos extends BaseController
         $pais = $this->request->getPost('pais');
         $nombre = $this->request->getPost('nombre');
         if ($tipe == 1) {
-            $res = $this->departamentos->insertarDepartamento($pais, $nombre);
-            if ($res == 1) {
-                return redirect()->to(base_url('/departamentos'));
+            $res = $this->departamentos->buscarDepartamento($id = 0, $nombre, $pais);
+            if ($res) {
+                $data = 'error_insert_name';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                $this->departamentos->insertarDepartamento($pais, $nombre);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/departamentos'));
+                }
             }
         } else {
             $res = $this->departamentos->actualizarDepartamento($id, $pais, $nombre);

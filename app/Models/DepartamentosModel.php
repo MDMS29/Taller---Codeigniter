@@ -32,6 +32,7 @@ class DepartamentosModel extends Model
         $this->select('departamentos.*,paises.nombre as nombrePais');
         $this->join('paises', 'paises.id = departamentos.id_pais');
         $this->where('departamentos.estado', 'A');
+        $this->where('paises.estado', 'A');
         $this->orderBy('id');
         $datos = $this->findAll();
         return $datos;
@@ -55,18 +56,26 @@ class DepartamentosModel extends Model
     }
 
     //OBTENER EL DEPARTAMENTO SEGUN SU ID
-    public function buscarDepartamento($id)
+    public function buscarDepartamento($id, $nombre = '', $pais = 0)
     {
-        $this->select('departamentos.*');
-        $this->where('id', $id);
-        $this->where('estado', 'A');
-        $datos = $this->findAll();
-        return $datos;
+        if($nombre != ''){
+            $this->select('departamentos.*');
+            $this->where('nombre', $nombre);
+            $this->where('id_pais', $pais);
+            $datos = $this->findAll();
+            return $datos;
+        }else{
+            $this->select('departamentos.*');
+            $this->where('id', $id);
+            $this->where('estado', 'A');
+            $datos = $this->findAll();
+            return $datos;
+        }
     }
     //ACTUALIZAR EL DEPARTAMENTO SEGUN SU ID
     public function actualizarDepartamento($id, $pais, $nombre)
     {
-        $this->update($id,[
+        $this->update($id, [
             'id_pais' => $pais,
             'nombre' => $nombre
         ]);

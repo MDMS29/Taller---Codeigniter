@@ -28,12 +28,18 @@ class Paises extends BaseController
         $codigo = $this->request->getPost('codigo');
         $nombre = $this->request->getPost('nombre');
         if ($tipe == 1) {
-            $res = $this->pais->insertarPais($codigo, $nombre);
-            if ($res == 'y') {
-                return redirect()->to(base_url('/paises'));
+            $res = $this->pais->buscarPais(0, $codigo);
+            if ($res) {
+                $data = 'error_insert_code';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                $res = $this->pais->insertarPais($codigo, $nombre, $tipe);
+                if ($res == 'y') {
+                    return redirect()->to(base_url('/paises'));
+                }
             }
         } else {
-            $res = $this->pais->actualizarPais($codigo, $nombre, $id);
+            $res = $this->pais->actualizarPais($codigo, $nombre, $tipe);
             if ($res == 'y') {
                 return redirect()->to(base_url('/paises'));
             }
@@ -59,7 +65,7 @@ class Paises extends BaseController
                     return redirect()->to(base_url('/paises'));
                 }
             }
-        } 
+        }
         //RESTAURAR
         else {
             $res = $this->pais->eliminarResModelDpto($id, $estado);

@@ -32,21 +32,31 @@ class PaisesModel extends Model
         $datos = $this->findAll();
         return $datos;
     }
-    public function insertarPais($codigo, $nombre)
+    public function insertarPais($codigo, $nombre, $tipe)
     {
-        $this->save([
-            'codigo' => $codigo,
-            'nombre' => $nombre
-        ]);
-        return 'y';
+        if ($tipe == 1) {
+            $this->save([
+                'codigo' => $codigo,
+                'nombre' => $nombre
+            ]);
+            return 'y';
+        }
     }
-    public function buscarPais($id)
-    {
-        $this->select('paises.*');
-        $this->where('id', $id);
-        $this->where('estado', 'A');
-        $datos = $this->findAll();
-        return $datos;
+    public function buscarPais($id = 0, $codigo = 0)
+    { 
+        if ($id != 0) {
+            $this->select('paises.*');
+            $this->where('id', $id);
+            $this->where('estado', 'A');
+            $datos = $this->findAll();
+            return $datos;
+        } else {
+            echo $codigo;
+            $this->select('paises.*');
+            $this->where('codigo', $codigo);
+            $datos = $this->findAll();
+            return $datos;
+        }
     }
     public function actualizarPais($codigo, $nombre, $id)
     {

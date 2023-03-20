@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 
 //Principal Vista
 $routes->get('/', 'Principal::index');
+// $routes->get('/error', 'Principal::error');
 
 
 $routes->get('/dptoActivos', 'Departamentos::index');

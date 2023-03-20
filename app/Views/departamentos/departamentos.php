@@ -20,10 +20,11 @@
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
+            <?php $contador = 0;   ?>
                 <?php foreach ($datos as $x => $valor) { ?>
                     <tr>
                         <td class="text-center">
-                            <?php echo $valor['id']; ?>
+                        <?php echo $contador += 1;   ?>
                         </td>
                         <td class="text-center">
                             <?php echo $valor['nombre']; ?>
@@ -69,7 +70,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Nombre:</label>
-                            <input type="text" name="nombre" class="form-control" id="nombreDpto">
+                            <input type="text" name="nombre" class="form-control text-capitalize" id="nombreDpto">
                         </div>
                     </form>
                 </div>

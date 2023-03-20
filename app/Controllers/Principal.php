@@ -12,8 +12,24 @@ class Principal extends BaseController
 
     public function index()
     {
-        $data = ['titulo' => 'Proyecto Taller', 'nombre' => 'Moises Mazo', 'tituloPrin' => 'Principal'];
+        $data = ['titulo' => 'Proyecto Taller', 'nombre' => 'Moises Mazo'];
         echo view('/principal/header', $data);
         echo view('/principal/principal');
+    }
+    public function error($dao)
+    {
+        if ($dao == 'error_insert_code') {
+            $dao = '¡Error al insertar un codigo de un Pais ya registrado!';
+            $urlBack = 'paises';
+        } else if ($dao == 'error_insert_name') {
+            $dao = '¡Error al insertar un Departamento con un nombre ya registrado!';
+            $urlBack = 'departamentos';
+        }
+
+        $data = ['titulo' => '¡Error!', 'nombre' => 'Moises Mazo'];
+        echo view('/principal/header', $data);
+
+        $dataError = ['msgError' => $dao, 'url' => $urlBack];
+        echo view('/errors/error', $dataError);
     }
 }
