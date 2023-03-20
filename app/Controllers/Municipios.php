@@ -21,7 +21,7 @@ class Municipios extends BaseController
     public function index()
     {
         $paises = $this->paises->obtenerPaises();
-        $municipios = $this->municipios->obtenerMunicipios();
+        $municipios = $this->municipios->obtenerMunicipios(0);
 
         $data = ['titulo' => 'Administrar Municipios', 'nombre' => 'Moises Mazo', 'datos' => $municipios, 'paises' => $paises,];
         echo view('/principal/header', $data);
@@ -36,15 +36,46 @@ class Municipios extends BaseController
         }
         echo json_encode($departamentos);
     }
+
+    function obtenerMunicipio($id)
+    {
+        $dataArray = array();
+        $departamentos = $this->municipios->obtenerMunicipios($id);
+        if (!empty($departamentos)) {
+            array_push($dataArray, $departamentos);
+        }
+        echo json_encode($departamentos);
+    }
+
     function insertar()
     {
-        if ($this->request->getMethod() == 'post') {
-            $departamento = $this->request->getPost('departamento');
-            $nombre = $this->request->getPost('nombre');
-            $res = $this->municipios->insertarMunicipio($departamento, $nombre);
+        $tp = $this->request->getPost('tp');
+        $id = $this->request->getPost('id');
+        $departamento = $this->request->getPost('departamento');
+        $nombre = $this->request->getPost('nombre');
+        if ($tp == 1) {
+            //Validacion del que el registro no este duplicado
+            $res = $this->municipios->buscarMunicipio($nombre, $departamento);
+            if ($res) {
+                $data = 'error_insert_muni';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                //Registrar nuevo municipio
+                $res = $this->municipios->insertarActuMunicipio(0, $departamento, $nombre);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/municipios'));
+                }
+            }
+        } else {
+            //Actualizar el municipio
+            $res = $this->municipios->insertarActuMunicipio($id, $departamento, $nombre);
             if ($res == 1) {
                 return redirect()->to(base_url('/municipios'));
             }
         }
+    }
+
+    function eliminarResLogic($id, $estado, $tipe)
+    {
     }
 }

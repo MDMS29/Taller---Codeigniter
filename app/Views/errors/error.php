@@ -5,7 +5,7 @@
             <p class="card-text m-0 text-center fw-semibold mb-4">
                 <?php echo $msgError ?>
             </p>
-            <a name="url" id="url" class="btn btn-info" href="<?php echo base_url($url); ?>" role="button">Volver a
+            <a name="url" id="url" class="btn btn-primary fw-semibold text-white" href="<?php echo base_url($url); ?>" role="button">Volver a
                 <span class="text-capitalize">
                     <?php echo $url; ?>
                 </span></a>

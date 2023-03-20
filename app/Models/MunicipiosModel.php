@@ -25,20 +25,50 @@ class MunicipiosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerMunicipios()
+    public function obtenerMunicipios($id = 0)
     {
-        $this->select('municipios.*,departamentos.nombre as nombreDeparta');
-        $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
-        $this->where('municipios.estado', 'A');
-        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
-        return $datos;
+        if ($id != 0) {
+            $this->select('municipios.id, municipios.nombre as nombreMuni, d.id as idDpto, p.id as idPais');
+            $this->join('departamentos as d', 'd.id=municipios.id_dpto');
+            $this->join('paises as p', 'p.id=d.id_pais');
+            $this->where('municipios.id', $id);
+            $datos = $this->findAll();
+            return $datos;
+        } else {
+            $this->select('municipios.*,departamentos.nombre as nombreDeparta, paises.nombre as nombrePais');
+            $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
+            $this->join('paises', 'paises.id = departamentos.id_pais');
+            $this->where('paises.estado', 'A');
+            $this->where('departamentos.estado', 'A');
+            $this->where('municipios.estado', 'A');
+            $datos = $this->findAll();
+            return $datos;
+        }
     }
-    public function insertarMunicipio($departamento, $nombre)
+    public function insertarActuMunicipio($id = 0, $departamento, $nombre)
     {
-        $this->save([
-            'id_dpto' => $departamento,
-            'nombre' => $nombre
-        ]);
-        return 1;
+        if ($id != 0) {
+            $this->update($id, [
+                'id_dpto' => $departamento,
+                'nombre' => $nombre
+            ]);
+            return 1;
+        } else {
+            $this->save([
+                'id_dpto' => $departamento,
+                'nombre' => $nombre
+            ]);
+            return 1;
+        }
+    }
+
+    public function buscarMunicipio($nombre, $idDpto)
+    {
+        $this->select('municipios.*');
+        $this->join('departamentos as d', 'd.id=municipios.id_dpto');
+        $this->where('municipios.nombre', $nombre);
+        $this->where('d.id', $idDpto);
+        $datos = $this->findAll();
+        return $datos;
     }
 }
