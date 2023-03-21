@@ -25,13 +25,15 @@ class MunicipiosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerMunicipios($id = 0)
+    public function obtenerMunicipios($estado)
     {
-        if ($id != 0) {
-            $this->select('municipios.id, municipios.nombre as nombreMuni, d.id as idDpto, p.id as idPais');
-            $this->join('departamentos as d', 'd.id=municipios.id_dpto');
-            $this->join('paises as p', 'p.id=d.id_pais');
-            $this->where('municipios.id', $id);
+        if ($estado != 'A') {
+            $this->select('municipios.*,departamentos.nombre as nombreDeparta, paises.nombre as nombrePais');
+            $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
+            $this->join('paises', 'paises.id = departamentos.id_pais');
+            $this->where('municipios.estado', 'I');
+            $this->where('departamentos.estado', 'A');
+            $this->where('paises.estado', 'A');
             $datos = $this->findAll();
             return $datos;
         } else {
@@ -47,13 +49,14 @@ class MunicipiosModel extends Model
     }
     public function insertarActuMunicipio($id = 0, $departamento, $nombre)
     {
-        if ($id != 0) {
+        if ($id != 0) { //Si hay un id actualizara ese registro.
             $this->update($id, [
                 'id_dpto' => $departamento,
                 'nombre' => $nombre
             ]);
             return 1;
         } else {
+            //Si no hay id guardara un nuevo registro
             $this->save([
                 'id_dpto' => $departamento,
                 'nombre' => $nombre
@@ -62,13 +65,28 @@ class MunicipiosModel extends Model
         }
     }
 
-    public function buscarMunicipio($nombre, $idDpto)
+    public function buscarMunicipio($id = 0, $nombre = '', $idDpto = '')
     {
-        $this->select('municipios.*');
-        $this->join('departamentos as d', 'd.id=municipios.id_dpto');
-        $this->where('municipios.nombre', $nombre);
-        $this->where('d.id', $idDpto);
-        $datos = $this->findAll();
-        return $datos;
+        if ($id != 0) {
+            $this->select('municipios.id, municipios.nombre as nombreMuni, d.id as idDpto, p.id as idPais');
+            $this->join('departamentos as d', 'd.id=municipios.id_dpto');
+            $this->join('paises as p', 'p.id=d.id_pais');
+            $this->where('municipios.id', $id);
+            $datos = $this->findAll();
+            return $datos;
+        } else {
+            $this->select('municipios.*');
+            $this->join('departamentos as d', 'd.id=municipios.id_dpto');
+            $this->where('municipios.nombre', $nombre);
+            $this->where('d.id', $idDpto);
+            $datos = $this->findAll();
+            return $datos;
+        }
+    }
+
+    public function eliminarResLogic($id, $estado)
+    {
+        $this->update($id, ['estado' => $estado]);
+        return 1;
     }
 }

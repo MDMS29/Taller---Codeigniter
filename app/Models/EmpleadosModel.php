@@ -27,11 +27,12 @@ class EmpleadosModel extends Model
 
     public function obtenerEmpleados()
     {
-        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, salarios.sueldo as salario');
+        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, salarios.id as idSalario,salarios.sueldo as salario');
         $this->join('municipios', 'municipios.id = empleados.id_municipio');
         $this->join('cargos', 'cargos.id = empleados.id_cargo');
         $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
         $this->where('empleados.estado', 'A');
+        // $this->where('cargos.estado', 'A');
         $this->orderBy('id');
         $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
         return $datos;
@@ -44,7 +45,6 @@ class EmpleadosModel extends Model
         $id_municipio = $data['municipio'];
         $nacimientoAno = $data['anoNac'];
         $id_cargo = $data['cargo'];
-
         $this->save([
             'nombres' => $nombres,
             'apellidos' => $apellidos,
@@ -52,9 +52,46 @@ class EmpleadosModel extends Model
             'nacimientoAno' => $nacimientoAno,
             'id_cargo' => $id_cargo
         ]);
-
         $id = $this->getInsertID();
-
+        return $id;
+    }
+    public function buscarEmpleado($id, $nombres = '', $apellidos = '', $cargo = 0)
+    {
+        if ($cargo != 0) {
+            $this->select('empleados.*,empleados.nombres as nombresEmple,municipios.id as idMuni');
+            $this->join('municipios', 'municipios.id = empleados.id_municipio');
+            $this->join('cargos', 'cargos.id = empleados.id_cargo');
+            $this->where('empleados.nombres', $nombres);
+            $this->where('empleados.apellidos', $apellidos);
+            $this->where('empleados.id_cargo', $cargo);
+            $datos = $this->findAll();
+            return $datos;
+        } else {
+            $this->select('empleados.*,empleados.nombres as nombresEmple,municipios.id as idMuni, cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');
+            $this->join('municipios', 'municipios.id = empleados.id_municipio');
+            $this->join('cargos', 'cargos.id = empleados.id_cargo');
+            $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
+            $this->where('empleados.id', $id);
+            $datos = $this->findAll();
+            return $datos;
+        }
+    }
+    public function actualizarEmpleado($data)
+    {
+        $id = $data['id'];
+        $nombres = $data['nombres'];
+        $apellidos = $data['apellidos'];
+        $id_municipio = $data['municipio'];
+        $nacimientoAno = $data['anoNac'];
+        $id_cargo = $data['cargo'];
+        
+        $this->update($id, [
+            'nombres' => $nombres,
+            'apellidos' => $apellidos,
+            'id_municipio' => $id_municipio,
+            'nacimientoAno' => $nacimientoAno,
+            'id_cargo' => $id_cargo
+        ]);
         return $id;
     }
 }

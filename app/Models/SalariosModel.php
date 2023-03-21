@@ -25,12 +25,20 @@ class SalariosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    function insertarSalario($dataSalario)
+    public function insertarSalario($dataSalario)
     {
         $this->save([
             'id_empleado' => $dataSalario['id'],
             'sueldo' => $dataSalario['salario'],
             'periodoAno' => $dataSalario['periodo']
+        ]);
+        return 1;
+    }
+    public function actualizarSalario($dataSalario)
+    {
+        $this->update($dataSalario['id'], [
+            'sueldo' => $dataSalario['salario'],
+            'periodo' => $dataSalario['periodo']
         ]);
         return 1;
     }

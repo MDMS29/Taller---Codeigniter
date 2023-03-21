@@ -27,6 +27,9 @@ class Principal extends BaseController
         }else if ($dao == 'error_insert_muni') {
             $dao = '¡Error al insertar un Municipio con un nombre ya registrado!';
             $urlBack = 'municipios';
+        }else if ($dao == 'error_insert_emple') {
+            $dao = '¡Error al insertar un Empleado con un cargo ya registrado!';
+            $urlBack = 'empleados';
         }
 
         $data = ['titulo' => '¡Error!', 'nombre' => 'Moises Mazo'];

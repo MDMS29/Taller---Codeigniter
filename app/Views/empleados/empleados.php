@@ -3,7 +3,7 @@
         <h1 class="titulo_Vista text-center"><?php echo $titulo ?></h1>
     </div>
     <div>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado">Agregar</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" onclick="seleccionarEmpleado(<?php echo 1  . ',' . 1 . ',' . 0 ?>)">Agregar</button>
         <button type="button" class="btn btn-secondary">Eliminados</button>
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
@@ -48,7 +48,7 @@
                             $<?php echo $valor['salario']; ?>
                         </td>
                         <td style="height:0.2rem;width:1rem;">
-                            <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                            <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2 . ',' .  $valor['idSalario'] ?>)" href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
                             <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
                         </td>
 
@@ -64,15 +64,18 @@
     <div class="modal fade" id="AgregarEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <input name="id" id="id" hidden>
+                <input name="tp" id="tp" hidden>
+                <input id="idSalario" name="idSalario">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Nuevo Empleado</h1>
+                    <h1 class="modal-title fs-5" id="tituloModal">Agregar Nuevo Empleado</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
-                            <label for="recipient-name" class="col-form-label">Cargo:</label>
-                            <select class="form-select" name="cargo" aria-label="cargo">
+                            <label for="cargo" class="col-form-label">Cargo:</label>
+                            <select class="form-select" name="cargo" aria-label="cargo" id="cargo">
                                 <option selected>-- Seleccionar Cargo --</option>
                                 <?php foreach ($cargos as $x => $valor) { ?>
                                     <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
@@ -84,12 +87,12 @@
                             <input type="text" name="nombres" class="form-control" id="nombres">
                         </div>
                         <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Apellidos:</label>
-                            <input type="text" name="apellidos" class="form-control" id="recipient-name">
+                            <label for="apellidos" class="col-form-label">Apellidos:</label>
+                            <input type="text" name="apellidos" class="form-control" id="apellidos">
                         </div>
                         <div class="mb-3">
                             <label for="anoNac" class="col-form-label">Año Nacimiento:</label>
-                            <select class="form-select" name="anoNac" aria-label="anoNac">
+                            <select class="form-select" name="anoNac" id="anoNac" aria-label="anoNac">
                                 <option selected>-- Seleccionar Año --</option>
                                 <?php $years = range(strftime("%Y", time()), 1940); ?>
                                 <?php foreach ($years as $year) : ?>
@@ -99,7 +102,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="municipio" class="col-form-label">Municipio:</label>
-                            <select class="form-select" name="municipio" aria-label="Departamentos">
+                            <select class="form-select" name="municipio" id="municipio" aria-label="Departamentos">
                                 <option selected>-- Seleccionar Municipio --</option>
                                 <?php foreach ($municipios as $x => $valor) { ?>
                                     <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
@@ -108,8 +111,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Salario:</label>
-                            <div class="flex ">
-                                <label for="salario">$</label>
+                            <div class="d-flex align-items-center">
+                                <label for="salario" class="fw-semibold fs-5 me-2">$</label>
                                 <input type="number" name="salario" class="form-control" id="salario">
                             </div>
                         </div>
@@ -118,7 +121,7 @@
                             <div class="flex ">
                                 <select class="form-select" name="periodo" aria-label="periodo" id="periodo">
                                     <option selected>-- Seleccionar Año --</option>
-                                    <?php $years = range(strftime("%Y", time()), 1940); ?>
+                                    <?php $years = range(strftime("%Y", time()), 2000); ?>
                                     <?php foreach ($years as $year) : ?>
                                         <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
                                     <?php endforeach; ?>
@@ -129,9 +132,50 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="submit" class="btn btn-primary" id="btn-guardar">Guardar</button>
                 </div>
             </div>
         </div>
     </div>
 </form>
+
+<script>
+    function seleccionarEmpleado(id, tp, idSala) {
+        if (tp == 2) {
+            $('#tp').val(2)
+            $('#id').val(id)
+            // alert(idSala)
+
+            $.ajax({
+                url: "<?php echo base_url('empleados/buscarEmpleado') ?>" + '/' + id,
+                type: 'POST',
+                dataType: 'json',
+                success: function(res) {
+                    $('#tituloModal').text('Actualizar Empleado');
+                    $('#btn-guardar').text('Actualizar');
+                    $('#cargo').val(res[0]['idCargo']);
+                    $('#nombres').val(res[0]['nombres']);
+                    $('#apellidos').val(res[0]['apellidos']);
+                    $('#anoNac').val(res[0]['nacimientoAno']);
+                    $('#municipio').val(res[0]['idMuni']);
+                    $('#salario').val(res[0]['salario']);
+                    $('#idSalario').val(idSala);
+                    $('#periodo').val(res[0]['periodoAno']);
+                    $('#AgregarEmpleado').modal('show')
+                }
+            })
+
+        } else {
+            $('#tituloModal').text('Agregar Nuevo Empleado');
+            $('#btn-guardar').text('Guardar');
+            $('#cargo').val('');
+            $('#nombres').val('');
+            $('#apellidos').val('');
+            $('#anoNac').val('');
+            $('#municipio').val('');
+            $('#salario').val('');
+            $('#periodo').val('');
+            $('#tp').val(1)
+        }
+    }
+</script>

@@ -21,7 +21,7 @@ class Municipios extends BaseController
     public function index()
     {
         $paises = $this->paises->obtenerPaises();
-        $municipios = $this->municipios->obtenerMunicipios(0);
+        $municipios = $this->municipios->obtenerMunicipios('A');
 
         $data = ['titulo' => 'Administrar Municipios', 'nombre' => 'Moises Mazo', 'datos' => $municipios, 'paises' => $paises,];
         echo view('/principal/header', $data);
@@ -40,7 +40,7 @@ class Municipios extends BaseController
     function obtenerMunicipio($id)
     {
         $dataArray = array();
-        $departamentos = $this->municipios->obtenerMunicipios($id);
+        $departamentos = $this->municipios->buscarMunicipio($id, '', '');
         if (!empty($departamentos)) {
             array_push($dataArray, $departamentos);
         }
@@ -55,7 +55,7 @@ class Municipios extends BaseController
         $nombre = $this->request->getPost('nombre');
         if ($tp == 1) {
             //Validacion del que el registro no este duplicado
-            $res = $this->municipios->buscarMunicipio($nombre, $departamento);
+            $res = $this->municipios->buscarMunicipio(0, $nombre, $departamento);
             if ($res) {
                 $data = 'error_insert_muni';
                 return redirect()->to(base_url('principal/error' . '/' . $data));
@@ -77,5 +77,32 @@ class Municipios extends BaseController
 
     function eliminarResLogic($id, $estado, $tipe)
     {
+        //Eliminar logicamente el registro cambiando su estado a 'I'
+        if ($tipe == 1) {
+            if ($id && $estado) {
+                $res = $this->municipios->eliminarResLogic($id, $estado);
+                echo "Hi";
+                if ($res == 1) {
+                    return redirect()->to(base_url('/municipios'));
+                }
+            }
+        }
+        //Restaurar logicamente el registro cambiando su estado a 'A'
+        else {
+            $res = $this->municipios->eliminarResLogic($id, $estado);
+            if ($res == 1) {
+                return redirect()->to(base_url('/municipios/eliminados'));
+            }
+        }
+    }
+
+    public function eliminados()
+    {
+        $paises = $this->paises->obtenerPaises();
+        $municipios = $this->municipios->obtenerMunicipios('I');
+
+        $data = ['titulo' => 'Administrar Municipios', 'nombre' => 'Moises Mazo', 'datos' => $municipios];
+        echo view('/principal/header', $data);
+        echo view('/municipios/municipiosEliminados', $data);
     }
 }
