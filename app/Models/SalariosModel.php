@@ -42,4 +42,11 @@ class SalariosModel extends Model
         ]);
         return 1;
     }
+    public function eliminarResModelSala($dataSalario)
+    {
+        $this->update($dataSalario['id'], [
+            'estado' => $dataSalario['estado']
+        ]);
+        return 1;
+    }
 }

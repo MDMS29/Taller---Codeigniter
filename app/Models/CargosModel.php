@@ -25,17 +25,51 @@ class CargosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerCargos()
+    public function obtenerCargos($estado)
     {
-        $this->select('cargos.*');
-        $this->where('estado', 'A');
-        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
-        return $datos;
+        if ($estado != 'A') {
+            $this->select('cargos.*');
+            $this->where('estado', 'I');
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            return $datos;
+        } else {
+            $this->select('cargos.*');
+            $this->where('estado', 'A');
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            return $datos;
+        }
     }
     public function insertarCargo($nombre)
     {
         $this->save([
             'nombre' => $nombre
+        ]);
+        return 1;
+    }
+    public function buscarCargo($id, $nombre)
+    {
+        if ($nombre != '') {
+            $this->select('cargos.*');
+            $this->where('nombre', $nombre);
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            return $datos;
+        }
+        $this->select('cargos.*');
+        $this->where('id', $id);
+        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+        return $datos;
+    }
+    public function actualizarCargo($id, $nombre)
+    {
+        $this->update($id, [
+            'nombre' => $nombre
+        ]);
+        return 1;
+    }
+    function eliminarResModelLogic($id, $estado)
+    {
+        $this->update($id, [
+            'estado' => $estado
         ]);
         return 1;
     }

@@ -89,4 +89,12 @@ class MunicipiosModel extends Model
         $this->update($id, ['estado' => $estado]);
         return 1;
     }
+
+    public function getMunicipiosDpto($id)
+    {
+        $this->select('municipios.*');
+        $this->where('id_dpto', $id);
+        $datos = $this->findAll();
+        return $datos;
+    }
 }

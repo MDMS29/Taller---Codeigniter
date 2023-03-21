@@ -30,6 +30,9 @@ class Principal extends BaseController
         }else if ($dao == 'error_insert_emple') {
             $dao = '¡Error al insertar un Empleado con un cargo ya registrado!';
             $urlBack = 'empleados';
+        }else if ($dao == 'error_name_cargo') {
+            $dao = '¡Error al insertar un Cargo con un nombre ya registrado!';
+            $urlBack = 'cargos';
         }
 
         $data = ['titulo' => '¡Error!', 'nombre' => 'Moises Mazo'];

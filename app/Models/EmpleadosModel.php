@@ -25,17 +25,27 @@ class EmpleadosModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerEmpleados()
+    public function obtenerEmpleados($estado)
     {
-        $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, salarios.id as idSalario,salarios.sueldo as salario');
-        $this->join('municipios', 'municipios.id = empleados.id_municipio');
-        $this->join('cargos', 'cargos.id = empleados.id_cargo');
-        $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
-        $this->where('empleados.estado', 'A');
-        // $this->where('cargos.estado', 'A');
-        $this->orderBy('id');
-        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
-        return $datos;
+        if ($estado != 'A') {
+            $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, salarios.id as idSalario,salarios.sueldo as salario');
+            $this->join('municipios', 'municipios.id = empleados.id_municipio');
+            $this->join('cargos', 'cargos.id = empleados.id_cargo');
+            $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
+            $this->where('empleados.estado', 'I');
+            $this->orderBy('id');
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            return $datos;
+        } else {
+            $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, salarios.id as idSalario,salarios.sueldo as salario');
+            $this->join('municipios', 'municipios.id = empleados.id_municipio');
+            $this->join('cargos', 'cargos.id = empleados.id_cargo');
+            $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
+            $this->where('empleados.estado', 'A');
+            $this->orderBy('id');
+            $datos = $this->findAll();
+            return $datos;
+        }
     }
 
     public function insertarEmpleado($data)
@@ -55,20 +65,21 @@ class EmpleadosModel extends Model
         $id = $this->getInsertID();
         return $id;
     }
-    public function buscarEmpleado($id, $nombres = '', $apellidos = '', $cargo = 0)
+    public function buscarEmpleado($id, $nombres = '', $apellidos = '')
     {
-        if ($cargo != 0) {
+        if ($nombres != '') {
             $this->select('empleados.*,empleados.nombres as nombresEmple,municipios.id as idMuni');
             $this->join('municipios', 'municipios.id = empleados.id_municipio');
             $this->join('cargos', 'cargos.id = empleados.id_cargo');
             $this->where('empleados.nombres', $nombres);
             $this->where('empleados.apellidos', $apellidos);
-            $this->where('empleados.id_cargo', $cargo);
             $datos = $this->findAll();
             return $datos;
         } else {
-            $this->select('empleados.*,empleados.nombres as nombresEmple,municipios.id as idMuni, cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');
+            $this->select('empleados.*,empleados.nombres as nombresEmple,municipios.id as idMuni, paises.id as idPais, departamentos.id as idDpto,cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');
             $this->join('municipios', 'municipios.id = empleados.id_municipio');
+            $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
+            $this->join('paises', 'paises.id = departamentos.id_pais');
             $this->join('cargos', 'cargos.id = empleados.id_cargo');
             $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
             $this->where('empleados.id', $id);
@@ -84,7 +95,7 @@ class EmpleadosModel extends Model
         $id_municipio = $data['municipio'];
         $nacimientoAno = $data['anoNac'];
         $id_cargo = $data['cargo'];
-        
+
         $this->update($id, [
             'nombres' => $nombres,
             'apellidos' => $apellidos,
@@ -93,5 +104,13 @@ class EmpleadosModel extends Model
             'id_cargo' => $id_cargo
         ]);
         return $id;
+    }
+
+    public function eliminarResModelEmple($id, $estado)
+    {
+        $this->update($id, [
+            'estado' => $estado
+        ]);
+        return 1;
     }
 }

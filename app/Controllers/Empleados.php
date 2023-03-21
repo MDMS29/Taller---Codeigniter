@@ -7,6 +7,7 @@ use App\Models\EmpleadosModel;
 use App\Models\CargosModel;
 use App\Models\MunicipiosModel;
 use App\Models\SalariosModel;
+use App\Models\PaisesModel;
 
 class Empleados extends BaseController
 {
@@ -14,9 +15,11 @@ class Empleados extends BaseController
     protected $cargos;
     protected $municipios;
     protected $salarios;
+    protected $paises;
 
     public function __construct()
     {
+        $this->paises = new PaisesModel();
         $this->empleados = new EmpleadosModel();
         $this->cargos = new CargosModel();
         $this->municipios = new MunicipiosModel();
@@ -24,13 +27,14 @@ class Empleados extends BaseController
     }
     public function index()
     {
-        $empleados = $this->empleados->obtenerEmpleados();
-        $cargos = $this->cargos->obtenerCargos();
+        $paises = $this->paises->obtenerPaises('A');
+        $empleados = $this->empleados->obtenerEmpleados('A');
+        $cargos = $this->cargos->obtenerCargos('A');
         $municipios = $this->municipios->obtenerMunicipios('A');
 
         $data = [
             'titulo' => 'Administrar Empleados', 'nombre' => 'Moises Mazo', 'datos' => $empleados,
-            'cargos' => $cargos, 'municipios' => $municipios
+            'cargos' => $cargos, 'municipios' => $municipios, 'paises' => $paises
         ];
         echo view('/principal/header', $data);
         echo view('/empleados/empleados', $data);
@@ -49,7 +53,7 @@ class Empleados extends BaseController
 
         if ($tp == 1) {
             //Verificar si el empleado no esta duplicado, por sus nombres, apellidos y cargo
-            $res = $this->empleados->buscarEmpleado($idEmple, $nombres, $apellidos, $cargo);
+            $res = $this->empleados->buscarEmpleado($idEmple, $nombres, $apellidos);
             if ($res) {
                 $data = 'error_insert_emple';
                 return redirect()->to(base_url('principal/error' . '/' . $data));
@@ -104,11 +108,54 @@ class Empleados extends BaseController
     }
     function buscarEmpleado($id)
     {
-        $dataArray = array();
-        $empleados = $this->empleados->buscarEmpleado($id, '', '', 0);
+        $empleados = $this->empleados->buscarEmpleado($id, '', '');
         if (!empty($departamentos)) {
-            array_push($dataArray, $departamentos);
+            echo json_encode($empleados);
         }
-        echo json_encode($empleados);
+    }
+
+    public function eliminados()
+    {
+        $empleados = $this->empleados->obtenerEmpleados('I');
+
+        $data = [
+            'titulo' => 'Administrar Empleados Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $empleados
+        ];
+        echo view('/principal/header', $data);
+        echo view('/empleados/empleadosEliminados', $data);
+    }
+
+    function eliminarResLogic($id, $estado, $tipo, $idSalario)
+    {
+        //ELIMINAR
+        if ($tipo == 1) {
+            if ($id && $estado) {
+                $res = $this->empleados->eliminarResModelEmple($id, $estado);
+                if ($res == 1) {
+                    $dataSalario = [
+                        'id' => $idSalario,
+                        'estado' => $estado,
+                    ];
+                    $respue = $this->salarios->eliminarResModelSala($dataSalario);
+                    if ($respue == 1) {
+                        return redirect()->to(base_url('/empleados'));
+                    }
+                }
+            }
+        }
+        //RESTAURAR
+        else {
+            $res = $this->empleados->eliminarResModelEmple($id, $estado);
+            if ($res == 1) {
+                $dataSalario = [
+                    'id' => $idSalario,
+                    'estado' => $estado,
+                ];
+                $respue = $this->salarios->eliminarResModelSala($dataSalario);
+                if ($respue == 1) {
+                    return redirect()->to(base_url('/empleados/eliminados'));
+                }
+            }
+        }
     }
 }

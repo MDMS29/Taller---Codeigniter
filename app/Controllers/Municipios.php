@@ -36,15 +36,22 @@ class Municipios extends BaseController
         }
         echo json_encode($departamentos);
     }
+    function obtenerMunicipiosDpto($id)
+    {
+        $dataArray = array();
+        $municipios = $this->municipios->getMunicipiosDpto($id);
+        if (!empty($municipios)) {
+            array_push($dataArray, $municipios);
+        }
+        echo json_encode($municipios);
+    }
 
     function obtenerMunicipio($id)
     {
-        $dataArray = array();
         $departamentos = $this->municipios->buscarMunicipio($id, '', '');
         if (!empty($departamentos)) {
-            array_push($dataArray, $departamentos);
+            echo json_encode($departamentos);
         }
-        echo json_encode($departamentos);
     }
 
     function insertar()
@@ -53,6 +60,7 @@ class Municipios extends BaseController
         $id = $this->request->getPost('id');
         $departamento = $this->request->getPost('departamento');
         $nombre = $this->request->getPost('nombre');
+
         if ($tp == 1) {
             //Validacion del que el registro no este duplicado
             $res = $this->municipios->buscarMunicipio(0, $nombre, $departamento);
@@ -98,7 +106,6 @@ class Municipios extends BaseController
 
     public function eliminados()
     {
-        $paises = $this->paises->obtenerPaises();
         $municipios = $this->municipios->obtenerMunicipios('I');
 
         $data = ['titulo' => 'Administrar Municipios', 'nombre' => 'Moises Mazo', 'datos' => $municipios];

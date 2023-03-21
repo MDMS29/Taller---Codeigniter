@@ -3,8 +3,8 @@
         <h1 class="titulo_Vista text-center"><?php echo $titulo ?></h1>
     </div>
     <div>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarCargo">Agregar</button>
-        <button type="button" class="btn btn-secondary">Eliminados</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarCargo" onclick="seleccionarCargo(<?php echo 1 . ',' . 1 ?>)">Agregar</button>
+        <a  href="<?php echo base_url('/cargos/eliminados'); ?>" type="button" class="btn btn-secondary">Eliminados</a>
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
 
@@ -24,8 +24,8 @@
                         <td class="text-center"><?php echo $valor['id']; ?></td>
                         <td class="text-center"><?php echo $valor['nombre']; ?></td>
                         <td style="height:0.2rem;width:1rem;">
-                            <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
+                            <input href="#" onclick="seleccionarCargo(<?php echo $valor['id'] . ',' . 2 ?>)" data-bs-toggle="modal" data-bs-target="#AgregarCargo" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                            <input href="#"  data-href="<?php echo base_url('/cargos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarCargo" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
                         </td>
                     </tr>
                 <?php } ?>
@@ -42,23 +42,84 @@
     <div class="modal fade" id="AgregarCargo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
+                <input id="id" name="id">
+                <input id="tp" name="tp">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Cargo</h1>
+                    <h1 class="modal-title fs-5" id="titulo">Agregar Cargo</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Nombre:</label>
-                            <input type="text" name="nombre" class="form-control" id="recipient-name">
+                            <input type="text" name="nombre" class="form-control" id="nombre">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
                 </div>
             </div>
         </div>
     </div>
 </form>
+
+<!-- MODAL ELIMINAR DEPARTAMENTO -->
+<div class="modal fade" id="eliminarCargo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div style="text-align:center;" class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eliminación de Registro</h5>
+            </div>
+            <div class="modal-body">
+                <p>Seguro Desea Eliminar éste Registro?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</button>
+                <a class="btn btn-danger btn-ok">Si</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#formulario').on('submit', function(e) {
+        //Verificacion de campos vacios en el formulario
+        if ([$('#nombres').val()].includes('')) {
+            e.preventDefault()
+            return Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '¡Debe llenar todos los campos!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    })
+
+    function seleccionarCargo(id, tp) {
+        if (tp == 2) {
+            //Editar
+            $.ajax({
+                url: '<?php echo base_url('cargos/buscarCargo') ?>' + '/' + id + '/' + '',
+                type: 'POST',
+                dataType: 'json',
+                success: function(res) {
+                    $('#tp').val(tp)
+                    $('#titulo').text('Actualizar Cargo')
+                    $('#btnGuardar').text('Actualizar')
+                    $('#id').val(res[0]['id'])
+                    $('#nombre').val(res[0]['nombre'])
+                    $('#AgregarCargo').modal('show')
+                }
+            })
+        } else {
+            $('#tp').val(tp)
+            $('#id').val('')
+            $('#nombre').val('')
+            $('#titulo').text('Agregar Cargo')
+            $('#btnGuardar').text('Guardar')
+        }
+    }
+</script>

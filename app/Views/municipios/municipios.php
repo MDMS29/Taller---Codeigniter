@@ -122,7 +122,7 @@
         if (pais == 0 && idDpto == 0) {
             //No mostrar nada si no se mandan los valores del pais y el departamento
             //Esto por si se inserta un nuevo registro.
-            $('#contenedor-dptos').html('')
+            $('#contenedor-dptos').html('<p class="ms-3 text-danger">*Seleccione un País*</p>')
         } else {
             //Buscar los departamentos del país para mostrarlos en el Select.
             $.ajax({
