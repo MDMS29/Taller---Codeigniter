@@ -80,28 +80,34 @@ class Empleados extends BaseController
                 }
             }
         } else {
-            $data = [
-                'id' => $idEmple,
-                'cargo' => $cargo,
-                'nombres' => $nombres,
-                'apellidos' => $apellidos,
-                'anoNac' => $anoNac,
-                'municipio' => $municipio
-            ];
-            //Actuliazar el empleado
-            $respues = $this->empleados->actualizarEmpleado($data);
-            if ($respues != 0) {
-                //Informacion para actualizar el salario del empleado.
-                $idSalario = $this->request->getPost('idSalario');
-                $dataSalario = [
-                    'id' => $idSalario,
-                    'salario' => $salario,
-                    'periodo' => $periodo
+            $res = $this->empleados->buscarEmpleado($idEmple, $nombres, $apellidos);
+            if ($res) {
+                $data = 'error_insert_emple';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                $data = [
+                    'id' => $idEmple,
+                    'cargo' => $cargo,
+                    'nombres' => $nombres,
+                    'apellidos' => $apellidos,
+                    'anoNac' => $anoNac,
+                    'municipio' => $municipio
                 ];
-                //Luego de actualizar el empleado se actualiza su salario.
-                $respu = $this->salarios->actualizarSalario($dataSalario);
-                if ($respu == 1) {
-                    return redirect()->to(base_url('/empleados'));
+                //Actuliazar el empleado
+                $respues = $this->empleados->actualizarEmpleado($data);
+                if ($respues != 0) {
+                    //Informacion para actualizar el salario del empleado.
+                    $idSalario = $this->request->getPost('idSalario');
+                    $dataSalario = [
+                        'id' => $idSalario,
+                        'salario' => $salario,
+                        'periodo' => $periodo
+                    ];
+                    //Luego de actualizar el empleado se actualiza su salario.
+                    $respu = $this->salarios->actualizarSalario($dataSalario);
+                    if ($respu == 1) {
+                        return redirect()->to(base_url('/empleados'));
+                    }
                 }
             }
         }
@@ -109,7 +115,7 @@ class Empleados extends BaseController
     function buscarEmpleado($id)
     {
         $empleados = $this->empleados->buscarEmpleado($id, '', '');
-        if (!empty($departamentos)) {
+        if (!empty($empleados)) {
             echo json_encode($empleados);
         }
     }

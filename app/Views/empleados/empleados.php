@@ -49,7 +49,7 @@
                             $<?php echo $valor['salario']; ?>
                         </td>
                         <td style="height:0.2rem;width:1rem;">
-                            <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2 . ',' .  $valor['idSalario'] ?>)" href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
+                            <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2 . ',' .  $valor['idSalario'] ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
 
                             <input href="#" data-href="<?php echo base_url('/empleados/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1 . '/' .  $valor['idSalario'] ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="16" height="16" title="Eliminar Registro"></input>
                         </td>
@@ -134,7 +134,7 @@
                             <label for="periodo" class="col-form-label">Periodo (Salario):</label>
                             <div class="flex ">
                                 <select class="form-select" name="periodo" aria-label="periodo" id="periodo">
-                                    <option selected>-- Seleccionar Año --</option>
+                                    <option selected value="">-- Seleccionar Año --</option>
                                     <?php $years = range(strftime("%Y", time()), 2000); ?>
                                     <?php foreach ($years as $year) : ?>
                                         <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
@@ -175,7 +175,16 @@
 <script>
     $('#formulario').on('submit', function(e) {
         //Verificacion de campos vacios en el formulario
-        if ([$('#selectPais').val()].includes('')) {
+        nombre = $('#nombres').val()
+        apellidos = $('#apellidos').val()
+        selectPais = $('#selectPais').val()
+        departamento = $('#departamento').val()
+        municipio = $('#municipio').val()
+        anoNac = $('#anoNac').val()
+        salario = $('#salario').val()
+        periodo = $('#periodo').val()
+
+        if ([nombre, apellidos, selectPais, departamento, municipio, anoNac, salario, periodo].includes('')) {
             e.preventDefault()
             return Swal.fire({
                 position: 'center',

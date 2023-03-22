@@ -73,7 +73,7 @@ class EmpleadosModel extends Model
             $this->join('cargos', 'cargos.id = empleados.id_cargo');
             $this->where('empleados.nombres', $nombres);
             $this->where('empleados.apellidos', $apellidos);
-            $datos = $this->findAll();
+            $datos = $this->first();
             return $datos;
         } else {
             $this->select('empleados.*,empleados.nombres as nombresEmple,municipios.id as idMuni, paises.id as idPais, departamentos.id as idDpto,cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');

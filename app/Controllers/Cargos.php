@@ -33,9 +33,15 @@ class Cargos extends BaseController
                 $data = 'error_name_cargo';
                 return redirect()->to(base_url('principal/error/' . $data));
             } else {
-                $res = $this->cargos->insertarCargo($nombre);
-                if ($res == 1) {
-                    return redirect()->to(base_url('/cargos'));
+                $res = $this->cargos->buscarCargo(0, $nombre);
+                if ($res) {
+                    $data = 'error_name_cargo';
+                    return redirect()->to(base_url('principal/error/' . $data));
+                } else {
+                    $res = $this->cargos->insertarCargo($nombre);
+                    if ($res == 1) {
+                        return redirect()->to(base_url('/cargos'));
+                    }
                 }
             }
         } else {

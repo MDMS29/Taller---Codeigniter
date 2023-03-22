@@ -20,11 +20,11 @@
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
-            <?php $contador = 0;   ?>
+                <?php $contador = 0;   ?>
                 <?php foreach ($datos as $x => $valor) { ?>
                     <tr>
                         <td class="text-center">
-                        <?php echo $contador += 1;   ?>
+                            <?php echo $contador += 1;   ?>
                         </td>
                         <td class="text-center">
                             <?php echo $valor['nombre']; ?>
@@ -47,7 +47,7 @@
 
 
 <!-- MODAL AGREGAR DEPARTAMENTO -->
-<form method="POST" action="<?php echo base_url('departamentos/insertar'); ?>" autocomplete="off">
+<form method="POST" action="<?php echo base_url('departamentos/insertar'); ?>" autocomplete="off" id="formularioDptos">
     <div class="modal fade" id="AgregarDepartamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <input hidden name="id" id="idDpto">
         <input hidden name="tipe" id="tipeFunct">
@@ -62,7 +62,7 @@
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">País:</label>
                             <select name="pais" class="form-select" aria-label="Departamentos" id="pais">
-                                <option selected>-- Seleccionar País --</option>
+                                <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
                                     <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
                                 <?php } ?>
@@ -102,6 +102,21 @@
 </div>
 
 <script type="text/javascript">
+    $('#formularioDptos').on('submit', function(e) {
+        pais = $('#pais').val()
+        nombre = $('#nombreDpto').val()
+        if ([pais, nombre].includes('')) {
+            e.preventDefault()
+            return Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '¡Debe llenar todos los campos!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    })
+
     function seleccionaDepartamento(id, tp) {
         if (tp == 2) {
             $.ajax({

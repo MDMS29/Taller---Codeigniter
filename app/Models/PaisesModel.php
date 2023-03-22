@@ -39,7 +39,7 @@ class PaisesModel extends Model
                 'codigo' => $codigo,
                 'nombre' => $nombre
             ]);
-            return 'y';
+            return 1;
         }
     }
     public function buscarPais($id = 0, $codigo = 0)
@@ -64,7 +64,7 @@ class PaisesModel extends Model
             'codigo' => $codigo,
             'nombre' => $nombre
         ]);
-        return 'y';
+        return 1;
     }
     public function eliminarResModelDpto($id, $estado)
     {

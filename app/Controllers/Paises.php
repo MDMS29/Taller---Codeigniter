@@ -33,15 +33,27 @@ class Paises extends BaseController
                 $data = 'error_insert_code';
                 return redirect()->to(base_url('principal/error' . '/' . $data));
             } else {
-                $res = $this->pais->insertarPais($codigo, $nombre, $tipe);
-                if ($res == 'y') {
-                    return redirect()->to(base_url('/paises'));
+                $res = $this->pais->buscarPais(0, $codigo);
+                if ($res) {
+                    $data = 'error_insert_code';
+                    return redirect()->to(base_url('principal/error' . '/' . $data));
+                } else {
+                    $res = $this->pais->insertarPais($codigo, $nombre, $tipe);
+                    if ($res == 1) {
+                        return redirect()->to(base_url('/paises'));
+                    }
                 }
             }
         } else {
-            $res = $this->pais->actualizarPais($codigo, $nombre, $tipe);
-            if ($res == 'y') {
-                return redirect()->to(base_url('/paises'));
+            $res = $this->pais->buscarPais(0, $codigo);
+            if ($res) {
+                $data = 'error_insert_code';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                $res = $this->pais->actualizarPais($codigo, $nombre, $tipe);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/paises'));
+                }
             }
         }
     }

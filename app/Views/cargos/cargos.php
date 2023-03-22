@@ -4,7 +4,7 @@
     </div>
     <div>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarCargo" onclick="seleccionarCargo(<?php echo 1 . ',' . 1 ?>)">Agregar</button>
-        <a  href="<?php echo base_url('/cargos/eliminados'); ?>" type="button" class="btn btn-secondary">Eliminados</a>
+        <a href="<?php echo base_url('/cargos/eliminados'); ?>" type="button" class="btn btn-secondary">Eliminados</a>
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
 
@@ -23,13 +23,12 @@
                     <tr>
                         <td class="text-center"><?php echo $valor['id']; ?></td>
                         <td class="text-center"><?php echo $valor['nombre']; ?></td>
-                        <td style="height:0.2rem;width:1rem;">
+                        <td class ="text-center" colspan="2">
                             <input href="#" onclick="seleccionarCargo(<?php echo $valor['id'] . ',' . 2 ?>)" data-bs-toggle="modal" data-bs-target="#AgregarCargo" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#"  data-href="<?php echo base_url('/cargos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarCargo" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('/cargos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarCargo" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
                         </td>
                     </tr>
                 <?php } ?>
-
             </tbody>
         </table>
     </div>
@@ -38,12 +37,12 @@
 
 
 <!-- MODAL AGREGAR CARGO -->
-<form method="POST" action="<?php echo base_url('cargos/insertar'); ?>" autocomplete="off">
+<form method="POST" action="<?php echo base_url('cargos/insertar'); ?>" autocomplete="off" id="formularioCargo">
     <div class="modal fade" id="AgregarCargo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <input id="id" name="id">
-                <input id="tp" name="tp">
+                <input id="id" name="id" hidden>
+                <input id="tp" name="tp" hidden>
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="titulo">Agregar Cargo</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -84,9 +83,11 @@
 </div>
 
 <script>
-    $('#formulario').on('submit', function(e) {
+    $('#formularioCargo').on('submit', function(e) {
         //Verificacion de campos vacios en el formulario
-        if ([$('#nombres').val()].includes('')) {
+        nombre = $('#nombre').val()
+
+        if ([nombre].includes('')) {
             e.preventDefault()
             return Swal.fire({
                 position: 'center',
@@ -122,4 +123,8 @@
             $('#btnGuardar').text('Guardar')
         }
     }
+
+    $('#eliminarCargo').on('show.bs.modal', function(e) {
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
+    })
 </script>

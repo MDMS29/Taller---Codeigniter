@@ -53,7 +53,7 @@
 
 
 <!-- MODAL AGREGAR MUNICIPIO -->
-<form method="POST" action="<?php echo base_url('municipios/insertar'); ?>">
+<form method="POST" action="<?php echo base_url('municipios/insertar'); ?>" id="formularioMuni">
     <div class="modal fade" id="AgregarMunicipios" tabindex="-1" aria-labelledby="AgregarMunicipios" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -68,7 +68,7 @@
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">País:</label>
                             <select name="pais" id="selectPais" class="form-select" aria-label="Paises">
-                                <option selected>-- Seleccionar País --</option>
+                                <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
                                     <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
                                 <?php } ?>
@@ -118,6 +118,28 @@
 
 
 <script type="text/javascript">
+    $('#formularioMuni').on('submit', function(e) {
+        pais = $('#selectPais').val()
+        dpto = $('#departamento').val()
+        nombre = $('#nombre').val()
+        if ([pais, dpto, nombre].includes('')) {
+            e.preventDefault()
+            return Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '¡Debe llenar todos los campos!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    })
+
+    $('#selectPais').on('change', () => {
+        //Al cambio de un país se mostraran los departamentos del país seleccionado
+        pais = $('#selectPais').val()
+        obtenerDepartamentos(pais)
+    })
+
     function obtenerDepartamentos(pais, idDpto) {
         if (pais == 0 && idDpto == 0) {
             //No mostrar nada si no se mandan los valores del pais y el departamento
@@ -146,11 +168,6 @@
             })
         }
     }
-    $('#selectPais').on('change', () => {
-        //Al cambio de un país se mostraran los departamentos del país seleccionado
-        pais = $('#selectPais').val()
-        obtenerDepartamentos(pais)
-    })
 
     //Funcion para saber si se editara o se guardara un registro
     /*

@@ -5,8 +5,7 @@
         </h1>
     </div>
     <div>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarPais"
-            onclick="seleccionaPais(<?php echo 1 . ',' . 1 ?>);">Agregar</button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarPais" onclick="seleccionaPais(<?php echo 1 . ',' . 1 ?>);">Agregar</button>
         <a href="<?php echo base_url('/paises/eliminados'); ?>" type="button" class="btn btn-secondary">Eliminados</a>
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
@@ -40,15 +39,8 @@
                             <?php echo $valor['estado']; ?>
                         </td>
                         <td class="text-center" colspan="2">
-                            <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);"
-                                data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image"
-                                src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20"
-                                title="Editar Registro"></input>
-                            <input href="#"
-                                data-href="<?php echo base_url('/paises/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>"
-                                data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image"
-                                src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20"
-                                title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                            <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('/paises/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
                         </td>
                     </tr>
                 <?php } ?>
@@ -60,7 +52,7 @@
 
 
 <!-- MODAL AGREGAR - EDITAR PAIS -->
-<form method="POST" action="<?php echo base_url('paises/insertar'); ?>" autocomplete="off">
+<form method="POST" action="<?php echo base_url('paises/insertar'); ?>" autocomplete="off" id="formularioPaises">
     <div class="modal fade" id="AgregarPais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <input type="text" name="id" id="idPais" hidden>
         <input type="text" name="tipe" id="tipeFunct" hidden>
@@ -92,8 +84,7 @@
 </form>
 
 <!-- MODAL ELIMINAR PAISES -->
-<div class="modal fade" id="eliminarPais" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="eliminarPais" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div style="text-align:center;" class="modal-header">
@@ -112,13 +103,28 @@
 </div>
 
 <script type="text/javascript">
+    $('#formularioPaises').on('submit', function(e) {
+        pais = $('#codigoPais').val()
+        nombre = $('#nombrePais').val()
+        if ([pais, nombre].includes('')) {
+            e.preventDefault()
+            return Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '¡Debe llenar todos los campos!',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    })
+
     function seleccionaPais(id, tp) {
         if (tp == 2) {
             $.ajax({
                 type: "POST",
                 url: "<?php echo base_url('paises/buscarPais'); ?>" + "/" + id + "/" + 0,
                 dataType: "json",
-                success: function (rs) {
+                success: function(rs) {
                     $("#tipeFunct").val(tp);
                     $("#idPais").val(rs[0]['id']);
                     $("#tituloModal").text('Editar Pais ' + rs[0]['nombre'])
@@ -137,7 +143,7 @@
         }
     }
 
-    $('#eliminarPais').on('show.bs.modal', function (e) {
+    $('#eliminarPais').on('show.bs.modal', function(e) {
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
     })
 </script>
