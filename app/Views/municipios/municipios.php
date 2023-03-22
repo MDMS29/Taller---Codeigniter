@@ -33,24 +33,13 @@
                             <?php echo $valor['nombre']; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoDpto'] == 'A') {
-                                echo $valor['nombreDeparta'];
-                            } else {
-                                echo $valor['nombreDeparta'] . ' - <span class="text-danger fw-bold">' . $valor['estadoDpto'] . 'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDeparta'] : $valor['nombreDeparta'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoPais'] == 'A') {
-                                echo $valor['nombrePais'];
-                            } else {
-                                echo $valor['nombrePais'] . ' - <span class="text-danger fw-bold">' . $valor['estadoPais'] . 'nactivo</span>';
-                            } ?>
-
+                            <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
-
                         <td style="height:0.2rem;width:1rem;">
                             <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro" onclick="seleccionarMunicipio(<?php echo $valor['id'] . ',' . 2 ?>)"></input>
-
                             <input href="#" data-href="<?php echo base_url('/municipios/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarMuni" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
                         </td>
                     </tr>

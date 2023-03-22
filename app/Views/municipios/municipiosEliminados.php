@@ -31,20 +31,11 @@
                             <?php echo $valor['nombre']; ?>
                         </td>
                         <td class="text-center">
-                        <?php if ($valor['estadoDpto'] == 'A') {
-                                echo $valor['nombreDeparta'];
-                            } else {
-                                echo $valor['nombreDeparta'] . ' - <span class="text-danger fw-bold">' . $valor['estadoDpto'] . 'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDeparta'] : $valor['nombreDeparta'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoPais'] == 'A') {
-                                echo $valor['nombrePais'];
-                            } else {
-                                echo $valor['nombrePais'] . ' - <span class="text-danger fw-bold">' . $valor['estadoPais'] . 'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
-
                         <td class="text-center">
                             <input href=" #" data-href="<?php echo base_url('/municipios/eliminarResLogic') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>" data-bs-toggle="modal" data-bs-target="#restaurarMuni" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
                         </td>

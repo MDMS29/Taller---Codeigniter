@@ -18,21 +18,17 @@
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
-            <?php $contador = 0;   ?>
+                <?php $contador = 0;   ?>
                 <?php foreach ($datos as $x => $valor) { ?>
                     <tr>
                         <td class="text-center">
-                        <?php echo $contador += 1;   ?>
+                            <?php echo $contador += 1;   ?>
                         </td>
                         <td class="text-center">
                             <?php echo $valor['nombre']; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoPais'] == 'A') {
-                                echo $valor['nombrePais'];
-                            } else {
-                                echo $valor['nombrePais'] . ' - <span class="text-danger fw-bold">' . $valor['estadoPais'].'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
 
                         <td class="text-center" colspan="2">

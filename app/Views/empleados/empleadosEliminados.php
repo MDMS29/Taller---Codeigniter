@@ -37,35 +37,19 @@
                             <?php echo $valor['apellidos']; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoPais'] == 'A') {
-                                echo $valor['nombrePais'];
-                            } else {
-                                echo $valor['nombrePais'] . ' - <span class="text-danger fw-bold">' . $valor['estadoPais'] . 'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoDpto'] == 'A') {
-                                echo $valor['nombreDpto'];
-                            } else {
-                                echo $valor['nombreDpto'] . ' - <span class="text-danger fw-bold">' . $valor['estadoDpto'] . 'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDpto'] : $valor['nombreDpto'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoMuni'] == 'A') {
-                                echo $valor['nombreMuni'];
-                            } else {
-                                echo $valor['nombreMuni'] . ' - <span class="text-danger fw-bold">' . $valor['estadoMuni'] . 'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoMuni'] == 'A' ? $valor['nombreMuni'] : $valor['nombreMuni'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
                             <?php echo $valor['nacimientoAno']; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoCargo'] == 'A') {
-                                echo $valor['nombreCargo'];
-                            } else {
-                                echo $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">' . $valor['estadoCargo'] . 'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
                             $<?php echo $valor['salario']; ?>

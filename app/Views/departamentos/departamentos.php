@@ -30,11 +30,7 @@
                             <?php echo $valor['nombre']; ?>
                         </td>
                         <td class="text-center">
-                            <?php if ($valor['estadoPais'] == 'A') {
-                                echo $valor['nombrePais'];
-                            } else {
-                                echo $valor['nombrePais'] . ' - <span class="text-danger fw-bold">' . $valor['estadoPais'].'nactivo</span>';
-                            } ?>
+                            <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
 
                         <td class="text-center" colspan="2">
