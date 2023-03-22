@@ -12,7 +12,7 @@
     <div class="table-responsive">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
-                <tr style="color:#98040a;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
+                <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>Id</th>
                     <th>Nombre</th>
                     <th colspan="2">Acciones</th>

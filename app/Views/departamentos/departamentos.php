@@ -12,8 +12,8 @@
     <div class="table-responsive">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
-                <tr style="color:#98040a;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
-                    <th>Id</th>
+                <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
+                    <th>#</th>
                     <th>Departamento</th>
                     <th>Pais</th>
                     <th colspan="2">Acciones</th>
@@ -21,7 +21,7 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0;   ?>
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php foreach ($datos as $valor) { ?>
                     <tr>
                         <td class="text-center">
                             <?php echo $contador += 1;   ?>
@@ -30,7 +30,11 @@
                             <?php echo $valor['nombre']; ?>
                         </td>
                         <td class="text-center">
-                            <?php echo $valor['nombrePais']; ?>
+                            <?php if ($valor['estadoPais'] == 'A') {
+                                echo $valor['nombrePais'];
+                            } else {
+                                echo $valor['nombrePais'] . ' - <span class="text-danger fw-bold">' . $valor['estadoPais'].'nactivo</span>';
+                            } ?>
                         </td>
 
                         <td class="text-center" colspan="2">

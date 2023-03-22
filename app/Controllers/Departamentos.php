@@ -17,7 +17,7 @@ class Departamentos extends BaseController
     }
     public function index()
     {
-        $departamentos = $this->departamentos->obtenerDepartamentos();
+        $departamentos = $this->departamentos->obtenerDepartamentos('A');
         $paises = $this->paises->obtenerPaises();
 
         $data = ['titulo' => 'Administrar Departamentos', 'nombre' => 'Moises Mazo', 'datos' => $departamentos, 'paises' => $paises];
@@ -87,7 +87,7 @@ class Departamentos extends BaseController
 
     public function eliminados()
     {
-        $departamentos = $this->departamentos->obtenerEliminados();
+        $departamentos = $this->departamentos->obtenerDepartamentos('I');
         $data = ['titulo' => 'Administrar Departamentos Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $departamentos];
         echo view('/principal/header', $data);
         echo view('/departamentos/departamentosEliminados', $data);

@@ -14,8 +14,8 @@
     <div class="table-responsive">
         <table class="table table-bordered table-sm table-striped" id="tableMunicipios" width="100%" cellspacing="0">
             <thead>
-                <tr style="color:#98040a;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
-                    <th>Id</th>
+                <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
+                    <th>#</th>
                     <th>Municipio</th>
                     <th>Departamento</th>
                     <th>País</th>
@@ -33,10 +33,19 @@
                             <?php echo $valor['nombre']; ?>
                         </td>
                         <td class="text-center">
-                            <?php echo $valor['nombreDeparta']; ?>
+                            <?php if ($valor['estadoDpto'] == 'A') {
+                                echo $valor['nombreDeparta'];
+                            } else {
+                                echo $valor['nombreDeparta'] . ' - <span class="text-danger fw-bold">' . $valor['estadoDpto'] . 'nactivo</span>';
+                            } ?>
                         </td>
                         <td class="text-center">
-                            <?php echo $valor['nombrePais']; ?>
+                            <?php if ($valor['estadoPais'] == 'A') {
+                                echo $valor['nombrePais'];
+                            } else {
+                                echo $valor['nombrePais'] . ' - <span class="text-danger fw-bold">' . $valor['estadoPais'] . 'nactivo</span>';
+                            } ?>
+
                         </td>
 
                         <td style="height:0.2rem;width:1rem;">

@@ -28,20 +28,16 @@ class MunicipiosModel extends Model
     public function obtenerMunicipios($estado)
     {
         if ($estado != 'A') {
-            $this->select('municipios.*,departamentos.nombre as nombreDeparta, paises.nombre as nombrePais');
+            $this->select('municipios.*,departamentos.nombre as nombreDeparta, paises.nombre as nombrePais, paises.estado as estadoPais, departamentos.estado as estadoDpto');
             $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
             $this->join('paises', 'paises.id = departamentos.id_pais');
             $this->where('municipios.estado', 'I');
-            $this->where('departamentos.estado', 'A');
-            $this->where('paises.estado', 'A');
             $datos = $this->findAll();
             return $datos;
         } else {
-            $this->select('municipios.*,departamentos.nombre as nombreDeparta, paises.nombre as nombrePais');
+            $this->select('municipios.*,departamentos.nombre as nombreDeparta, paises.nombre as nombrePais, paises.estado as estadoPais, departamentos.estado as estadoDpto');
             $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
             $this->join('paises', 'paises.id = departamentos.id_pais');
-            $this->where('paises.estado', 'A');
-            $this->where('departamentos.estado', 'A');
             $this->where('municipios.estado', 'A');
             $datos = $this->findAll();
             return $datos;

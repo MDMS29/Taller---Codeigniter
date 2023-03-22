@@ -12,11 +12,10 @@
     <div class="table-responsive">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
-                <tr style="color:#98040a;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
+                <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>#</th>
                     <th>Codigo</th>
                     <th>Nombre</th>
-                    <th>Estado</th>
                     <th colspan="2">Acciones</th>
                 </tr>
             </thead>
@@ -32,9 +31,6 @@
                         </td>
                         <td class="text-center">
                             <?php echo $valor['nombre']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estado']; ?>
                         </td>
                         <td class="text-center" colspan="2">
                             <input href="#"

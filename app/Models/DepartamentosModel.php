@@ -27,15 +27,23 @@ class DepartamentosModel extends Model
     protected $skipValidation = false;
 
     //TOMAR TODOS LOS DEPARTAMENTOS
-    public function obtenerDepartamentos()
+    public function obtenerDepartamentos($estado)
     {
-        $this->select('departamentos.*,paises.nombre as nombrePais');
-        $this->join('paises', 'paises.id = departamentos.id_pais');
-        $this->where('departamentos.estado', 'A');
-        $this->where('paises.estado', 'A');
-        $this->orderBy('id');
-        $datos = $this->findAll();
-        return $datos;
+        if ($estado != 'A') {
+            $this->select('departamentos.*,paises.nombre as nombrePais, paises.estado as estadoPais');
+            $this->join('paises', 'paises.id = departamentos.id_pais');
+            $this->where('departamentos.estado', 'I');
+            $this->orderBy('id');
+            $datos = $this->findAll();
+            return $datos;
+        } else {
+            $this->select('departamentos.*,paises.nombre as nombrePais, paises.estado as estadoPais');
+            $this->join('paises', 'paises.id = departamentos.id_pais');
+            $this->where('departamentos.estado', 'A');
+            $this->orderBy('id');
+            $datos = $this->findAll();
+            return $datos;
+        }
     }
     //GUARDAR EL DEPARTAMENTO
     public function insertarDepartamento($pais, $nombre)
@@ -58,13 +66,13 @@ class DepartamentosModel extends Model
     //OBTENER EL DEPARTAMENTO SEGUN SU ID
     public function buscarDepartamento($id, $nombre = '', $pais = 0)
     {
-        if($nombre != ''){
+        if ($nombre != '') {
             $this->select('departamentos.*');
             $this->where('nombre', $nombre);
             $this->where('id_pais', $pais);
             $datos = $this->findAll();
             return $datos;
-        }else{
+        } else {
             $this->select('departamentos.*');
             $this->where('id', $id);
             $this->where('estado', 'A');
@@ -90,11 +98,5 @@ class DepartamentosModel extends Model
     }
     public function obtenerEliminados()
     {
-        $this->select('departamentos.*,paises.nombre as nombrePais');
-        $this->join('paises', 'paises.id = departamentos.id_pais');
-        $this->where('departamentos.estado', 'I');
-        $this->orderBy('id');
-        $datos = $this->findAll();
-        return $datos;
     }
 }
