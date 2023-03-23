@@ -9,7 +9,7 @@
     </div>
 
     <br>
-    <div class="table-responsive">
+    <div class="table-responsive" style="overflow:scroll-vertical;overflow-y: scroll !important; overflow:scroll-horizontal;overflow-x: scroll !important;height: 600px;">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
@@ -75,8 +75,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" id="btnGuardar">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
                 </div>
             </div>
         </div>
@@ -134,7 +134,8 @@
                 }
             })
         } else {
-            $("#idDpto").val('');
+            $("#pais").val('');
+            $("#nombreDpto").val('');
             $("#tituloModal").text('Agregar Departamento')
             $("#tipeFunct").val(tp);
         }

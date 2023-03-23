@@ -72,7 +72,7 @@
 <!-- MODAL AGREGAR EMPLEADO -->
 <form method="POST" action="<?php echo base_url('empleados/insertar') ?>" id="formulario">
     <div class="modal fade" id="AgregarEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
                 <input name="id" id="id" hidden>
                 <input name="tp" id="tp" hidden>
@@ -86,24 +86,26 @@
                         <div class="mb-3">
                             <label for="cargo" class="col-form-label">Cargo:</label>
                             <select class="form-select" name="cargo" aria-label="cargo" id="cargo">
-                                <option selected>-- Seleccionar Cargo --</option>
+                                <option selected value="">-- Seleccionar Cargo --</option>
                                 <?php foreach ($cargos as $x => $valor) { ?>
                                     <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="nombres" class="col-form-label">Nombre:</label>
-                            <input type="text" name="nombres" class="form-control" id="nombres">
-                        </div>
-                        <div class="mb-3">
-                            <label for="apellidos" class="col-form-label">Apellidos:</label>
-                            <input type="text" name="apellidos" class="form-control" id="apellidos">
+                        <div class="d-flex column-gap-3" style="width: 100%">
+                            <div class="mb-3" style="width: 100%">
+                                <label for="nombres" class="col-form-label">Nombres:</label>
+                                <input type="text" name="nombres" class="form-control" id="nombres">
+                            </div>
+                            <div class="mb-3" style="width: 100%">
+                                <label for="apellidos" class="col-form-label">Apellidos:</label>
+                                <input type="text" name="apellidos" class="form-control" id="apellidos">
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="municipio" class="col-form-label">Pais:</label>
-                            <select class="form-select" name="pais" id="selectPais" aria-label="Departamentos">
-                                <option selected value="">-- Seleccionar Pais --</option>
+                            <select class="form-select" name="pais" id="selectPais" aria-label="Paises">
+                                <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
                                     <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
                                 <?php } ?>
@@ -131,30 +133,32 @@
                                 <?php endforeach; ?>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="message-text" class="col-form-label">Salario:</label>
-                            <div class="d-flex align-items-center">
-                                <label for="salario" class="fw-semibold fs-5 me-2">$</label>
-                                <input type="number" name="salario" class="form-control" id="salario">
+                        <div class="d-flex column-gap-3" style="width: 100%">
+                            <div class="mb-3" style="width: 100%">
+                                <label for="message-text" class="col-form-label">Salario:</label>
+                                <div class="d-flex align-items-center">
+                                    <label for="salario" class="fw-semibold fs-5 me-2">$</label>
+                                    <input type="number" name="salario" class="form-control" id="salario">
+                                </div>
                             </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="periodo" class="col-form-label">Periodo (Salario):</label>
-                            <div class="flex ">
-                                <select class="form-select" name="periodo" aria-label="periodo" id="periodo">
-                                    <option selected value="">-- Seleccionar Año --</option>
-                                    <?php $years = range(strftime("%Y", time()), 2000); ?>
-                                    <?php foreach ($years as $year) : ?>
-                                        <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
-                                    <?php endforeach; ?>
-                                </select>
+                            <div class="mb-3" style="width: 100%">
+                                <label for="periodo" class="col-form-label">Periodo (Salario):</label>
+                                <div class="flex ">
+                                    <select class="form-select" name="periodo" aria-label="periodo" id="periodo">
+                                        <option selected value="">-- Seleccionar Año --</option>
+                                        <?php $years = range(strftime("%Y", time()), 2000); ?>
+                                        <?php foreach ($years as $year) : ?>
+                                            <option value="<?php echo $year; ?>"><?php echo $year; ?></option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" id="btn-guardar">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary" id="btn-guardar">Guardar</button>
                 </div>
             </div>
         </div>
@@ -247,68 +251,63 @@
         }
     }
 
-    function obtenerDepartamentos(pais, idDpto, muni) {
-        if (pais == 0 && idDpto == 0) {
-            //No mostrar nada si no se mandan los valores del pais y el departamento
-            //Esto por si se inserta un nuevo registro.
-            $('#contenedor-dptos').html('<p class="ms-3 text-danger">*Seleccione un País*</p>')
-        } else {
-            //Buscar los departamentos del país para mostrarlos en el Select.
-            $.ajax({
-                url: "<?php echo base_url('municipios/obtenerDepartamentosPais') ?>" + '/' + pais,
-                type: 'POST',
-                dataType: 'json',
-                success: function(res) {
-                    //Mostrar todos los departamentos en los items del select
-                    var cadena
-                    cadena = `<select class="form-select" name="departamento" id="departamento" aria-label="Departamentos"> 
-                                    <option selected value="">-- Seleccionar Departamento --</option>`
-                    for (let i = 0; i < res.length; i++) {
-                        cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
-                    }
-                    cadena += `</select>`
-                    $('#contenedor-dptos').html(cadena)
-
-                    //Le damos el valor del departamento para que se muestre al editar el registro
-                    $('#departamento').val(idDpto);
-                    obtenerMunicipios(idDpto, muni)
-                }
-            })
-        }
-    }
-
-    function obtenerMunicipios(idDpto, idMuni) {
-        if (idMuni == '') {
-            $('#contenedor-muni').html('<p class="ms-3 text-danger">*Seleccione un Departamento*</p>')
-        } else {
-            $('#departamento').on('change', () => {
-                dpto = $('#departamento').val()
-                obtenerMunicipios(dpto)
-            })
-            //Buscar los departamentos del país para mostrarlos en el Select.
-            $.ajax({
-                url: "<?php echo base_url('municipios/obtenerMunicipiosDpto') ?>" + '/' + idDpto,
-                type: 'POST',
-                dataType: 'json',
-                success: function(res) {
-                    var cadena
-                    cadena = `<select class="form-select" name="municipio" id="municipio" aria-label="Departamentos"> 
-                                    <option selected value="">-- Seleccionar Municipio --</option>`
-                    for (let i = 0; i < res.length; i++) {
-                        cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
-                    }
-                    cadena += `</select>`
-                    $('#contenedor-muni').html(cadena)
-                    $('#municipio').val(idMuni);
-                }
-            })
-        }
-    }
     $('#selectPais').on('change', () => {
         //Al cambio de un país se mostraran los departamentos del país seleccionado
         pais = $('#selectPais').val()
         obtenerDepartamentos(pais)
     })
+
+    function obtenerDepartamentos(pais, idDpto, muni) {
+
+        //Buscar los departamentos del país para mostrarlos en el Select.
+        $.ajax({
+            url: "<?php echo base_url('municipios/obtenerDepartamentosPais') ?>" + '/' + pais,
+            type: 'POST',
+            dataType: 'json',
+            success: function(res) {
+                //Mostrar todos los departamentos en los items del select
+                var cadena
+                cadena = `<select class="form-select" name="departamento" id="departamento" aria-label="Departamentos"> 
+                                <option value="" selected>-- Seleccionar Departamento --</option>`
+                for (let i = 0; i < res.length; i++) {
+                    cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
+                }
+                cadena += `</select>`
+                $('#contenedor-dptos').html(cadena)
+
+                //Le damos el valor del departamento para que se muestre al editar el registro
+                $('#departamento').val(idDpto);
+                obtenerMunicipios(idDpto, muni)
+            }
+        })
+
+    }
+
+    function obtenerMunicipios(idDpto, idMuni) {
+        $('#departamento').on('change', () => {
+            dpto = $('#departamento').val()
+            obtenerMunicipios(dpto)
+        })
+        //Buscar los municipios del país para mostrarlos en el Select.
+        $.ajax({
+            url: "<?php echo base_url('municipios/obtenerMunicipiosDpto') ?>" + '/' + idDpto,
+            type: 'POST',
+            dataType: 'json',
+            success: function(res) {
+                var cadena
+                cadena = `<select class="form-select" name="municipio" id="municipio" aria-label="Municipios"> 
+                                <option selected value="">-- Seleccionar Municipio --</option>`
+                for (let i = 0; i < res.length; i++) {
+                    cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
+                }
+                cadena += `</select>`
+                $('#contenedor-muni').html(cadena)
+
+                //Le damos el valor del municipio para que se muestre al editar el registro
+                $('#municipio').val(idMuni);
+            }
+        })
+    }
     $('#eliminarEmple').on('show.bs.modal', function(e) {
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
     })

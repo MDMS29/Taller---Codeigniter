@@ -42,15 +42,9 @@ class Departamentos extends BaseController
                 }
             }
         } else {
-            $res = $this->departamentos->buscarDepartamento($id = 0, $nombre, $pais);
-            if ($res) {
-                $data = 'error_insert_name';
-                return redirect()->to(base_url('principal/error' . '/' . $data));
-            } else {
-                $res = $this->departamentos->actualizarDepartamento($id, $pais, $nombre);
-                if ($res == 1) {
-                    return redirect()->to(base_url('/departamentos'));
-                }
+            $res = $this->departamentos->actualizarDepartamento($id, $pais, $nombre);
+            if ($res == 1) {
+                return redirect()->to(base_url('/departamentos'));
             }
         }
     }

@@ -7,19 +7,20 @@
     </div>
 
     <br>
-    <div class="table-responsive">
+    <div class="table-responsive" style="overflow:scroll-vertical;overflow-y: scroll !important; overflow:scroll-horizontal;overflow-x: scroll !important;height: 600px;">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
-                    <th>Id</th>
+                    <th>#</th>
                     <th>Nombre</th>
                     <th colspan="2">Acciones</th>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
+                <?php $contador = 0; ?>
                 <?php foreach ($datos as $x => $valor) { ?>
                     <tr>
-                        <td class="text-center"><?php echo $valor['id']; ?></td>
+                        <td class="text-center"><?php echo $contador += 1 ?></td>
                         <td class="text-center"><?php echo $valor['nombre']; ?></td>
                         <td class="text-center">
                             <input href="#" data-href="<?php echo base_url('/cargos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'A' . '/' . 2 ?>" data-bs-toggle="modal" data-bs-target="#restaurarCargo" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>

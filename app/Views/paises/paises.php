@@ -1,4 +1,4 @@
-<div class="container card my-4">
+<div class="container card my-4 ">
     <div>
         <h1 class="titulo_Vista text-center">
             <?php echo $titulo ?>
@@ -10,10 +10,10 @@
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
 
-    <br>
+    <br> 
     <div class="table-responsive">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
-            <thead>
+            <thead >
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>#</th>
                     <th>Codigo</th>
@@ -71,8 +71,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" id="btnGuardar">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary" id="btnGuardar">Guardar</button>
                 </div>
             </div>
         </div>

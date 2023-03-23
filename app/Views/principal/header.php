@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/principal.css">
     <link rel="icon" href="<?= base_url(); ?>assets/img/logoEmpresa.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;900&display=swap" rel="stylesheet">
     <title>
         <?= $titulo ?>
     </title>
@@ -44,30 +47,30 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item hover:dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Ubicación
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>paises">Paises</a>
+                        <li class="nav-item dropdown-item">
+                            <a class="nav-link active " aria-current="page" href="<?= base_url() ?>paises">Países</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown-item">
                             <a class="nav-link active" aria-current="page" href="<?= base_url() ?>departamentos">Departamentos</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown-item">
                             <a class="nav-link active" aria-current="page" href="<?= base_url() ?>municipios">Municipios</a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="<?= base_url() ?>cargos">Cargos</a>
+                    <a class="nav-link fw-semibold" aria-current="page" href="<?= base_url() ?>cargos">Cargos</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Empleados
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="nav-item">
+                        <li class="nav-item dropdown-item">
                             <a class="nav-link active" aria-current="page" href="<?= base_url() ?>empleados">Administrar</a>
                         </li>
                     </ul>

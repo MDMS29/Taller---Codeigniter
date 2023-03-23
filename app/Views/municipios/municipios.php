@@ -11,7 +11,7 @@
     </div>
 
     <br>
-    <div class="table-responsive">
+    <div class="table-responsive" style="overflow:scroll-vertical;overflow-y: scroll !important; overflow:scroll-horizontal;overflow-x: scroll !important;height: 600px;">
         <table class="table table-bordered table-sm table-striped" id="tableMunicipios" width="100%" cellspacing="0">
             <thead>
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
@@ -85,8 +85,8 @@
                     </form>
                 </div>
                 <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" id="btnGuardar">Guardar</button>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="submit" class="btn btn-primary" id="btn-save">Guardar</button>
                 </div>
             </div>
         </div>
@@ -139,32 +139,28 @@
     })
 
     function obtenerDepartamentos(pais, idDpto) {
-        if (pais == 0 && idDpto == 0) {
-            //No mostrar nada si no se mandan los valores del pais y el departamento
-            //Esto por si se inserta un nuevo registro.
-            $('#contenedor-dptos').html('<p class="ms-3 text-danger">*Seleccione un País*</p>')
-        } else {
-            //Buscar los departamentos del país para mostrarlos en el Select.
-            $.ajax({
-                url: "<?php echo base_url('municipios/obtenerDepartamentosPais') ?>" + '/' + pais,
-                type: 'POST',
-                dataType: 'json',
-                success: function(res) {
-                    //Mostrar todos los departamentos en los items del select
-                    var cadena
-                    cadena = `<select class="form-select" name="departamento" id="departamento" aria-label="Departamentos"> 
-                                    <option selected value="">-- Seleccionar Departamento --</option>`
-                    for (let i = 0; i < res.length; i++) {
-                        cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
-                    }
-                    cadena += `</select>`
-                    $('#contenedor-dptos').html(cadena)
 
-                    //Le damos el valor del departamento para que se muestre al editar el registro
-                    $('#departamento').val(idDpto);
+        //Buscar los departamentos del país para mostrarlos en el Select.
+        $.ajax({
+            url: "<?php echo base_url('municipios/obtenerDepartamentosPais') ?>" + '/' + pais,
+            type: 'POST',
+            dataType: 'json',
+            success: function(res) {
+                //Mostrar todos los departamentos en los items del select
+                var cadena
+                cadena = `<select class="form-select" name="departamento" id="departamento" aria-label="Departamentos"> 
+                                    <option selected value="">-- Seleccionar Departamento --</option>`
+                for (let i = 0; i < res.length; i++) {
+                    cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
                 }
-            })
-        }
+                cadena += `</select>`
+                $('#contenedor-dptos').html(cadena)
+
+                //Le damos el valor del departamento para que se muestre al editar el registro
+                $('#departamento').val(idDpto);
+            }
+        })
+
     }
 
     //Funcion para saber si se editara o se guardara un registro
@@ -180,7 +176,7 @@
                 dataType: 'json',
                 success: function(res) {
                     $('#titulo').text('Actualizar Municipio ' + res[0]['nombreMuni']) //Titulo del modal
-                    $('#btn-save').text('Actualizar')
+                    $('#btnGuardar').text('Actualizar')
                     $("#AgregarMunicipios").modal("show"); //Mostrar modal
 
                     $('#selectPais').val(res[0]['idPais'])
@@ -195,7 +191,7 @@
         } else {
             $('#tp').val(1)
             $('#titulo').text('Agregar Municipio')
-            $('#btn-save').text('Guardar')
+            $('#btnGuardar').text('Guardar')
             $('#selectPais').val('')
             obtenerDepartamentos(0, 0)
             $('#nombre').val('')

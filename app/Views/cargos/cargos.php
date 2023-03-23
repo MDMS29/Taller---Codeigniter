@@ -9,11 +9,11 @@
     </div>
 
     <br>
-    <div class="table-responsive">
+    <div class="table-responsive" style="overflow:scroll-vertical;overflow-y: scroll !important; overflow:scroll-horizontal;overflow-x: scroll !important;height: 600px;">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
-                    <th>Id</th>
+                    <th>#</th>
                     <th>Nombre</th>
                     <th colspan="2">Acciones</th>
                 </tr>
