@@ -18,21 +18,27 @@ class Principal extends BaseController
     }
     public function error($dao)
     {
-        if ($dao == 'error_insert_code') {
-            $dao = '¡Error al insertar un codigo de un Pais ya registrado!';
-            $urlBack = 'paises';
-        } else if ($dao == 'error_insert_name') {
-            $dao = '¡Error al insertar un Departamento con un nombre ya registrado!';
-            $urlBack = 'departamentos';
-        }else if ($dao == 'error_insert_muni') {
-            $dao = '¡Error al insertar un Municipio con un nombre ya registrado!';
-            $urlBack = 'municipios';
-        }else if ($dao == 'error_insert_emple') {
-            $dao = '¡Error al insertar un Empleado con un cargo ya registrado!';
-            $urlBack = 'empleados';
-        }else if ($dao == 'error_name_cargo') {
-            $dao = '¡Error al insertar un Cargo con un nombre ya registrado!';
-            $urlBack = 'cargos';
+        switch ($dao) {
+            case 'error_insert_code':
+                $dao = '¡Error al insertar un codigo o nombre de un Pais ya registrado!';
+                $urlBack = 'paises';
+                break;
+            case 'error_insert_name':
+                $dao = '¡Error al insertar un Departamento con un nombre ya registrado!';
+                $urlBack = 'departamentos';
+                break;
+            case 'error_insert_muni':
+                $dao = '¡Error al insertar un Municipio con un nombre ya registrado!';
+                $urlBack = 'municipios';
+                break;
+            case 'error_insert_emple':
+                $dao = '¡Error al insertar un Empleado con un cargo ya registrado!';
+                $urlBack = 'empleados';
+                break;
+            case 'error_name_cargo':
+                $dao = '¡Error al insertar un Cargo con un nombre ya registrado!';
+                $urlBack = 'cargos';
+                break;
         }
 
         $data = ['titulo' => '¡Error!', 'nombre' => 'Moises Mazo'];

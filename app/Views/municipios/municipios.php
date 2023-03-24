@@ -38,7 +38,7 @@
                         <td class="text-center">
                             <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
-                        <td style="height:0.2rem;width:1rem;">
+                        <td class="text-center">
                             <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro" onclick="seleccionarMunicipio(<?php echo $valor['id'] . ',' . 2 ?>)"></input>
                             <input href="#" data-href="<?php echo base_url('/municipios/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarMuni" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
                         </td>

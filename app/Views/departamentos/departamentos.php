@@ -34,8 +34,8 @@
                         </td>
 
                         <td class="text-center" colspan="2">
-                            <input href="#" onclick="seleccionaDepartamento(<?php echo $valor['id'] . ',' . 2 ?>);" data-toggle="modal" data-target="#AgregarDepartamento" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="16" height="16" title="Editar Registro"></input>
-                            <input href="#" data-href="<?php echo base_url('/departamentos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarDpto" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="16" height="16" title="Eliminar Registro"></input>
+                            <input href="#" onclick="seleccionaDepartamento(<?php echo $valor['id'] . ',' . 2 ?>);" data-toggle="modal" data-target="#AgregarDepartamento" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('/departamentos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarDpto" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
                         </td>
                     </tr>
                 <?php } ?>

@@ -55,11 +55,12 @@
                         </td>
                         <td class="text-center">
                             $<?php echo $valor['salario']; ?>
+                            <a class="btn btn-primary" data-bs-toggle="modal" href="#exampleModalToggle" role="button" onclick="buscarSalario(<?php echo $valor['idSalario'] . ',' . $valor['id'] ?>)">Open first modal</a>
                         </td>
-                        <td style="height:0.2rem;width:1rem;">
+                        <td class="text-center">
                             <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2 . ',' .  $valor['idSalario'] ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
 
-                            <input href="#" data-href="<?php echo base_url('/empleados/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1 . '/' .  $valor['idSalario'] ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="16" height="16" title="Eliminar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('/empleados/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1 . '/' .  $valor['idSalario'] ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
                         </td>
 
                     </tr>
@@ -179,6 +180,56 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</button>
                 <a class="btn btn-danger btn-ok">Si</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MODALES DE SALARIOS -->
+<div class="modal fade" id="exampleModalToggle" aria-hidden="false" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="tituloModalSalario">Modal 1</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="table-responsive " style="overflow:scroll-vertical;overflow-y: scroll !important; overflow:scroll-horizontal;overflow-x: scroll !important;height: 600px;">
+                    <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
+                        <thead>
+                            <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
+                                <th>#</th>
+                                <th>Nombres</th>
+                                <th>Apellidos</th>
+                                <th>Sueldo</th>
+                                <th>PeriodoAño</th>
+                                <th colspan="2">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody style="font-family:Arial;font-size:12px;" id="bodyTableSalarios">
+                            <!-- TABLA DINAMICA EN EL SCRIPT -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Open second modal</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Hide this modal and show the first with the button below.
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back to first</button>
             </div>
         </div>
     </div>
@@ -311,4 +362,40 @@
     $('#eliminarEmple').on('show.bs.modal', function(e) {
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
     })
+
+    function buscarSalario(idSalario, idEmpleado) {
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo base_url('salarios/buscarSalario') ?>" + '/' + idSalario + '/' + idEmpleado,
+            dataType: "json",
+            success: function(res) {
+                $('#tituloModalSalario').text('Salarios del Empleado - ' + $res[0]['nombreEmpleado'])
+                for (let i = 0; i < res.length; i++) {
+                    cadena = `  <tr>
+                                    <td class="text-center">
+                                        ${i + 1}
+                                    </td>
+                                    <td class="text-center">
+                                        ${res[i]['nombreEmpleado']}
+                                    </td>
+                                    <td class="text-center">
+                                        ${res[i]['apellidoEmpleado']}
+                                    </td>
+                                    <td class="text-center">
+                                        ${res[i]['sueldo']}
+                                    </td>
+                                    <td class="text-center">
+                                        ${res[i]['periodoAno']}
+                                    </td>
+                                    <td class="text-center">
+                                        <input " href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
+
+                                        <input href="#" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                                    </td>
+                                </tr>`
+                }
+                $('#bodyTableSalarios').html(cadena)
+            }
+        })
+    }
 </script>

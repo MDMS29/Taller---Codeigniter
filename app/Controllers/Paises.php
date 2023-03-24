@@ -28,24 +28,18 @@ class Paises extends BaseController
         $codigo = $this->request->getPost('codigo');
         $nombre = $this->request->getPost('nombre');
         if ($tipe == 1) {
-            $res = $this->pais->buscarPais(0, $codigo);
+            $res = $this->pais->buscarPais(0, $codigo, $nombre);
             if ($res) {
                 $data = 'error_insert_code';
                 return redirect()->to(base_url('principal/error' . '/' . $data));
             } else {
-                $res = $this->pais->buscarPais(0, $codigo);
-                if ($res) {
-                    $data = 'error_insert_code';
-                    return redirect()->to(base_url('principal/error' . '/' . $data));
-                } else {
-                    $res = $this->pais->insertarPais($codigo, $nombre, $tipe);
-                    if ($res == 1) {
-                        return redirect()->to(base_url('/paises'));
-                    }
+                $res = $this->pais->insertarPais($codigo, $nombre, $tipe);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/paises'));
                 }
             }
         } else {
-            $res = $this->pais->actualizarPais($codigo, $nombre, $tipe);
+            $res = $this->pais->actualizarPais($codigo, $nombre, $id);
             if ($res == 1) {
                 return redirect()->to(base_url('/paises'));
             }
@@ -58,7 +52,7 @@ class Paises extends BaseController
         if (!empty($pais)) {
             array_push($dataArray, $pais);
         }
-        echo json_encode($pais);
+        echo json_encode($dataArray);
     }
     //ELIMINAR Y RESTAURAR EL PAIS
     function eliminarResLogic($id, $estado, $tipo)

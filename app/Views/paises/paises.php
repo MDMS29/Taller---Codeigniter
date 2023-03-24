@@ -10,10 +10,10 @@
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
     </div>
 
-    <br> 
+    <br>
     <div class="table-responsive">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
-            <thead >
+            <thead>
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>#</th>
                     <th>Codigo</th>
@@ -50,7 +50,7 @@
 <!-- MODAL AGREGAR - EDITAR PAIS -->
 <form method="POST" action="<?php echo base_url('paises/insertar'); ?>" autocomplete="off" id="formularioPaises">
     <div class="modal fade" id="AgregarPais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <input type="text" name="id" id="idPais" hidden>
+        <input type="text" name="id" id="idPais" value="0" hidden>
         <input type="text" name="tipe" id="tipeFunct" hidden>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -118,7 +118,7 @@
         if (tp == 2) {
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('paises/buscarPais'); ?>" + "/" + id + "/" + 0,
+                url: "<?php echo base_url('paises/buscarPais'); ?>" + "/" + id,
                 dataType: "json",
                 success: function(rs) {
                     $("#tipeFunct").val(tp);

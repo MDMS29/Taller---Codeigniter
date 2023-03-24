@@ -42,19 +42,20 @@ class PaisesModel extends Model
             return 1;
         }
     }
-    public function buscarPais($id = 0, $codigo = 0)
+    public function buscarPais($id = 0, $codigo = 0, $nombre = '')
     { 
         if ($id != 0) {
             $this->select('paises.*');
             $this->where('id', $id);
             $this->where('estado', 'A');
-            $datos = $this->findAll();
+            $datos = $this->first();
             return $datos;
         } else {
-            echo $codigo;
             $this->select('paises.*');
             $this->where('codigo', $codigo);
-            $datos = $this->findAll();
+            $this->orWhere('nombre', $nombre);
+            echo $nombre;
+            $datos = $this->first();
             return $datos;
         }
     }

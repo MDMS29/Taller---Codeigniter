@@ -36,7 +36,7 @@ class EmpleadosModel extends Model
             $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
             $this->where('empleados.estado', 'I');
             $this->orderBy('id');
-            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            $datos = $this->findAll();
             return $datos;
         } else {
             $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, cargos.estado as estadoCargo, salarios.id as idSalario,salarios.sueldo as salario, paises.nombre as nombrePais, paises.estado as estadoPais, departamentos.nombre as nombreDpto, departamentos.estado as estadoDpto, municipios.estado as estadoMuni');

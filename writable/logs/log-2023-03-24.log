@@ -1,0 +1,607 @@
+CRITICAL - 2023-03-24 18:49:11 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(36): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 18:49:50 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(39): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 18:50:26 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(39): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 18:51:23 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(39): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 18:51:50 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(39): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 18:52:14 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(39): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:00:29 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar('0', '12')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:01:02 --> Updates are not allowed unless they contain a "where" or "like" clause.
+in SYSTEMPATH\Model.php on line 391.
+ 1 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate(null, [...])
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [...])
+ 3 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update(null, [...])
+ 4 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais(null, null, null)
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:04:27 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(64): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:04:27 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:04:54 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(64): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:04:54 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(64): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:06:20 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:06:21 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:06:22 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:06:22 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:06:22 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:06:22 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:06:23 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:06:23 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:06:28 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:06:28 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:07:28 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:07:28 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:07:29 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:07:29 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:07:29 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:07:29 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:07:29 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:07:29 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:07:30 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:07:30 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:07:37 --> mysqli_sql_exception: Duplicate entry '123' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('UPDATE `paises`...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `paises`...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `paises`...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises`...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(943): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(756): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', Array)
+#8 C:\xampp\htdocs\taller\app\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+#9 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-24 19:07:37 --> Duplicate entry '123' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2476): CodeIgniter\Database\BaseConnection->query('UPDATE `paises` SET `codigo` = :codigo:, `nombre` = :nombre:
+WHERE `paises`.`id` IN :paises.id:', [...], false)
+ 2 SYSTEMPATH\Model.php(396): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(943): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Models\PaisesModel.php(65): CodeIgniter\Model->update('2', [...])
+ 6 APPPATH\Controllers\Paises.php(48): App\Models\PaisesModel->actualizarPais('123', 'Colombi', '2')
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:14:21 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'Colombia')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:18:38 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '234', 'asd')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:20:39 --> Too few arguments to function App\Controllers\Paises::buscarPais(), 2 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\Paises.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->buscarPais('1', '0')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:20:41 --> Too few arguments to function App\Controllers\Paises::buscarPais(), 2 passed in C:\xampp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 3 expected
+in APPPATH\Controllers\Paises.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->buscarPais('2', '0')
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:20:58 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '123')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:45:21 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'Colombia')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:45:32 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'Colombia')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:46:12 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'Colombia')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:46:57 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'Colombia')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-24 19:47:11 --> mysqli_sql_exception: Duplicate entry '1' for key 'codigo' in C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\taller\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `pa...', 0)
+#1 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pa...')
+#2 C:\xampp\htdocs\taller\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pa...')
+#3 C:\xampp\htdocs\taller\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pa...', Array, false)
+#4 C:\xampp\htdocs\taller\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\taller\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\taller\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 C:\xampp\htdocs\taller\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 C:\xampp\htdocs\taller\app\Models\PaisesModel.php(40): CodeIgniter\BaseModel->save(Array)
+#9 C:\xampp\htdocs\taller\app\Controllers\Paises.php(41): App\Models\PaisesModel->insertarPais('1', 'Colombia', '1')
+#10 C:\xampp\htdocs\taller\system\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+#11 C:\xampp\htdocs\taller\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+#12 C:\xampp\htdocs\taller\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\taller\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#14 {main}
+CRITICAL - 2023-03-24 19:47:11 --> Duplicate entry '1' for key 'codigo'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `paises` (`codigo`, `nombre`, `fechaCrea`) VALUES (:codigo:, :nombre:, :fechaCrea:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH\Models\PaisesModel.php(40): CodeIgniter\BaseModel->save([...])
+ 7 APPPATH\Controllers\Paises.php(41): App\Models\PaisesModel->insertarPais('1', 'Colombia', '1')
+ 8 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:49:08 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(57): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'asd')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:49:17 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(57): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'asd')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 19:49:21 --> Call to undefined method App\Models\PaisesModel::or_where
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\PaisesModel.php(56): CodeIgniter\Model->__call('or_where', [...])
+ 2 APPPATH\Controllers\Paises.php(31): App\Models\PaisesModel->buscarPais(0, '1', 'asd')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Paises->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Paises))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 20:20:42 --> Argument 1 passed to CodeIgniter\HTTP\URI::removeDotSegments() must be of the type string, null given, called in C:\xampp\htdocs\taller\system\Helpers\url_helper.php on line 71
+in SYSTEMPATH\HTTP\URI.php on line 197.
+ 1 SYSTEMPATH\Helpers\url_helper.php(71): CodeIgniter\HTTP\URI::removeDotSegments(null)
+ 2 SYSTEMPATH\Helpers\url_helper.php(118): _get_uri(null, Object(Config\App))
+ 3 SYSTEMPATH\Helpers\url_helper.php(151): site_url(null, null, Object(Config\App))
+ 4 APPPATH\Views\errors\error.php(14): base_url(null)
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 8 APPPATH\Controllers\Principal.php(48): view('/errors/error', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error('Array')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-24 20:49:06 --> Argument 1 passed to CodeIgniter\HTTP\URI::removeDotSegments() must be of the type string, null given, called in C:\xampp\htdocs\taller\system\Helpers\url_helper.php on line 71
+in SYSTEMPATH\HTTP\URI.php on line 197.
+ 1 SYSTEMPATH\Helpers\url_helper.php(71): CodeIgniter\HTTP\URI::removeDotSegments(null)
+ 2 SYSTEMPATH\Helpers\url_helper.php(118): _get_uri(null, Object(Config\App))
+ 3 SYSTEMPATH\Helpers\url_helper.php(151): site_url(null, null, Object(Config\App))
+ 4 APPPATH\Views\errors\error.php(13): base_url(null)
+ 5 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\errors\\error.php')
+ 6 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 7 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/errors/error', [], true)
+ 8 APPPATH\Controllers\Principal.php(48): view('/errors/error', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Principal->error('Array')
+10 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Principal))
+11 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
