@@ -59,4 +59,11 @@ class SalariosModel extends Model
         $data = $this->findAll();
         return $data;
     }
+    public function buscarSalario($idSalario, $idEmpleado){
+        $this->select('salarios.sueldo, salarios.periodoAno, empleados.nombres as nombreEmpleado');
+        $this->join('empleados', 'empleados.id = salarios.id_empleado');
+        $this->where('salarios.id_empleado', $idEmpleado);
+        $data = $this->findAll();
+        return $data;
+    }
 }
