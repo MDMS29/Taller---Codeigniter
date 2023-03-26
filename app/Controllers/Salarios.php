@@ -14,20 +14,20 @@ class Salarios extends BaseController
         $this->salarios = new SalariosModel();
     }
 
-    public function index()
+    public function index($idEmpleado, $idSalario)
     {
-        
+        $salarios = $this->salarios->obtenerSalarios($idEmpleado);
         $data = [
-            'titulo' => 'Administrar Empleados', 'nombre' => 'Moises Mazo'
+            'titulo' => 'Administrar Salarios - ' . $salarios[0]['nombreEmpleado'] . ' ' .  $salarios[0]['apellidoEmpleado'], 'nombre' => 'Moises Mazo', 'salarios' => $salarios
         ];
         echo view('/principal/header', $data);
-        echo view('/salarios/salarios', $data);
-
+        echo view('/salarios/salarios');
+        
     }
-    function buscarSalario($idSalario, $idEmpleado)
+    function buscarSalario($idEmpleado, $idSalario)
     {
         $returnData = array();
-        $salario = $this->salarios->buscarSalario($idSalario, $idEmpleado);
+        $salario = $this->salarios->buscarSalario($idEmpleado, $idSalario);
         if (!empty($salario)) {
             array_push($returnData, $salario);
             echo json_encode($returnData);

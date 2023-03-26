@@ -68,16 +68,16 @@ class Empleados extends BaseController
                 ];
 
                 $idEmple = $this->empleados->insertarEmpleado($data);
-                //INSERTAR SALARIO DENTRO DEL EMPLEADO REGISTRADO
-                $dataSalario = [
-                    'id' => $idEmple,
-                    'salario' => $salario,
-                    'periodo' => $periodo
-                ];
-                $res = $this->salarios->insertarSalario($dataSalario);
-                if ($res == 1) {
-                    return redirect()->to(base_url('/empleados'));
-                }
+                // //INSERTAR SALARIO DENTRO DEL EMPLEADO REGISTRADO
+                // $dataSalario = [
+                //     'id' => $idEmple,
+                //     'salario' => $salario,
+                //     'periodo' => $periodo
+                // ];
+                // $res = $this->salarios->insertarSalario($dataSalario);
+                // if ($res == 1) {
+                //     // return redirect()->to(base_url('/empleados'));
+                // }
             }
         } else {
 

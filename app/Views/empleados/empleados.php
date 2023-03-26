@@ -54,7 +54,7 @@
                             <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
-                            <a class="btn btn-primary" href="<?php echo base_url('salarios')?>">Ver Salarios</a>
+                            <a href="<?php echo base_url('/verSalarios/' . $valor['id'] . '/' . $valor['idSalario'] ) ?>" class="btn btn-primary">Ver Salarios</a>
                         </td>
                         <td class="text-center">
                             <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2 . ',' .  $valor['idSalario'] ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
@@ -176,7 +176,6 @@
         anoNac = $('#anoNac').val()
         salario = $('#salario').val()
         periodo = $('#periodo').val()
-
         if ([nombre, apellidos, selectPais, departamento, municipio, anoNac, salario, periodo].includes('')) {
             e.preventDefault()
             return Swal.fire({
@@ -187,6 +186,10 @@
                 timer: 1500
             })
         }
+        setTimeout(() => {
+            $('#formulario')[0].reset()
+            console.log('first')
+        }, 2000)
     })
 
     function seleccionarEmpleado(id, tp, idSala) {

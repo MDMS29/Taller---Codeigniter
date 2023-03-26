@@ -49,21 +49,23 @@ class SalariosModel extends Model
         ]);
         return 1;
     }
-    public function obtenerSalarios($idSalario, $idEmpleado)
+    public function obtenerSalarios($idEmpleado)
     {
-        $this->select('salarios.*,salarios.id as idSalario, empleados.id as idEmpleado, empleados.nombres as nombreEmpleado ,empleados.apellidos as apellidoEmpleado');
+        $this->select('salarios.sueldo, salarios.periodoAno, empleados.nombres as nombreEmpleado, empleados.apellidos as apellidoEmpleado, empleados.id as idEmpleado, salarios.id as idSalario');
         $this->join('empleados', 'empleados.id = salarios.id_empleado');
-        $this->where('salarios.id', $idSalario);
         $this->where('empleados.id', $idEmpleado);
         $this->orderBy('salarios.periodoAno', 'asc');
         $data = $this->findAll();
         return $data;
     }
-    public function buscarSalario($idSalario, $idEmpleado){
-        $this->select('salarios.sueldo, salarios.periodoAno, empleados.nombres as nombreEmpleado');
+    public function buscarSalario($idEmpleado, $idSalario)
+    {
+        $this->select('salarios.sueldo, salarios.periodoAno, empleados.nombres as nombreEmpleado, empleados.id as idEmpleado, salarios.id as idSalario');
         $this->join('empleados', 'empleados.id = salarios.id_empleado');
         $this->where('salarios.id_empleado', $idEmpleado);
-        $data = $this->findAll();
+        $this->where('salarios.id', $idSalario);
+        $this->where('salarios.estado', 'A');
+        $data = $this->first();
         return $data;
     }
 }
