@@ -5,7 +5,7 @@
         </h1>
     </div>
     <div>
-        <a href="<?php echo base_url('/paises'); ?>" class="btn btn-secondary">Regresar</a>
+        <a href="<?php echo base_url('/paises'); ?>" class="btn btn-secondary"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>

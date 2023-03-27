@@ -3,9 +3,9 @@
         <h1 class="text-center"><?php echo $titulo ?></h1>
     </div>
     <div>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarSalario" onclick="seleccionarSalario(<?php echo 0  . ',' . $salarios[0]['idEmpleado'] . ',' . 1 ?>)">Agregar</button>
-        <a href="<?php echo base_url('/salarios-eliminados/') . $salarios[0]['idEmpleado'] ?>" class="btn btn-secondary">Eliminados</a>
-        <a href="<?php echo base_url('/empleados'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarSalario" onclick="seleccionarSalario(<?php echo 0  . ',' . $empleado[0]['idEmpleado'] . ',' . 1 ?>)"><i class="bi bi-clipboard-plus"></i> Agregar</button>
+        <a href="<?php echo base_url('/salarios-eliminados/') . $empleado[0]['idEmpleado'] ?>" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
+        <a href="<?php echo base_url('/empleados'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>
@@ -21,16 +21,23 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0; ?>
-                <?php foreach ($salarios as $valor) { ?>
+                <?php if (empty($salarios[0]['idEmpleado'])) { ?>
                     <tr>
-                        <td class="text-center"><?php echo $contador += 1; ?></td>
-                        <td class="text-center"><?php echo $valor['periodoAno']; ?></td>
-                        <td class="text-center"><?php echo $valor['sueldo']; ?></td>
-                        <td colspan="2" class="text-center">
-                            <input onclick="seleccionarSalario(<?php echo $valor['idSalario'] . ',' . $valor['idEmpleado'] . ',' .  2 ?>)" href="#" data-bs-toggle="modal" data-bs-target="#agregarSalario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
-                            <input href="#" data-href="<?php echo base_url('/salarios/eliminarResLogic') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
-                        </td>
+                        <td colspan="7" class="text-center h4"><?php echo '¡No Hay Salarios!' ?></td>
+                    </tr>
+                <?php } else { ?>
+                    <?php foreach ($salarios as $valor) { ?>
+                        <tr>
+                            <td class="text-center"><?php echo $contador += 1; ?></td>
+                            <td class="text-center"><?php echo $valor['periodoAno']; ?></td>
+                            <td class="text-center"><?php echo $valor['sueldo']; ?></td>
+                            <td colspan="2" class="text-center">
+                                <input onclick="seleccionarSalario(<?php echo $valor['idSalario'] . ',' . $valor['idEmpleado'] . ',' .  2 ?>)" href="#" data-bs-toggle="modal" data-bs-target="#agregarSalario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
+                                <input href="#" data-href="<?php echo base_url('/salarios/eliminarResLogic') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                            </td>
+                        </tr>
                     <?php } ?>
+                <?php } ?>
             </tbody>
         </table>
     </div>

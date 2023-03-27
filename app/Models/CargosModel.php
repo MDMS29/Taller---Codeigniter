@@ -27,12 +27,16 @@ class CargosModel extends Model
 
     public function obtenerCargos($estado)
     {
-        if ($estado != 'A') {
+        if ($estado == 'I') {
             $this->select('cargos.*');
             $this->where('estado', 'I');
             $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
-        } else {
+        } elseif($estado == ''){
+            $this->select('cargos.*, estado');
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            return $datos;
+        }else if($estado == 'A') {
             $this->select('cargos.*');
             $this->where('estado', 'A');
             $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 

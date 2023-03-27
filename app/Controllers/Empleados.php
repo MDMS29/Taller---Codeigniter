@@ -1,11 +1,14 @@
 <?php
+
 namespace App\Controllers;
+
 use App\Controllers\BaseController;
 use App\Models\EmpleadosModel;
 use App\Models\CargosModel;
 use App\Models\MunicipiosModel;
 use App\Models\SalariosModel;
 use App\Models\PaisesModel;
+
 class Empleados extends BaseController
 {
     protected $empleados;
@@ -23,9 +26,9 @@ class Empleados extends BaseController
     }
     public function index()
     {
-        $paises = $this->paises->obtenerPaises('A');
+        $paises = $this->paises->obtenerPaises('');
         $empleados = $this->empleados->obtenerEmpleados('A');
-        $cargos = $this->cargos->obtenerCargos('A');
+        $cargos = $this->cargos->obtenerCargos('');
         $municipios = $this->municipios->obtenerMunicipios('A');
         $data = [
             'titulo' => 'Administrar Empleados', 'nombre' => 'Moises Mazo', 'datos' => $empleados,
@@ -108,21 +111,15 @@ class Empleados extends BaseController
         echo view('/principal/header', $data);
         echo view('/empleados/empleadosEliminados', $data);
     }
-    function eliminarResLogic($id, $estado, $tipo, $idSalario)
+    function eliminarResLogic($id, $estado, $tipo)
     {
         //ELIMINAR
         if ($tipo == 1) {
             if ($id && $estado) {
                 $res = $this->empleados->eliminarResModelEmple($id, $estado);
                 if ($res == 1) {
-                    $dataSalario = [
-                        'id' => $idSalario,
-                        'estado' => $estado,
-                    ];
-                    $respue = $this->salarios->eliminarResModelSala($dataSalario);
-                    if ($respue == 1) {
-                        return redirect()->to(base_url('/empleados'));
-                    }
+
+                    return redirect()->to(base_url('/empleados'));
                 }
             }
         }
@@ -130,14 +127,7 @@ class Empleados extends BaseController
         else {
             $res = $this->empleados->eliminarResModelEmple($id, $estado);
             if ($res == 1) {
-                $dataSalario = [
-                    'id' => $idSalario,
-                    'estado' => $estado,
-                ];
-                $respue = $this->salarios->eliminarResModelSala($dataSalario);
-                if ($respue == 1) {
-                    return redirect()->to(base_url('/empleados/eliminados'));
-                }
+                return redirect()->to(base_url('/empleados/eliminados'));
             }
         }
     }

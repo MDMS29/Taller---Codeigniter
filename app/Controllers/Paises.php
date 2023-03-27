@@ -15,7 +15,7 @@ class Paises extends BaseController
 
     public function index()
     {
-        $pais = $this->pais->obtenerPaises();
+        $pais = $this->pais->obtenerPaises('A');
 
         $data = ['titulo' => 'Administrar Países', 'nombre' => 'Moises Mazo', 'datos' => $pais];
         echo view('/principal/header', $data);

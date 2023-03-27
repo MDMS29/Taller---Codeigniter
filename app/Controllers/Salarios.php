@@ -4,19 +4,25 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\SalariosModel;
+use App\Models\EmpleadosModel;
 
 class Salarios extends BaseController
 {
     protected $salarios;
+    protected $empleados;
     public function __construct()
     {
         $this->salarios = new SalariosModel();
+        $this->empleados = new EmpleadosModel();
     }
     public function index($idEmpleado)
     {
+        $empleados = $this->empleados->buscarEmpleado($idEmpleado);
         $salarios = $this->salarios->obtenerSalarios($idEmpleado, 'A');
+        if (!empty($salarios)) {$salario = $salarios;} else {$salario = [['periodoAno' => '', 'sueldo' => '', 'idSalario' => '', 'idEmpleado' => '', 'nombreEmpleado' => '', 'apellidoEmpleado' => '']];}
         $data = [
-            'titulo' => 'Administrar Salarios - ' . $salarios[0]['nombreEmpleado'] . ' ' .  $salarios[0]['apellidoEmpleado'], 'nombre' => 'Moises Mazo', 'salarios' => $salarios
+            'titulo' => 'Administrar Salarios - ' . $empleados[0]['nombresEmple'] . ' ' .  $empleados[0]['apellidosEmple'],
+            'nombre' => 'Moises Mazo', 'salarios' => $salario, 'empleado' => $empleados
         ];
         echo view('/principal/header', $data);
         echo view('/salarios/salarios');
@@ -51,7 +57,7 @@ class Salarios extends BaseController
                 ];
                 $res = $this->salarios->insertarSalario($tipo, $data);
                 if ($res == 1) {
-                    return redirect()->to(base_url('/verSalarios/' . $idEmpleado));
+                    return redirect()->to(base_url('/ver-salarios/' . $idEmpleado));
                 }
             }
         } else {
@@ -63,7 +69,7 @@ class Salarios extends BaseController
             ];
             $res = $this->salarios->insertarSalario($tipo, $data);
             if ($res == 1) {
-                return redirect()->to(base_url('/verSalarios/' . $idEmpleado));
+                return redirect()->to(base_url('/ver-salarios/' . $idEmpleado));
             }
         }
     }
@@ -81,9 +87,11 @@ class Salarios extends BaseController
     }
     public function eliminados($idEmpleado)
     {
-        // $salarios = $this->salarios->obtenerSalarios($idEmpleado, 'I');
+        $empleados = $this->empleados->buscarEmpleado($idEmpleado);
+        $salarios = $this->salarios->obtenerSalarios($idEmpleado, 'I');
+        if (!empty($salarios)) {$salario = $salarios;} else {$salario = [['periodoAno' => '', 'sueldo' => '', 'idSalario' => '', 'idEmpleado' => '', 'nombreEmpleado' => '', 'apellidoEmpleado' => '']];}
         $data = [
-            'titulo' => 'Administrar Salarios - ', 'nombre' => 'Moises Mazo'
+            'titulo' => 'Administrar Salarios - '  . $empleados[0]['nombresEmple'] . ' ' .  $empleados[0]['apellidosEmple'], 'nombre' => 'Moises Mazo', 'salarios' => $salario, 'empleado' => $empleados
         ];
         echo view('/principal/header', $data);
         echo view('/salarios/salariosEliminados');

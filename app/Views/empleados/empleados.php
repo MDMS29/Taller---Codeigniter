@@ -3,9 +3,9 @@
         <h1 class="titulo_Vista text-center"><?php echo $titulo ?></h1>
     </div>
     <div>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" onclick="seleccionarEmpleado(<?php echo 1  . ',' . 1 . ',' . 0 ?>)">Agregar</button>
-        <a href="<?php echo base_url('/empleados/eliminados') ?>" class="btn btn-secondary">Eliminados</a>
-        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" onclick="seleccionarEmpleado(<?php echo 1  . ',' . 1 . ',' . 0 ?>)"><i class="bi bi-clipboard-plus"></i> Agregar</button>
+        <a href="<?php echo base_url('/empleados/eliminados') ?>" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
+        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>
@@ -57,9 +57,9 @@
                             <a href="<?php echo base_url('/ver-salarios/' . $valor['id'] ) ?>" class="btn btn-primary">Ver Salarios</a>
                         </td>
                         <td class="text-center">
-                            <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2 . ',' .  $valor['idSalario'] ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
+                            <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2  ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
 
-                            <input href="#" data-href="<?php echo base_url('/empleados/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1 . '/' .  $valor['idSalario'] ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('/empleados/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
                         </td>
 
                     </tr>
@@ -88,7 +88,7 @@
                             <select class="form-select" name="cargo" aria-label="cargo" id="cargo">
                                 <option selected value="">-- Seleccionar Cargo --</option>
                                 <?php foreach ($cargos as $x => $valor) { ?>
-                                    <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
+                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?> > <?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -107,7 +107,7 @@
                             <select class="form-select" name="pais" id="selectPais" aria-label="Paises">
                                 <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
-                                    <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
+                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?> ><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -188,7 +188,7 @@
         }
     })
 
-    function seleccionarEmpleado(id, tp, idSala) {
+    function seleccionarEmpleado(id, tp) {
         if (tp == 2) {
             $('#tp').val(2)
             $('#id').val(id)

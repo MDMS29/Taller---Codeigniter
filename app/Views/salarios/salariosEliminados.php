@@ -3,7 +3,7 @@
         <h1 class="text-center"><?php echo $titulo ?></h1>
     </div>
     <div>
-        <a href="<?php echo base_url('/ver-salarios/') . $salarios[0]['idEmpleado'] ?>" class="btn btn-primary regresar_Btn">Regresar</a>
+        <a href="<?php echo base_url('/ver-salarios/') . $empleado[0]['idEmpleado'] ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>
@@ -19,15 +19,21 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0; ?>
-                <?php foreach ($salarios as $valor) { ?>
+                <?php if (empty($salarios[0]['idEmpleado'])) { ?>
                     <tr>
-                        <td class="text-center"><?php echo $contador += 1; ?></td>
-                        <td class="text-center"><?php echo $valor['periodoAno']; ?></td>
-                        <td class="text-center"><?php echo $valor['sueldo']; ?></td>
-                        <td colspan="2" class="text-center">
-                            <input href="#" data-href="<?php echo base_url('/salarios/eliminarResLogic') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'A' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20" title="Eliminar Registro"></input>
-                        </td>
+                        <td colspan="7" class="text-center h4"><?php echo '¡No Hay Salarios!' ?></td>
                     </tr>
+                <?php } else { ?>
+                    <?php foreach ($salarios as $valor) { ?>
+                        <tr>
+                            <td class="text-center"><?php echo $contador += 1; ?></td>
+                            <td class="text-center"><?php echo $valor['periodoAno']; ?></td>
+                            <td class="text-center"><?php echo $valor['sueldo']; ?></td>
+                            <td colspan="2" class="text-center">
+                                <input href="#" data-href="<?php echo base_url('/salarios/eliminarResLogic') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'A' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20" title="Eliminar Registro"></input>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 <?php } ?>
             </tbody>
         </table>

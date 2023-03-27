@@ -25,12 +25,18 @@ class PaisesModel extends Model
     protected $validationMessages = [];
     protected $skipValidation = false;
 
-    public function obtenerPaises()
+    public function obtenerPaises($estado)
     {
-        $this->select('paises.*');
-        $this->where('estado', 'A');
-        $datos = $this->findAll();
-        return $datos;
+        if($estado == 'A'){
+            $this->select('paises.*');
+            $this->where('estado', 'A');
+            $datos = $this->findAll();
+            return $datos;
+        }else if($estado == ''){
+            $this->select('paises.*, estado');
+            $datos = $this->findAll();
+            return $datos;
+        }
     }
     public function insertarPais($codigo, $nombre, $tipe)
     {

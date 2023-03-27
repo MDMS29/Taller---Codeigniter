@@ -20,7 +20,7 @@ class Municipios extends BaseController
     }
     public function index()
     {
-        $paises = $this->paises->obtenerPaises();
+        $paises = $this->paises->obtenerPaises('');
         $municipios = $this->municipios->obtenerMunicipios('A');
 
         $data = ['titulo' => 'Administrar Municipios', 'nombre' => 'Moises Mazo', 'datos' => $municipios, 'paises' => $paises,];

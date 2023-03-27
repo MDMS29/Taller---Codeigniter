@@ -5,9 +5,9 @@
         </h1>
     </div>
     <div>
-        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarMunicipios" onclick="seleccionarMunicipio(<?php echo 1 . ',' . 1 ?>)">Agregar</button>
-        <a href="<?php echo base_url('/municipios/eliminados') ?>" class="btn btn-secondary">Eliminados</a>
-        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn">Regresar</a>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarMunicipios" onclick="seleccionarMunicipio(<?php echo 1 . ',' . 1 ?>)"><i class="bi bi-clipboard-plus"></i> Agregar</button>
+        <a href="<?php echo base_url('/municipios/eliminados') ?>" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
+        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>
@@ -68,7 +68,7 @@
                             <select name="pais" id="selectPais" class="form-select" aria-label="Paises">
                                 <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
-                                    <option value="<?php echo $valor['id']; ?>"><?php echo $valor['nombre']; ?></option>
+                                    <option value="<?php echo $valor['id']; ?>"<?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?> ><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
                                 <?php } ?>
                             </select>
                         </div>

@@ -19,23 +19,23 @@ class EmpleadosModel extends Model
     public function obtenerEmpleados($estado)
     {
         if ($estado != 'A') {
-            $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, cargos.estado as estadoCargo, salarios.id as idSalario,salarios.sueldo as salario, paises.nombre as nombrePais,paises.estado as estadoPais, departamentos.nombre as nombreDpto, departamentos.estado as estadoDpto, municipios.estado as estadoMuni');
+            $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, cargos.estado as estadoCargo, paises.nombre as nombrePais,paises.estado as estadoPais, departamentos.nombre as nombreDpto, departamentos.estado as estadoDpto, municipios.estado as estadoMuni');
             $this->join('municipios', 'municipios.id = empleados.id_municipio');
             $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
             $this->join('paises', 'paises.id = departamentos.id_pais');
             $this->join('cargos', 'cargos.id = empleados.id_cargo');
-            $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
+            // $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
             $this->where('empleados.estado', 'I');
             $this->orderBy('id');
             $datos = $this->findAll();
             return $datos;
         } else {
-            $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, cargos.estado as estadoCargo, salarios.id as idSalario,salarios.sueldo as salario, paises.nombre as nombrePais, paises.estado as estadoPais, departamentos.nombre as nombreDpto, departamentos.estado as estadoDpto, municipios.estado as estadoMuni');
+            $this->select('empleados.*,municipios.nombre as nombreMuni, cargos.nombre as nombreCargo, cargos.estado as estadoCargo, paises.nombre as nombrePais, paises.estado as estadoPais, departamentos.nombre as nombreDpto, departamentos.estado as estadoDpto, municipios.estado as estadoMuni');
             $this->join('municipios', 'municipios.id = empleados.id_municipio');
             $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
             $this->join('paises', 'paises.id = departamentos.id_pais');
             $this->join('cargos', 'cargos.id = empleados.id_cargo');
-            $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
+            // $this->join('salarios', 'salarios.id_empleado = empleados.id', 'left');
             $this->where('empleados.estado', 'A');
             $this->orderBy('id');
             $datos = $this->findAll();
@@ -69,7 +69,7 @@ class EmpleadosModel extends Model
             $datos = $this->first();
             return $datos;
         } else {
-            $this->select('empleados.*,empleados.nombres as nombresEmple,municipios.id as idMuni, paises.id as idPais, departamentos.id as idDpto,cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');
+            $this->select('empleados.*,empleados.id as idEmpleado ,empleados.nombres as nombresEmple, empleados.apellidos as apellidosEmple,municipios.id as idMuni, paises.id as idPais, departamentos.id as idDpto,cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');
             $this->join('municipios', 'municipios.id = empleados.id_municipio');
             $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
             $this->join('paises', 'paises.id = departamentos.id_pais');

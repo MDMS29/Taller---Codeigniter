@@ -5,7 +5,7 @@
         </h1>
     </div>
     <div>
-        <a href="<?php echo base_url('/municipios'); ?>" class="btn btn-secondary regresar_Btn">Regresar</a>
+        <a href="<?php echo base_url('/municipios'); ?>" class="btn btn-secondary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>

@@ -26,17 +26,23 @@ class SalariosModel extends Model
     protected $skipValidation = false;
     public function obtenerSalarios($idEmpleado, $estado)
     {
-        $this->select('salarios.sueldo, salarios.periodoAno, empleados.nombres as nombreEmpleado, empleados.apellidos as apellidoEmpleado, empleados.id as idEmpleado, salarios.id as idSalario');
-        $this->join('empleados', 'empleados.id = salarios.id_empleado');
-        $this->where('empleados.id', $idEmpleado);
         if ($estado != 'A') {
+            $this->select('salarios.sueldo, salarios.periodoAno, empleados.nombres as nombreEmpleado, empleados.apellidos as apellidoEmpleado, empleados.id as idEmpleado, salarios.id as idSalario');
+            $this->join('empleados', 'empleados.id = salarios.id_empleado', 'left');
+            $this->where('empleados.id', $idEmpleado);
             $this->where('salarios.estado', 'I');
+            $this->orderBy('salarios.periodoAno', 'desc');
+            $data = $this->findAll();
+            return $data;
         } else {
+            $this->select('salarios.sueldo, salarios.periodoAno, empleados.nombres as nombreEmpleado, empleados.apellidos as apellidoEmpleado, empleados.id as idEmpleado, salarios.id as idSalario');
+            $this->join('empleados', 'empleados.id = salarios.id_empleado', 'left');
+            $this->where('empleados.id', $idEmpleado);
             $this->where('salarios.estado', 'A');
+            $this->orderBy('salarios.periodoAno', 'desc');
+            $data = $this->findAll();
+            return $data;
         }
-        $this->orderBy('salarios.periodoAno', 'asc');
-        $data = $this->findAll();
-        return $data;
     }
     public function insertarSalario($tipo, $dataSalario)
     {

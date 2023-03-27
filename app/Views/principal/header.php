@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?= base_url(); ?>assets/css/principal.css">
     <link rel="icon" href="<?= base_url(); ?>assets/img/logoEmpresa.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;900&display=swap" rel="stylesheet">
@@ -48,7 +49,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item hover:dropdown">
                     <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Ubicación
+                        <i class="bi bi-geo-alt-fill"></i> Ubicación
                     </a>
                     <ul class="dropdown-menu">
                         <li class="nav-item dropdown-item">
@@ -63,11 +64,11 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-semibold" aria-current="page" href="<?= base_url() ?>cargos">Cargos</a>
+                    <a class="nav-link fw-semibold" aria-current="page" href="<?= base_url() ?>cargos"><i class="bi bi-person-badge-fill"></i> Cargos</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Empleados
+                        <i class="bi bi-people-fill"></i> Empleados
                     </a>
                     <ul class="dropdown-menu">
                         <li class="nav-item dropdown-item">

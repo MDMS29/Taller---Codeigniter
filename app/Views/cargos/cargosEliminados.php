@@ -3,7 +3,7 @@
         <h1 class="titulo_Vista text-center"><?php echo $titulo ?></h1>
     </div>
     <div>
-        <a href="<?php echo base_url('/cargos'); ?>" class="btn btn-secondary regresar_Btn">Regresar</a>
+        <a href="<?php echo base_url('/cargos'); ?>" class="btn btn-secondary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>
