@@ -32,7 +32,8 @@ $routes->setAutoRoute(true);
 
 //Principal Vista
 $routes->get('/', 'Principal::index');
-$routes->get('/verSalarios/(:num)/(:num)', 'Salarios::index/$1/$2');
+$routes->get('/ver-salarios/(:num)', 'Salarios::index/$1');
+$routes->get('/salarios-eliminados/(:num)', 'Salarios::eliminados/$1');
 
 
 $routes->get('/dptoActivos', 'Departamentos::index');

@@ -39,6 +39,10 @@ class Principal extends BaseController
                 $dao = '¡Error al insertar un Cargo con un nombre ya registrado!';
                 $urlBack = 'cargos';
                 break;
+            case 'error_insert_salario':
+                $dao = '¡Error al insertar un Salario ya registrado!';
+                $urlBack = 'empleados';
+                break;
         }
 
         $data = ['titulo' => '¡Error!', 'nombre' => 'Moises Mazo'];

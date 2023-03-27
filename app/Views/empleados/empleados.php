@@ -54,7 +54,7 @@
                             <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                         </td>
                         <td class="text-center">
-                            <a href="<?php echo base_url('/verSalarios/' . $valor['id'] . '/' . $valor['idSalario'] ) ?>" class="btn btn-primary">Ver Salarios</a>
+                            <a href="<?php echo base_url('/ver-salarios/' . $valor['id'] ) ?>" class="btn btn-primary">Ver Salarios</a>
                         </td>
                         <td class="text-center">
                             <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2 . ',' .  $valor['idSalario'] ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
@@ -186,10 +186,6 @@
                 timer: 1500
             })
         }
-        setTimeout(() => {
-            $('#formulario')[0].reset()
-            console.log('first')
-        }, 2000)
     })
 
     function seleccionarEmpleado(id, tp, idSala) {
@@ -203,6 +199,7 @@
                 dataType: 'json',
                 success: function(res) {
                     $('#tituloModal').text('Actualizar Empleado');
+                    
                     $('#btn-guardar').text('Actualizar');
                     $('#cargo').val(res[0]['idCargo']);
                     $('#nombres').val(res[0]['nombres']);
@@ -210,7 +207,6 @@
                     $('#anoNac').val(res[0]['nacimientoAno']);
                     $('#selectPais').val(res[0]['idPais']);
                     obtenerDepartamentos(res[0]['idPais'], res[0]['idDpto'], res[0]['idMuni'])
-
                 }
             })
 

@@ -1,30 +1,21 @@
 <?php
-
 namespace App\Models; //Reservamos el espacio de nombre de la ruta app\models
-
 use CodeIgniter\Model;
-
 class EmpleadosModel extends Model
 {
     protected $table = 'empleados'; /* nombre de la tabla modelada/*/
     protected $primaryKey = 'id';
-
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
-
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
-
     protected $allowedFields = ['nombres', 'apellidos', 'id_municipio', 'nacimientoAno', 'id_cargo', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
-
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
     protected $updatedField = ''; /*fecha automatica para la edicion */
     protected $deletedField = ''; /*no se usara, es para la eliminacion fisica */
-
     protected $validationRules = [];
     protected $validationMessages = [];
     protected $skipValidation = false;
-
     public function obtenerEmpleados($estado)
     {
         if ($estado != 'A') {
@@ -51,7 +42,6 @@ class EmpleadosModel extends Model
             return $datos;
         }
     }
-
     public function insertarEmpleado($data)
     {
         $nombres = $data['nombres'];
@@ -66,8 +56,7 @@ class EmpleadosModel extends Model
             'nacimientoAno' => $nacimientoAno,
             'id_cargo' => $id_cargo
         ]);
-        $id = $this->getInsertID();
-        return $id;
+        return 1;
     }
     public function buscarEmpleado($id, $nombres = '', $apellidos = '')
     {
@@ -109,7 +98,6 @@ class EmpleadosModel extends Model
         ]);
         return $id;
     }
-
     public function eliminarResModelEmple($id, $estado)
     {
         $this->update($id, [
