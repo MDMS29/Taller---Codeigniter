@@ -34,7 +34,7 @@
                         </td>
                         <td class="text-center" colspan="2">
                             <input href="#"
-                                data-href="<?php echo base_url('/paises/eliminarResLogic') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>"
+                                data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>"
                                 data-bs-toggle="modal" data-bs-target="#restaurarPais" type="image"
                                 src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20"
                                 title="Restaurar Registro" value="<?php echo $valor['id']; ?>"></input>

@@ -30,8 +30,18 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
-//Principal Vista
-$routes->get('/', 'Principal::index');
+$routes->get('/', 'Principal::index');//Principal Vista
+
+$routes->post('/instrPs', 'Paises::insertar'); //Insertar y Actualizar Pais
+$routes->post('/srchPs/(:num)', 'Paises::buscarPais/$1'); //Buscar Pais
+$routes->get('/dltPs/(:num)/(:alpha)/(:num)', 'Paises::eliminarResLogic/$1/$2/$3'); //Eliminacion y Restauracion Logica Pais
+
+$routes->post('/instrDpt', 'Departamentos::insertar'); //Insertar y Actualizar Departamentos
+$routes->post('/srchDpt/(:num)', 'Departamentos::buscarDepartamento/$1'); //Buscar Departamentos
+$routes->get('/dltDpt/(:num)/(:alpha)/(:num)', 'Departamentos::eliminarResLogic/$1/$2/$3'); //Eliminacion y Restauracion Departamentos
+
+
+
 $routes->get('/ver-salarios/(:num)', 'Salarios::index/$1');
 $routes->get('/salarios-eliminados/(:num)', 'Salarios::eliminados/$1');
 

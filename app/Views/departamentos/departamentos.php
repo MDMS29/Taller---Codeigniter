@@ -35,7 +35,7 @@
 
                         <td class="text-center" colspan="2">
                             <input href="#" onclick="seleccionaDepartamento(<?php echo $valor['id'] . ',' . 2 ?>);" data-toggle="modal" data-target="#AgregarDepartamento" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#" data-href="<?php echo base_url('/departamentos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarDpto" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('dltDpt') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarDpto" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
                         </td>
                     </tr>
                 <?php } ?>
@@ -47,7 +47,7 @@
 
 
 <!-- MODAL AGREGAR DEPARTAMENTO -->
-<form method="POST" action="<?php echo base_url('departamentos/insertar'); ?>" autocomplete="off" id="formularioDptos">
+<form method="POST" action="<?php echo base_url('instrDpt'); ?>" autocomplete="off" id="formularioDptos">
     <div class="modal fade" id="AgregarDepartamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <input hidden name="id" id="idDpto">
         <input hidden name="tipe" id="tipeFunct">
@@ -121,7 +121,7 @@
         if (tp == 2) {
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('departamentos/buscarDepartamento'); ?>" + "/" + id,
+                url: "<?php echo base_url('srchDpt'); ?>" + "/" + id,
                 dataType: "json",
                 success: function(rs) {
                     $("#tipeFunct").val(tp);

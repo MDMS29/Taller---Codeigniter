@@ -82,7 +82,11 @@ class Salarios extends BaseController
         ];
         $res = $this->salarios->actualizarSalario($data);
         if ($res == 1) {
-            return redirect()->to(base_url('/salarios-eliminados/' . $idEmpleado));
+            if($tipo == 1){
+                return redirect()->to(base_url('/ver-salarios/' . $idEmpleado));
+            }else{
+                return redirect()->to(base_url('/salarios-eliminados/' . $idEmpleado));
+            }
         }
     }
     public function eliminados($idEmpleado)

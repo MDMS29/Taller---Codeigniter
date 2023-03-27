@@ -32,7 +32,7 @@
                         </td>
 
                         <td class="text-center" colspan="2">
-                            <input href="#" data-href="<?php echo base_url('/departamentos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>" data-bs-toggle="modal" data-bs-target="#restaurarDpto" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
+                            <input href="#" data-href="<?php echo base_url('dltDpt') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>" data-bs-toggle="modal" data-bs-target="#restaurarDpto" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
                         </td>
                     </tr>
                 <?php } ?>

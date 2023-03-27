@@ -79,19 +79,8 @@ class Empleados extends BaseController
             ];
             //Actuliazar el empleado
             $respues = $this->empleados->actualizarEmpleado($data);
-            if ($respues != 0) {
-                //Informacion para actualizar el salario del empleado.
-                $idSalario = $this->request->getPost('idSalario');
-                $dataSalario = [
-                    'id' => $idSalario,
-                    'salario' => $salario,
-                    'periodo' => $periodo
-                ];
-                //Luego de actualizar el empleado se actualiza su salario.
-                $respu = $this->salarios->actualizarSalario($dataSalario);
-                if ($respu == 1) {
-                    return redirect()->to(base_url('/empleados'));
-                }
+            if ($respues == 1) {
+                return redirect()->to(base_url('/empleados'));
             }
         }
     }

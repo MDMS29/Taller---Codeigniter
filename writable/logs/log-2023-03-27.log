@@ -1,0 +1,83 @@
+CRITICAL - 2023-03-27 16:38:03 --> Undefined array key "idEmpleado"
+in APPPATH\Models\SalariosModel.php on line 67.
+ 1 APPPATH\Models\SalariosModel.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idEmpleado"', 'APPPATH\\Models\\SalariosModel.php', 67)
+ 2 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizarSalario([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:47:50 --> Too few arguments to function App\Controllers\Municipios::obtenerMunicipiosDpto(), 0 passed in C:\xamppp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Municipios.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Municipios->obtenerMunicipiosDpto()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:50:53 --> Undefined array key "salario"
+in APPPATH\Views\empleados\empleadosEliminados.php on line 55.
+ 1 APPPATH\Views\empleados\empleadosEliminados.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "salario"', 'APPPATH\\Views\\empleados\\empleadosEliminados.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\empleados\\empleadosEliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/empleados/empleadosEliminados', [], true)
+ 5 APPPATH\Controllers\Empleados.php(112): view('/empleados/empleadosEliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:51:24 --> Undefined array key "salario"
+in APPPATH\Views\empleados\empleadosEliminados.php on line 55.
+ 1 APPPATH\Views\empleados\empleadosEliminados.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "salario"', 'APPPATH\\Views\\empleados\\empleadosEliminados.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\empleados\\empleadosEliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/empleados/empleadosEliminados', [], true)
+ 5 APPPATH\Controllers\Empleados.php(112): view('/empleados/empleadosEliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:52:43 --> Undefined array key "idSalario"
+in APPPATH\Views\empleados\empleadosEliminados.php on line 55.
+ 1 APPPATH\Views\empleados\empleadosEliminados.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idSalario"', 'APPPATH\\Views\\empleados\\empleadosEliminados.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\empleados\\empleadosEliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/empleados/empleadosEliminados', [], true)
+ 5 APPPATH\Controllers\Empleados.php(112): view('/empleados/empleadosEliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:52:44 --> Undefined array key "idSalario"
+in APPPATH\Views\empleados\empleadosEliminados.php on line 55.
+ 1 APPPATH\Views\empleados\empleadosEliminados.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idSalario"', 'APPPATH\\Views\\empleados\\empleadosEliminados.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\empleados\\empleadosEliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/empleados/empleadosEliminados', [], true)
+ 5 APPPATH\Controllers\Empleados.php(112): view('/empleados/empleadosEliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:52:44 --> Undefined array key "idSalario"
+in APPPATH\Views\empleados\empleadosEliminados.php on line 55.
+ 1 APPPATH\Views\empleados\empleadosEliminados.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idSalario"', 'APPPATH\\Views\\empleados\\empleadosEliminados.php', 55)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\empleados\\empleadosEliminados.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('/empleados/empleadosEliminados', [], true)
+ 5 APPPATH\Controllers\Empleados.php(112): view('/empleados/empleadosEliminados', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->eliminados()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:54:48 --> Undefined array key "idEmpleado"
+in APPPATH\Models\SalariosModel.php on line 67.
+ 1 APPPATH\Models\SalariosModel.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "idEmpleado"', 'APPPATH\\Models\\SalariosModel.php', 67)
+ 2 APPPATH\Controllers\Empleados.php(91): App\Models\SalariosModel->actualizarSalario([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Empleados->insertar()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Empleados))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-27 16:57:26 --> Too few arguments to function App\Controllers\Municipios::obtenerMunicipiosDpto(), 0 passed in C:\xamppp\htdocs\taller\system\CodeIgniter.php on line 934 and exactly 1 expected
+in APPPATH\Controllers\Municipios.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Municipios->obtenerMunicipiosDpto()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Municipios))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

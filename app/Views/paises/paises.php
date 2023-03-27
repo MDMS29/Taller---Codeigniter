@@ -36,7 +36,7 @@
                         </td>
                         <td class="text-center" colspan="2">
                             <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#" data-href="<?php echo base_url('/paises/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                            <input href="#" data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
                         </td>
                     </tr>
                 <?php } ?>
@@ -48,7 +48,7 @@
 
 
 <!-- MODAL AGREGAR - EDITAR PAIS -->
-<form method="POST" action="<?php echo base_url('paises/insertar'); ?>" autocomplete="off" id="formularioPaises">
+<form method="POST" action="<?php echo base_url('instrPs'); ?>" autocomplete="off" id="formularioPaises">
     <div class="modal fade" id="AgregarPais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <input type="text" name="id" id="idPais" value="0" hidden>
         <input type="text" name="tipe" id="tipeFunct" hidden>
@@ -118,7 +118,7 @@
         if (tp == 2) {
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('paises/buscarPais'); ?>" + "/" + id,
+                url: "<?php echo base_url('srchPs'); ?>" + "/" + id,
                 dataType: "json",
                 success: function(rs) {
                     $("#tipeFunct").val(tp);

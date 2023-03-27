@@ -69,7 +69,7 @@ class EmpleadosModel extends Model
             $datos = $this->first();
             return $datos;
         } else {
-            $this->select('empleados.*,empleados.id as idEmpleado ,empleados.nombres as nombresEmple, empleados.apellidos as apellidosEmple,municipios.id as idMuni, paises.id as idPais, departamentos.id as idDpto,cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');
+            $this->select('empleados.*,empleados.id as idEmpleado ,empleados.nombres as nombresEmple, empleados.apellidos as apellidosEmple,municipios.id as idMuni, paises.id as idPais, paises.estado as estadoPais, departamentos.id as idDpto,cargos.id as idCargo, salarios.sueldo as salario, salarios.periodoAno as periodoAno');
             $this->join('municipios', 'municipios.id = empleados.id_municipio');
             $this->join('departamentos', 'departamentos.id = municipios.id_dpto');
             $this->join('paises', 'paises.id = departamentos.id_pais');
