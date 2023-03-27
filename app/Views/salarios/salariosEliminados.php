@@ -21,7 +21,7 @@
                 <?php $contador = 0; ?>
                 <?php if (empty($salarios[0]['idEmpleado'])) { ?>
                     <tr>
-                        <td colspan="7" class="text-center h4"><?php echo '¡No Hay Salarios!' ?></td>
+                        <td colspan="7" class="text-center h4"><?php echo '¡No Hay Salarios Eliminados!' ?></td>
                     </tr>
                 <?php } else { ?>
                     <?php foreach ($salarios as $valor) { ?>
