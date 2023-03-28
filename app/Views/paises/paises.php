@@ -12,7 +12,7 @@
 
         </div>
         <div>
-        <input class="form-control me-2" type="search" placeholder="Buscar por Nombre" aria-label="Search" id="srchNombre">
+            <input class="form-control me-2" type="search" placeholder="Buscar por Nombre" aria-label="Search" id="srchNombre">
         </div>
     </div>
 
@@ -34,13 +34,13 @@
                         <td colspan="5" class="text-center h4"><?php echo '¡No Hay Países!' ?></td>
                     </tr>
                 <?php } else { ?>
-                    <?php foreach ($datos as $x => $valor) { ?>
+                    <?php foreach ($datos as $valor) { ?>
                         <tr>
                             <td class="text-center">
                                 <?php echo $contador += 1; ?>
                             </td>
                             <td class="text-center">
-                                <?php echo $valor['codigo']; ?>
+                                + <?php echo $valor['codigo']; ?>
                             </td>
                             <td class="text-center">
                                 <?php echo $valor['nombre']; ?>
@@ -111,45 +111,43 @@
 </div>
 
 <script type="text/javascript">
-     $('#srchNombre').on('input', function() {
+    $('#srchNombre').on('input', function() {
         nombre = $('#srchNombre').val()
         if (nombre.length > 0) {
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('paises/filtroNombre/') ?>" + nombre,
+                url: "<?php echo base_url('paises/filtroNombre/') ?>" + nombre + '/' + 'A',
                 dataType: "json",
                 success: function(res) {
                     var cadena
                     for (let i = 0; i < res.length; i++) {
-                        console.log(res[i]['nombre'])
                         cadena += `
                         <tr>
-                            <td class="text-center">
-                                ${i + 1}
-                            </td>
-                            <td class="text-center">
-                                ${res[i]['codigo']}
-                            </td>
-                            <td class="text-center">
-                                ${res[i]['nombre']}
-                            </td>
-                            <td class="text-center" colspan="2">
-                                <input href="#" onclick="seleccionaPais(${res[i]['id']}, 2);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                                <input href="#" data-href="http://localhost/taller/public/dltPs/${res[i]['id']}/I/1" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
-                            </td>`
+                        <td class="text-center">
+                        ${i + 1}
+                        </td>
+                        <td class="text-center">
+                        ${res[i]['codigo']}
+                        </td>
+                        <td class="text-center">
+                        ${res[i]['nombre']}
+                        </td>
+                        <td class="text-center" colspan="2">
+                            <input href="#" onclick="seleccionaPais(${res[i]['id']}, 2);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                            <input href="#" data-href="http://localhost/taller/public/dltPs/${res[i]['id']}/I/1" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                        </td>`
+                        }
+                        $('#tbodyT').html(cadena)
                     }
-                    $('#tbodyT').html(cadena)
-                }
-            })
-        } else {
+                })
+            } else {
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('paises/filtroNombre/') ?>" + 'seeAll',
+                url: "<?php echo base_url('paises/filtroNombre/') ?>" + 'seeAll' + '/' + 'A',
                 dataType: "json",
                 success: function(res) {
                     var cadena
                     for (let i = 0; i < res.length; i++) {
-                        console.log(res[i]['id'])
                         cadena += `
                         <tr>
                             <td class="text-center">
@@ -163,7 +161,7 @@
                             </td>
                             <td class="text-center" colspan="2">
                                 <input href="#" onclick="seleccionaPais(${res[i]['id']} , 2);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                                <input href="#" data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                                <input href="#" data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
                             </td>`
                     }
                     $('#tbodyT').html(cadena)
@@ -196,7 +194,7 @@
                 success: function(rs) {
                     $("#tipeFunct").val(tp);
                     $("#idPais").val(rs[0]['id']);
-                    $("#tituloModal").text('Editar Pais ' + rs[0]['nombre'])
+                    $("#tituloModal").text('Editar Pais - ' + rs[0]['nombre'])
                     $("#btnGuardar").text('Actualizar');
                     $("#codigoPais").val(rs[0]['codigo']);
                     $("#nombrePais").val(rs[0]['nombre']);

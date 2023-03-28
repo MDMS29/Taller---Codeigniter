@@ -39,7 +39,6 @@ class Paises extends BaseController
                 }
             }
         } else {
-            echo $nombre;
             $res = $this->pais->buscarPais(0, $codigo, $nombre);
             if ($res) {
                 $data = 'error_insert_code';
@@ -89,15 +88,25 @@ class Paises extends BaseController
         echo view('/paises/paisesEliminados', $data);
     }
 
-    public function filtroNombre($nombre)
+    public function filtroNombre($nombre, $tipo)
     {
         if ($nombre == 'seeAll') {
-            $data = $this->pais->obtenerPaises('A');
-            echo json_encode($data);
-        } else {
-            // Produces: WHERE `title` LIKE 'match%' ESCAPE '!'
-            $data = $this->pais->select('paises.*')->like('nombre', $nombre, 'after')->findAll();
-            echo json_encode($data);
+            if($tipo == 'I'){
+                $data = $this->pais->obtenerPaises('I');
+                echo json_encode($data);
+            }else if($tipo == 'A'){
+                $data = $this->pais->obtenerPaises('A');
+                echo json_encode($data);
+            }
+        } else if($nombre != 'seeAll') {
+            if($tipo == 'I'){
+                $data = $this->pais->select('paises.*')->like('nombre', $nombre, 'after')->where('estado', 'I')->findAll();
+                echo json_encode($data);
+            }else if($tipo == 'A'){
+                // Produces: WHERE `title` LIKE 'match%' ESCAPE '!'
+                $data = $this->pais->select('paises.*')->like('nombre', $nombre, 'after')->where('estado', 'A')->findAll();
+                echo json_encode($data);
+            }
         }
     }
 }

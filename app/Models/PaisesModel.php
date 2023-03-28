@@ -36,6 +36,11 @@ class PaisesModel extends Model
             $this->select('paises.*, estado');
             $datos = $this->findAll();
             return $datos;
+        }else if($estado == 'I'){
+            $this->select('paises.*');
+            $this->where('estado', 'I');
+            $datos = $this->findAll();
+            return $datos;
         }
     }
     public function insertarPais($codigo, $nombre, $tipe)
@@ -58,9 +63,8 @@ class PaisesModel extends Model
             return $datos;
         } else {
             $this->select('paises.*');
-            $this->orWhere('nombre', $nombre);
-            $this->where('codigo', $codigo);
-            echo $nombre;
+            $this->orWhere('codigo', $codigo);
+            $this->where('nombre', $nombre);
             $datos = $this->first();
             return $datos;
         }

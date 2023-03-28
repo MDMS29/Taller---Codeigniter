@@ -56,7 +56,7 @@
                                 <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                             </td>
                             <td class="text-center">
-                                <input href="#" data-href="<?php echo base_url('dltEpl') . '/' . $valor['id'] . '/' . 'A' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
+                                <input href="#" data-href="<?php echo base_url('dltEpl') . '/' . $valor['id'] . '/' . 'A' . '/' . 2  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
                             </td>
     
                         </tr>
