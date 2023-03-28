@@ -10,5 +10,5 @@
 </div>
 
 <script type="text/javascript">
-    setTimeout(()=>{ window.location.replace("<?php echo base_url($url); ?>");},1500)
+    setTimeout(()=>{ window.history.go(-1)},1500)
 </script>
