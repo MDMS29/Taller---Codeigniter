@@ -19,15 +19,22 @@
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php $contador = 0 ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center"><?php echo $valor['id']; ?></td>
-                        <td class="text-center"><?php echo $valor['nombre']; ?></td>
-                        <td class ="text-center" colspan="2">
-                            <input href="#" onclick="seleccionarCargo(<?php echo $valor['id'] . ',' . 2 ?>)" data-bs-toggle="modal" data-bs-target="#AgregarCargo" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#" data-href="<?php echo base_url('/cargos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarCargo" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
-                        </td>
+                        <td colspan="5" class="text-center h4"><?php echo '¡No Hay Cargos!' ?></td>
                     </tr>
+                <?php } else { ?>
+                    <?php foreach ($datos as $x => $valor) { ?>
+                        <tr>
+                            <td class="text-center"><?php echo $contador += 1 ?></td>
+                            <td class="text-center"><?php echo $valor['nombre']; ?></td>
+                            <td class="text-center" colspan="2">
+                                <input href="#" onclick="seleccionarCargo(<?php echo $valor['id'] . ',' . 2 ?>)" data-bs-toggle="modal" data-bs-target="#AgregarCargo" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                                <input href="#" data-href="<?php echo base_url('dltCrg') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarCargo" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 <?php } ?>
             </tbody>
         </table>
@@ -37,7 +44,7 @@
 
 
 <!-- MODAL AGREGAR CARGO -->
-<form method="POST" action="<?php echo base_url('cargos/insertar'); ?>" autocomplete="off" id="formularioCargo">
+<form method="POST" action="<?php echo base_url('instrCrg'); ?>" autocomplete="off" id="formularioCargo">
     <div class="modal fade" id="AgregarCargo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -103,7 +110,7 @@
         if (tp == 2) {
             //Editar
             $.ajax({
-                url: '<?php echo base_url('cargos/buscarCargo') ?>' + '/' + id + '/' + '',
+                url: '<?php echo base_url('srchCrg') ?>' + '/' + id,
                 type: 'POST',
                 dataType: 'json',
                 success: function(res) {

@@ -18,17 +18,22 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0; ?>
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center"><?php echo $contador += 1 ?></td>
-                        <td class="text-center"><?php echo $valor['nombre']; ?></td>
-                        <td class="text-center">
-                            <input href="#" data-href="<?php echo base_url('/cargos/eliminarResLogic') . '/' . $valor['id'] . '/' . 'A' . '/' . 2 ?>" data-bs-toggle="modal" data-bs-target="#restaurarCargo" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
-
-                        </td>
+                        <td colspan="5" class="text-center h4"><?php echo '¡No Hay Cargos Eliminados!' ?></td>
                     </tr>
-                <?php } ?>
+                <?php } else { ?>
+                    <?php foreach ($datos as $x => $valor) { ?>
+                        <tr>
+                            <td class="text-center"><?php echo $contador += 1 ?></td>
+                            <td class="text-center"><?php echo $valor['nombre']; ?></td>
+                            <td class="text-center">
+                                <input href="#" data-href="<?php echo base_url('dltCrg') . '/' . $valor['id'] . '/' . 'A' . '/' . 2 ?>" data-bs-toggle="modal" data-bs-target="#restaurarCargo" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
 
+                            </td>
+                        </tr>
+                    <?php } ?>
+                <?php } ?>
             </tbody>
         </table>
     </div>

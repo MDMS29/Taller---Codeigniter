@@ -21,34 +21,35 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0 ?>
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center">
-                            <?php echo $contador += 1;   ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['codigo']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nombre']; ?>
-                        </td>
-                        <td class="text-center" colspan="2">
-                            <input href="#"
-                                data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>"
-                                data-bs-toggle="modal" data-bs-target="#restaurarPais" type="image"
-                                src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20"
-                                title="Restaurar Registro" value="<?php echo $valor['id']; ?>"></input>
-                        </td>
+                        <td colspan="5" class="text-center h4"><?php echo '¡No Hay Países Eliminados!' ?></td>
                     </tr>
-                <?php } ?>
+                <?php } else { ?>
+                    <?php foreach ($datos as $x => $valor) { ?>
+                        <tr>
+                            <td class="text-center">
+                                <?php echo $contador += 1;   ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['codigo']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nombre']; ?>
+                            </td>
+                            <td class="text-center" colspan="2">
+                                <input href="#" data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>" data-bs-toggle="modal" data-bs-target="#restaurarPais" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20" title="Restaurar Registro" value="<?php echo $valor['id']; ?>"></input>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                <?php }  ?>
             </tbody>
         </table>
     </div>
 </div>
 
 <!-- MODAL RESTAURAR PAIS -->
-<div class="modal fade" id="restaurarPais" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
+<div class="modal fade" id="restaurarPais" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div style="text-align:center;" class="modal-header">
@@ -67,7 +68,7 @@
 </div>
 
 <script type="text/javascript">
-    $('#restaurarPais').on('show.bs.modal', function (e) {
+    $('#restaurarPais').on('show.bs.modal', function(e) {
         $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
     })
 </script>

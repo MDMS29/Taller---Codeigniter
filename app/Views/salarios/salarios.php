@@ -30,10 +30,10 @@
                         <tr>
                             <td class="text-center"><?php echo $contador += 1; ?></td>
                             <td class="text-center"><?php echo $valor['periodoAno']; ?></td>
-                            <td class="text-center"><?php echo $valor['sueldo']; ?></td>
+                            <td class="text-center">$ <?php echo $valor['sueldo']; ?></td>
                             <td colspan="2" class="text-center">
                                 <input onclick="seleccionarSalario(<?php echo $valor['idSalario'] . ',' . $valor['idEmpleado'] . ',' .  2 ?>)" href="#" data-bs-toggle="modal" data-bs-target="#agregarSalario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
-                                <input href="#" data-href="<?php echo base_url('/salarios/eliminarResLogic') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                                <input href="#" data-href="<?php echo base_url('dltSala') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
                             </td>
                         </tr>
                     <?php } ?>
@@ -44,7 +44,7 @@
 </div>
 
 <!-- MODAL AGREGAR SALARIO - EMPLEADO -->
-<form method="POST" action="<?php echo base_url('salarios/insertar') ?>" id="formularioSalarios">
+<form method="POST" action="<?php echo base_url('instrSala') ?>" id="formularioSalarios">
     <div class="modal fade" id="agregarSalario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered ">
             <div class="modal-content">
@@ -126,7 +126,7 @@
             $('#tipo').val(2)
             $.ajax({
                 type: "POST",
-                url: "<?php echo base_url('salarios/buscarSalario') ?>" + '/' + idEmpleado + '/' + idSalario,
+                url: "<?php echo base_url('srchSala') ?>" + '/' + idEmpleado + '/' + idSalario,
                 dataType: "json",
                 success: function(res) {
                     $('#idEmpleado').val(res[0]['idEmpleado'])

@@ -27,50 +27,55 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0; ?>
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center">
-                            <?php echo $contador += 1; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nombres']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['apellidos']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDpto'] : $valor['nombreDpto'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoMuni'] == 'A' ? $valor['nombreMuni'] : $valor['nombreMuni'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nacimientoAno']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <a href="<?php echo base_url('/ver-salarios/' . $valor['id'] ) ?>" class="btn btn-primary">Ver Salarios</a>
-                        </td>
-                        <td class="text-center">
-                            <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2  ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
-
-                            <input href="#" data-href="<?php echo base_url('/empleados/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
-                        </td>
-
+                        <td colspan="11" class="text-center h4"><?php echo '¡No Hay Empleados!' ?></td>
                     </tr>
-                <?php } ?>
+                <?php } else { ?>
+                    <?php foreach ($datos as $x => $valor) { ?>
+                        <tr>
+                            <td class="text-center">
+                                <?php echo $contador += 1; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nombres']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['apellidos']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDpto'] : $valor['nombreDpto'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoMuni'] == 'A' ? $valor['nombreMuni'] : $valor['nombreMuni'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nacimientoAno']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <a href="<?php echo base_url('/ver-salarios/' . $valor['id']) ?>" class="btn btn-primary"><i class="bi bi-cash-coin"></i> Salarios</a>
+                            </td>
+                            <td class="text-center">
+                                <input onclick="seleccionarEmpleado(<?php echo $valor['id'] . ',' . 2  ?>)" href="#" data-bs-toggle="modal" data-bs-target="#AgregarEmpleado" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
 
+                                <input href="#" data-href="<?php echo base_url('dltEpl') . '/' . $valor['id'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                            </td>
+
+                        </tr>
+                    <?php } ?>
+                <?php } ?>
             </tbody>
         </table>
     </div>
 </div>
 <!-- MODAL AGREGAR EMPLEADO -->
-<form method="POST" action="<?php echo base_url('empleados/insertar') ?>" id="formulario">
+<form method="POST" action="<?php echo base_url('instrEpl') ?>" id="formulario">
     <div class="modal fade" id="AgregarEmpleado" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
             <div class="modal-content">
@@ -88,7 +93,7 @@
                             <select class="form-select" name="cargo" aria-label="cargo" id="cargo">
                                 <option selected value="">-- Seleccionar Cargo --</option>
                                 <?php foreach ($cargos as $x => $valor) { ?>
-                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?> > <?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
+                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?>> <?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -107,14 +112,16 @@
                             <select class="form-select" name="pais" id="selectPais" aria-label="Paises">
                                 <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
-                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?> ><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
+                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?>><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="municipio" class="col-form-label">Departamento:</label>
                             <div id="contenedor-dptos">
-                                <!-- SELECTOR DINAMICO -->
+                                <select class="form-select" name="departamento" id="departamento" aria-label="Departamentos">
+                                    <option value="">-- Seleccionar Departamento --</option>
+                                </select>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -168,6 +175,7 @@
 <script>
     $('#formulario').on('submit', function(e) {
         //Verificacion de campos vacios en el formulario
+        cargo = $('#cargo').val()
         nombre = $('#nombres').val()
         apellidos = $('#apellidos').val()
         selectPais = $('#selectPais').val()
@@ -176,7 +184,7 @@
         anoNac = $('#anoNac').val()
         salario = $('#salario').val()
         periodo = $('#periodo').val()
-        if ([nombre, apellidos, selectPais, departamento, municipio, anoNac, salario, periodo].includes('')) {
+        if ([cargo, nombre, apellidos, selectPais, departamento, municipio, anoNac, salario, periodo].includes('')) {
             e.preventDefault()
             return Swal.fire({
                 position: 'center',
@@ -192,24 +200,21 @@
         if (tp == 2) {
             $('#tp').val(2)
             $('#id').val(id)
-
             $.ajax({
-                url: "<?php echo base_url('empleados/buscarEmpleado') ?>" + '/' + id,
+                url: "<?php echo base_url('srchEpl') ?>" + '/' + id,
                 type: 'POST',
                 dataType: 'json',
                 success: function(res) {
                     $('#tituloModal').text('Actualizar Empleado');
-                    
                     $('#btn-guardar').text('Actualizar');
-                    $('#cargo').val(res[0]['idCargo']);
+                    res[0]['estadoCargo'] == 'I' ? $('#cargo').val('') : $('#cargo').val(res[0]['idCargo']);
                     $('#nombres').val(res[0]['nombres']);
                     $('#apellidos').val(res[0]['apellidos']);
                     $('#anoNac').val(res[0]['nacimientoAno']);
-                    $('#selectPais').val(res[0]['idPais']);
-                    obtenerDepartamentos(res[0]['idPais'], res[0]['idDpto'], res[0]['idMuni'])
+                    res[0]['estadoPais'] == 'I' ? $('#selectPais').val('') : $('#selectPais').val(res[0]['idPais']);
+                    obtenerDepartamentos(res[0]['idPais'], res[0]['idDpto'], res[0]['estadoDpto'], res[0]['idMuni'], res[0]['estadoMuni'])
                 }
             })
-
         } else {
             $('#tituloModal').text('Agregar Nuevo Empleado');
             $('#btn-guardar').text('Guardar');
@@ -234,40 +239,38 @@
         obtenerDepartamentos(pais)
     })
 
-    function obtenerDepartamentos(pais, idDpto, muni) {
-
+    function obtenerDepartamentos(pais, idDpto, estadoDpto, muni, estadoMuni) {
         //Buscar los departamentos del país para mostrarlos en el Select.
         $.ajax({
-            url: "<?php echo base_url('municipios/obtenerDepartamentosPais') ?>" + '/' + pais,
+            url: "<?php echo base_url('srchDptMncp') ?>" + '/' + pais,
             type: 'POST',
             dataType: 'json',
             success: function(res) {
                 //Mostrar todos los departamentos en los items del select
-                var cadena
-                cadena = `<select class="form-select" name="departamento" id="departamento" aria-label="Departamentos"> 
-                                <option value="" selected>-- Seleccionar Departamento --</option>`
+                cadena = `<option value="">-- Seleccionar Departamento --</option>`
                 for (let i = 0; i < res.length; i++) {
-                    cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
+                    cadena += ` <option value='${res[i].id}' ${res[i].estadoDpto == 'I' ? 'disabled' : ''}>${res[i].estadoDpto == 'I' ? `${res[i].nombre} - Inactivo` : `${res[i].nombre}`}</option>`
                 }
                 cadena += `</select>`
-                $('#contenedor-dptos').html(cadena)
-
+                $('#departamento').html(cadena)
+                estadoDpto == 'I' ? $('#departamento').val('') : $('#departamento').val(idDpto);
                 //Le damos el valor del departamento para que se muestre al editar el registro
-                $('#departamento').val(idDpto);
-                obtenerMunicipios(idDpto, muni)
+
+                obtenerMunicipios(idDpto, muni, estadoMuni)
             }
         })
 
+
     }
 
-    function obtenerMunicipios(idDpto, idMuni) {
+    function obtenerMunicipios(idDpto, idMuni, estadoMuni) {
         $('#departamento').on('change', () => {
             dpto = $('#departamento').val()
             obtenerMunicipios(dpto)
         })
         //Buscar los municipios del país para mostrarlos en el Select.
         $.ajax({
-            url: "<?php echo base_url('municipios/obtenerMunicipiosDpto') ?>" + '/' + idDpto,
+            url: "<?php echo base_url('srchMncpDpto') ?>" + '/' + idDpto,
             type: 'POST',
             dataType: 'json',
             success: function(res) {
@@ -275,13 +278,13 @@
                 cadena = `<select class="form-select" name="municipio" id="municipio" aria-label="Municipios"> 
                                 <option selected value="">-- Seleccionar Municipio --</option>`
                 for (let i = 0; i < res.length; i++) {
-                    cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
+                    cadena += ` <option value='${res[i].id}' ${res[i].estado == 'I' ? 'disabled' : ''}>${res[i].estado == 'I' ? `${res[i].nombre} - Inactivo` : `${res[i].nombre}`}</option>`
                 }
                 cadena += `</select>`
                 $('#contenedor-muni').html(cadena)
-
+                estadoMuni == 'I' ? $('#municipio').val('') : $('#municipio').val(idMuni)
                 //Le damos el valor del municipio para que se muestre al editar el registro
-                $('#municipio').val(idMuni);
+
             }
         })
     }

@@ -19,7 +19,11 @@ class Salarios extends BaseController
     {
         $empleados = $this->empleados->buscarEmpleado($idEmpleado);
         $salarios = $this->salarios->obtenerSalarios($idEmpleado, 'A');
-        if (!empty($salarios)) {$salario = $salarios;} else {$salario = [['periodoAno' => '', 'sueldo' => '', 'idSalario' => '', 'idEmpleado' => '', 'nombreEmpleado' => '', 'apellidoEmpleado' => '']];}
+        if (!empty($salarios)) {
+            $salario = $salarios;
+        } else {
+            $salario = [['periodoAno' => '', 'sueldo' => '', 'idSalario' => '', 'idEmpleado' => '', 'nombreEmpleado' => '', 'apellidoEmpleado' => '']];
+        }
         $data = [
             'titulo' => 'Administrar Salarios - ' . $empleados[0]['nombresEmple'] . ' ' .  $empleados[0]['apellidosEmple'],
             'nombre' => 'Moises Mazo', 'salarios' => $salario, 'empleado' => $empleados
@@ -67,9 +71,15 @@ class Salarios extends BaseController
                 'salario' => $salario,
                 'periodo' => $periodo
             ];
-            $res = $this->salarios->insertarSalario($tipo, $data);
-            if ($res == 1) {
-                return redirect()->to(base_url('/ver-salarios/' . $idEmpleado));
+            $res = $this->salarios->buscarSalario($idEmpleado, $idSalario, $periodo, $salario);
+            if ($res) {
+                $data = 'error_insert_salario';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                $res = $this->salarios->insertarSalario($tipo, $data);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/ver-salarios/' . $idEmpleado));
+                }
             }
         }
     }
@@ -82,9 +92,9 @@ class Salarios extends BaseController
         ];
         $res = $this->salarios->actualizarSalario($data);
         if ($res == 1) {
-            if($tipo == 1){
+            if ($tipo == 1) {
                 return redirect()->to(base_url('/ver-salarios/' . $idEmpleado));
-            }else{
+            } else {
                 return redirect()->to(base_url('/salarios-eliminados/' . $idEmpleado));
             }
         }
@@ -93,7 +103,11 @@ class Salarios extends BaseController
     {
         $empleados = $this->empleados->buscarEmpleado($idEmpleado);
         $salarios = $this->salarios->obtenerSalarios($idEmpleado, 'I');
-        if (!empty($salarios)) {$salario = $salarios;} else {$salario = [['periodoAno' => '', 'sueldo' => '', 'idSalario' => '', 'idEmpleado' => '', 'nombreEmpleado' => '', 'apellidoEmpleado' => '']];}
+        if (!empty($salarios)) {
+            $salario = $salarios;
+        } else {
+            $salario = [['periodoAno' => '', 'sueldo' => '', 'idSalario' => '', 'idEmpleado' => '', 'nombreEmpleado' => '', 'apellidoEmpleado' => '']];
+        }
         $data = [
             'titulo' => 'Administrar Salarios - '  . $empleados[0]['nombresEmple'] . ' ' .  $empleados[0]['apellidosEmple'], 'nombre' => 'Moises Mazo', 'salarios' => $salario, 'empleado' => $empleados
         ];

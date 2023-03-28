@@ -57,7 +57,8 @@ class DepartamentosModel extends Model
     //OBTENER LOS DEPARTAMENTOS DE UN PAIS SEGUN EL ID DEL PAIS
     public function obtenerDepartamentosPais($id)
     {
-        $this->select('departamentos.*');
+        $this->select('departamentos.*, departamentos.estado as estadoDpto');
+        $this->join('paises', 'paises.id = departamentos.id_pais');
         $this->where('id_pais', $id);
         $datos = $this->findAll();
         return $datos;
@@ -68,15 +69,16 @@ class DepartamentosModel extends Model
     {
         if ($nombre != '') {
             $this->select('departamentos.*');
-            $this->where('nombre', $nombre);
             $this->where('id_pais', $pais);
-            $datos = $this->findAll();
+            $this->where('nombre', $nombre);
+            $datos = $this->first();
             return $datos;
         } else {
-            $this->select('departamentos.*');
-            $this->where('id', $id);
-            $this->where('estado', 'A');
-            $datos = $this->findAll();
+            $this->select('departamentos.*, paises.estado as estadoPais');
+            $this->join('paises', 'paises.id = departamentos.id_pais');
+            $this->where('departamentos.id', $id);
+            // $this->where('departamentos.estado', 'A');
+            $datos = $this->first();
             return $datos;
         }
     }

@@ -28,9 +28,9 @@
                         <tr>
                             <td class="text-center"><?php echo $contador += 1; ?></td>
                             <td class="text-center"><?php echo $valor['periodoAno']; ?></td>
-                            <td class="text-center"><?php echo $valor['sueldo']; ?></td>
+                            <td class="text-center">$ <?php echo $valor['sueldo']; ?></td>
                             <td colspan="2" class="text-center">
-                                <input href="#" data-href="<?php echo base_url('/salarios/eliminarResLogic') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'A' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20" title="Eliminar Registro"></input>
+                                <input href="#" data-href="<?php echo base_url('dltSala') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'A' . '/' . 2  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20" title="Eliminar Registro"></input>
                             </td>
                         </tr>
                     <?php } ?>

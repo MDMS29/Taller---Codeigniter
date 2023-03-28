@@ -39,9 +39,15 @@ class Paises extends BaseController
                 }
             }
         } else {
-            $res = $this->pais->actualizarPais($codigo, $nombre, $id);
-            if ($res == 1) {
-                return redirect()->to(base_url('/paises'));
+            $res = $this->pais->buscarPais(0, $codigo, $nombre);
+            if ($res) {
+                $data = 'error_insert_code';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                $res = $this->pais->actualizarPais($codigo, $nombre, $id);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/paises'));
+                }
             }
         }
     }

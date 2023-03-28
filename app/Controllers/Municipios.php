@@ -48,9 +48,11 @@ class Municipios extends BaseController
 
     function obtenerMunicipio($id)
     {
+        $returnData = array();
         $departamentos = $this->municipios->buscarMunicipio($id, '', '');
         if (!empty($departamentos)) {
-            echo json_encode($departamentos);
+            array_push($returnData, $departamentos);
+            echo json_encode($returnData);
         }
     }
 
@@ -75,10 +77,16 @@ class Municipios extends BaseController
                 }
             }
         } else {
-            //Actualizar el municipio
-            $res = $this->municipios->insertarActuMunicipio($id, $departamento, $nombre);
-            if ($res == 1) {
-                return redirect()->to(base_url('/municipios'));
+            $res = $this->municipios->buscarMunicipio(0, $nombre, $departamento);
+            if ($res) {
+                $data = 'error_insert_muni';
+                return redirect()->to(base_url('principal/error' . '/' . $data));
+            } else {
+                //Actualizar el municipio
+                $res = $this->municipios->insertarActuMunicipio($id, $departamento, $nombre);
+                if ($res == 1) {
+                    return redirect()->to(base_url('/municipios'));
+                }
             }
         }
     }

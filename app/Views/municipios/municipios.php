@@ -24,26 +24,32 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0; ?>
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center">
-                            <?php echo $contador += 1; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nombre']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDeparta'] : $valor['nombreDeparta'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro" onclick="seleccionarMunicipio(<?php echo $valor['id'] . ',' . 2 ?>)"></input>
-                            <input href="#" data-href="<?php echo base_url('/municipios/eliminarResLogic') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarMuni" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
-                        </td>
+                        <td colspan="5" class="text-center h4"><?php echo '¡No Hay Municipios!' ?></td>
                     </tr>
-                <?php } ?>
+                <?php } else { ?>
+                    <?php foreach ($datos as $x => $valor) { ?>
+                        <tr>
+                            <td class="text-center">
+                                <?php echo $contador += 1; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nombre']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDeparta'] : $valor['nombreDeparta'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro" onclick="seleccionarMunicipio(<?php echo $valor['id'] . ',' . 2 ?>)"></input>
+                                <input href="#" data-href="<?php echo base_url('dltMncp') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarMuni" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                            </td>
+                        </tr>
+                    <?php } ?>
+                <?php }  ?>
             </tbody>
         </table>
     </div>
@@ -51,7 +57,7 @@
 
 
 <!-- MODAL AGREGAR MUNICIPIO -->
-<form method="POST" action="<?php echo base_url('municipios/insertar'); ?>" id="formularioMuni">
+<form method="POST" action="<?php echo base_url('instrMncp'); ?>" id="formularioMuni">
     <div class="modal fade" id="AgregarMunicipios" tabindex="-1" aria-labelledby="AgregarMunicipios" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -68,14 +74,16 @@
                             <select name="pais" id="selectPais" class="form-select" aria-label="Paises">
                                 <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
-                                    <option value="<?php echo $valor['id']; ?>"<?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?> ><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
+                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?>><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="departamento" class="col-form-label">Departamento:</label>
                             <div id="contenedor-dptos">
-                                <!-- CAMBIO DINAMICO SEGUN EL PAIS -->
+                                <select class="form-select" name="departamento" id="departamento" aria-label="Departamentos">
+                                    <option value="" selected>-- Seleccionar Departamento --</option>
+                                </select>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -139,27 +147,30 @@
     })
 
     function obtenerDepartamentos(pais, idDpto) {
-
         //Buscar los departamentos del país para mostrarlos en el Select.
-        $.ajax({
-            url: "<?php echo base_url('municipios/obtenerDepartamentosPais') ?>" + '/' + pais,
-            type: 'POST',
-            dataType: 'json',
-            success: function(res) {
-                //Mostrar todos los departamentos en los items del select
-                var cadena
-                cadena = `<select class="form-select" name="departamento" id="departamento" aria-label="Departamentos"> 
-                                    <option selected value="">-- Seleccionar Departamento --</option>`
-                for (let i = 0; i < res.length; i++) {
-                    cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
-                }
-                cadena += `</select>`
-                $('#contenedor-dptos').html(cadena)
+        if (idDpto == 0) {
+            cadena = `<option value="" selected>-- Seleccionar Departamento --</option>`
+            $('#departamento').html(cadena)
+        } else {
 
-                //Le damos el valor del departamento para que se muestre al editar el registro
-                $('#departamento').val(idDpto);
-            }
-        })
+            $.ajax({
+                url: "<?php echo base_url('srchDptMncp') ?>" + '/' + pais,
+                type: 'POST',
+                dataType: 'json',
+                success: function(res) {
+                    //Mostrar todos los departamentos en los items del select
+                    var cadena
+                    cadena = `<option selected value="">-- Seleccionar Departamento --</option>`
+                    for (let i = 0; i < res.length; i++) {
+                        cadena += ` <option value='${res[i].id}'>${res[i].nombre}</option>`
+                    }
+                    $('#departamento').html(cadena)
+                    //Le damos el valor del departamento para que se muestre al editar el registro
+                    $('#departamento').val(idDpto);
+
+                }
+            })
+        }
 
     }
 
@@ -171,17 +182,16 @@
     function seleccionarMunicipio(id, tp) {
         if (tp == 2) {
             $.ajax({
-                url: "<?php echo base_url('municipios/obtenerMunicipio') ?>" + '/' + id,
+                url: "<?php echo base_url('srchMncpDpt') ?>" + '/' + id,
                 type: 'POST',
                 dataType: 'json',
                 success: function(res) {
                     $('#titulo').text('Actualizar Municipio ' + res[0]['nombreMuni']) //Titulo del modal
                     $('#btnGuardar').text('Actualizar')
                     $("#AgregarMunicipios").modal("show"); //Mostrar modal
-
-                    $('#selectPais').val(res[0]['idPais'])
+                    res[0]['estadoPais'] == 'I' ? $('#selectPais').val('') : $('#selectPais').val(res[0]['idPais'])
                     pais = $('#selectPais').val()
-                    idDpto = res[0]['idDpto']
+                    res[0]['estadoPais'] == 'I' ? idDpto = 0 : idDpto = res[0]['idDpto']
                     obtenerDepartamentos(pais, idDpto) //Funcion para mostrar el select dinamico segun el municipio seleccionado
                     $('#nombre').val(res[0]['nombreMuni'])
                     $('#tp').val(2)

@@ -24,39 +24,44 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0; ?>
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center">
-                            <?php echo $contador += 1; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nombres']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['apellidos']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDpto'] : $valor['nombreDpto'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoMuni'] == 'A' ? $valor['nombreMuni'] : $valor['nombreMuni'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nacimientoAno']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-                        <td class="text-center">
-                            <input href="#" data-href="<?php echo base_url('/empleados/eliminarResLogic') . '/' . $valor['id'] . '/' . 'A' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
-                        </td>
-
+                        <td colspan="10" class="text-center h4"><?php echo '¡No Hay Empleados Eliminados!' ?></td>
                     </tr>
+                <?php } else { ?>
+                    <?php foreach ($datos as $x => $valor) { ?>
+                        <tr>
+                            <td class="text-center">
+                                <?php echo $contador += 1; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nombres']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['apellidos']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoDpto'] == 'A' ? $valor['nombreDpto'] : $valor['nombreDpto'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoMuni'] == 'A' ? $valor['nombreMuni'] : $valor['nombreMuni'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nacimientoAno']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+                            <td class="text-center">
+                                <input href="#" data-href="<?php echo base_url('dltEpl') . '/' . $valor['id'] . '/' . 'A' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
+                            </td>
+    
+                        </tr>
+                    <?php } ?>
                 <?php } ?>
-
             </tbody>
         </table>
     </div>

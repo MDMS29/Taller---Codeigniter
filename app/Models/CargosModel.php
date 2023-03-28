@@ -57,11 +57,12 @@ class CargosModel extends Model
             $this->where('nombre', $nombre);
             $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
             return $datos;
+        }else{
+            $this->select('cargos.*');
+            $this->where('id', $id);
+            $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
+            return $datos;
         }
-        $this->select('cargos.*');
-        $this->where('id', $id);
-        $datos = $this->findAll();  // nos trae el registro que cumpla con una condicion dada 
-        return $datos;
     }
     public function actualizarCargo($id, $nombre)
     {

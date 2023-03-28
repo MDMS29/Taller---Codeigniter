@@ -50,11 +50,11 @@ class Empleados extends BaseController
         $periodo = $this->request->getPost('periodo');
         if ($tp == 1) {
             //Verificar si el empleado no esta duplicado, por sus nombres, apellidos y cargo
-            $res = $this->empleados->buscarEmpleado($idEmple, $nombres, $apellidos);
-            if ($res) {
-                $data = 'error_insert_emple';
-                return redirect()->to(base_url('principal/error' . '/' . $data));
-            } else {
+            // $res = $this->empleados->buscarEmpleado($idEmple, $nombres, $apellidos);
+            // if ($res) {
+            //     $data = 'error_insert_emple';
+            //     return redirect()->to(base_url('principal/error' . '/' . $data));
+            // } else {
                 //Si no es duplicado gaurdara al empleado
                 $data = [
                     'cargo' => $cargo,
@@ -66,7 +66,7 @@ class Empleados extends BaseController
                 $res = $this->empleados->insertarEmpleado($data);
                 if ($res == 1) {
                     return redirect()->to(base_url('/empleados'));
-                }
+                // }
             }
         } else {
             $data = [

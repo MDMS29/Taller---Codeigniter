@@ -4,7 +4,7 @@
     </div>
     <div>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarDepartamento" onclick="seleccionaDepartamento(<?php echo 1 . ',' . 1 ?>);"><i class="bi bi-clipboard-plus"></i> Agregar</button>
-        <a href="<?php echo base_url('dptopEliminados'); ?>" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
+        <a href="<?php echo base_url('/departamentos/eliminados'); ?>" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
         <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
@@ -21,24 +21,31 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0;   ?>
-                <?php foreach ($datos as $valor) { ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center">
-                            <?php echo $contador += 1;   ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nombre']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
-                        </td>
-
-                        <td class="text-center" colspan="2">
-                            <input href="#" onclick="seleccionaDepartamento(<?php echo $valor['id'] . ',' . 2 ?>);" data-toggle="modal" data-target="#AgregarDepartamento" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#" data-href="<?php echo base_url('dltDpt') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarDpto" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
-                        </td>
+                        <td colspan="5" class="text-center h4"><?php echo '¡No Hay Departamentos!' ?></td>
                     </tr>
+                <?php } else { ?>
+                    <?php foreach ($datos as $valor) { ?>
+                        <tr>
+                            <td class="text-center">
+                                <?php echo $contador += 1;   ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nombre']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
+                            </td>
+
+                            <td class="text-center" colspan="2">
+                                <input href="#" onclick="seleccionaDepartamento(<?php echo $valor['id'] . ',' . 2 ?>);" data-toggle="modal" data-target="#AgregarDepartamento" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                                <input href="#" data-href="<?php echo base_url('dltDpt') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarDpto" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 <?php } ?>
+
             </tbody>
         </table>
     </div>
@@ -64,7 +71,7 @@
                             <select name="pais" class="form-select" aria-label="Departamentos" id="pais">
                                 <option selected value="">-- Seleccionar País --</option>
                                 <?php foreach ($paises as $x => $valor) { ?>
-                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?> ><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
+                                    <option value="<?php echo $valor['id']; ?>" <?php echo $valor['estado'] != 'A' ? 'disabled' : '' ?>><?php echo $valor['estado'] == 'A' ? $valor['nombre'] : $valor['nombre'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -128,7 +135,7 @@
                     $("#idDpto").val(rs[0]['id']);
                     $("#tituloModal").text('Editar Departamento ' + rs[0]['nombre'])
                     $("#btnGuardar").text('Actualizar');
-                    $("#pais").val(rs[0]['id_pais']);
+                    rs[0]['estadoPais'] == 'I' ? $("#pais").val('') : $("#pais").val(rs[0]['id_pais']);
                     $("#nombreDpto").val(rs[0]['nombre']);
                     $("#AgregarDepartamento").modal("show");
                 }

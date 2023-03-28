@@ -64,11 +64,11 @@ class MunicipiosModel extends Model
     public function buscarMunicipio($id = 0, $nombre = '', $idDpto = '')
     {
         if ($id != 0) {
-            $this->select('municipios.id, municipios.nombre as nombreMuni, d.id as idDpto, p.id as idPais');
+            $this->select('municipios.id, municipios.nombre as nombreMuni, d.id as idDpto, p.id as idPais, p.estado as estadoPais');
             $this->join('departamentos as d', 'd.id=municipios.id_dpto');
             $this->join('paises as p', 'p.id=d.id_pais');
             $this->where('municipios.id', $id);
-            $datos = $this->findAll();
+            $datos = $this->first();
             return $datos;
         } else {
             $this->select('municipios.*');
@@ -88,7 +88,7 @@ class MunicipiosModel extends Model
 
     public function getMunicipiosDpto($id)
     {
-        $this->select('municipios.*');
+        $this->select('municipios.*, estado');
         $this->where('id_dpto', $id);
         $datos = $this->findAll();
         return $datos;

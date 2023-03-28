@@ -11,7 +11,7 @@
     </div>
 
     <br>
-    <div class="table-responsive">
+    <div class="table-responsive" style="overflow:scroll-vertical;overflow-y: scroll !important; overflow:scroll-horizontal;overflow-x: scroll !important;height: 600px;">
         <table class="table table-bordered table-sm table-striped" id="tablePaises" width="100%" cellspacing="0">
             <thead>
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
@@ -23,22 +23,28 @@
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
                 <?php $contador = 0 ?>
-                <?php foreach ($datos as $x => $valor) { ?>
+                <?php if (empty($datos)) { ?>
                     <tr>
-                        <td class="text-center">
-                            <?php echo $contador += 1; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['codigo']; ?>
-                        </td>
-                        <td class="text-center">
-                            <?php echo $valor['nombre']; ?>
-                        </td>
-                        <td class="text-center" colspan="2">
-                            <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                            <input href="#" data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
-                        </td>
+                        <td colspan="5" class="text-center h4"><?php echo '¡No Hay Países!' ?></td>
                     </tr>
+                <?php } else { ?>
+                    <?php foreach ($datos as $x => $valor) { ?>
+                        <tr>
+                            <td class="text-center">
+                                <?php echo $contador += 1; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['codigo']; ?>
+                            </td>
+                            <td class="text-center">
+                                <?php echo $valor['nombre']; ?>
+                            </td>
+                            <td class="text-center" colspan="2">
+                                <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                                <input href="#" data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                            </td>
+                        </tr>
+                    <?php } ?>
                 <?php } ?>
             </tbody>
         </table>
