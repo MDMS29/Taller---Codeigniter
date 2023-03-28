@@ -87,4 +87,16 @@ class Paises extends BaseController
         echo view('/principal/header', $data);
         echo view('/paises/paisesEliminados', $data);
     }
+
+    public function filtroNombre($nombre)
+    {
+        if ($nombre == 'seeAll') {
+            $data = $this->pais->obtenerPaises('A');
+            echo json_encode($data);
+        } else {
+            // Produces: WHERE `title` LIKE 'match%' ESCAPE '!'
+            $data = $this->pais->select('paises.*')->like('nombre', $nombre, 'after')->findAll();
+            echo json_encode($data);
+        }
+    }
 }
