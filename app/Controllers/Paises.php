@@ -39,6 +39,7 @@ class Paises extends BaseController
                 }
             }
         } else {
+            echo $nombre;
             $res = $this->pais->buscarPais(0, $codigo, $nombre);
             if ($res) {
                 $data = 'error_insert_code';

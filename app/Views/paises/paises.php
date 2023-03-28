@@ -9,9 +9,10 @@
             <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarPais" onclick="seleccionaPais(<?php echo 1 . ',' . 1 ?>);"><i class="bi bi-clipboard-plus"></i> Agregar</button>
             <a href="<?php echo base_url('/paises/eliminados'); ?>" type="button" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
             <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
+
         </div>
         <div>
-            <input class="form-control me-2" type="search" placeholder="Buscar por Nombre" aria-label="Search" id="srchNombre">
+        <input class="form-control me-2" type="search" placeholder="Buscar por Nombre" aria-label="Search" id="srchNombre">
         </div>
     </div>
 
@@ -110,7 +111,7 @@
 </div>
 
 <script type="text/javascript">
-    $('#srchNombre').on('input', function() {
+     $('#srchNombre').on('input', function() {
         nombre = $('#srchNombre').val()
         if (nombre.length > 0) {
             $.ajax({

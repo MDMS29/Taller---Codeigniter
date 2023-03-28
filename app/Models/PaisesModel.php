@@ -58,8 +58,8 @@ class PaisesModel extends Model
             return $datos;
         } else {
             $this->select('paises.*');
-            $this->where('codigo', $codigo);
             $this->orWhere('nombre', $nombre);
+            $this->where('codigo', $codigo);
             echo $nombre;
             $datos = $this->first();
             return $datos;
