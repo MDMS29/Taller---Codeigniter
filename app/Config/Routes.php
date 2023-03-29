@@ -60,6 +60,8 @@ $routes->get('/dltSala/(:num)/(:num)/(:alpha)/(:num)', 'Salarios::eliminarResLog
 $routes->get('/ver-salarios/(:num)', 'Salarios::index/$1'); //Vista Principal de Salario - Según el Empleado
 $routes->get('/salarios-eliminados/(:num)', 'Salarios::eliminados/$1'); //Vista Salarios Eliminados - Según el Empleado
 
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

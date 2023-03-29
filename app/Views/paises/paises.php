@@ -74,7 +74,7 @@
                     <form>
                         <div class="mb-3">
                             <label for="message-text" class="col-form-label">Codigo de País:</label>
-                            <input type="number" name="codigo" class="form-control" id="codigoPais">
+                            <input type="number" name="codigo" class="form-control" id="codigoPais" required>
                         </div>
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Nombre:</label>
@@ -136,11 +136,11 @@
                             <input href="#" onclick="seleccionaPais(${res[i]['id']}, 2);" data-bs-toggle="modal" data-bs-target="#AgregarPais" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
                             <input href="#" data-href="http://localhost/taller/public/dltPs/${res[i]['id']}/I/1" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
                         </td>`
-                        }
-                        $('#tbodyT').html(cadena)
                     }
-                })
-            } else {
+                    $('#tbodyT').html(cadena)
+                }
+            })
+        } else {
             $.ajax({
                 type: "POST",
                 url: "<?php echo base_url('paises/filtroNombre/') ?>" + 'seeAll' + '/' + 'A',
