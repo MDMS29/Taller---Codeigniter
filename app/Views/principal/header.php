@@ -19,8 +19,6 @@
 
     <!-- SCRIPTS GLOBALES -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
     <script src="<?= base_url(); ?>assets/bootstrap-5/dist/js/bootstrap.bundle.min.js"></script>
@@ -28,7 +26,7 @@
 </head>
 
 <header>
-    <a class="logo-empresa" href="<?= base_url() ?>">
+    <a class="logo-empresa" href="<?= base_url()?>home">
         <img src="<?= base_url(); ?>assets/img/logoEmpresa.png" alt="logo empresa">
     </a>
     <div class="info-page ">
@@ -71,11 +69,14 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="bi bi-people-fill"></i> Empleados
+                        <i class="bi bi-people-fill"></i> Administrar
                     </a>
                     <ul class="dropdown-menu">
                         <li class="nav-item dropdown-item">
-                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>empleados">Administrar</a>
+                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>empleados">Empleados</a>
+                        </li>
+                        <li class="nav-item dropdown-item">
+                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>usuarios">Usuarios</a>
                         </li>
                     </ul>
                 </li>

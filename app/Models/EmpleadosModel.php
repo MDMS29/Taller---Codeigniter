@@ -44,18 +44,7 @@ class EmpleadosModel extends Model
     }
     public function insertarEmpleado($data)
     {
-        $nombres = $data['nombres'];
-        $apellidos = $data['apellidos'];
-        $id_municipio = $data['municipio'];
-        $nacimientoAno = $data['anoNac'];
-        $id_cargo = $data['cargo'];
-        $this->save([
-            'nombres' => $nombres,
-            'apellidos' => $apellidos,
-            'id_municipio' => $id_municipio,
-            'nacimientoAno' => $nacimientoAno,
-            'id_cargo' => $id_cargo
-        ]);
+        $this->save($data);
         return 1;
     }
     public function buscarEmpleado($id, $nombres = '', $apellidos = '')

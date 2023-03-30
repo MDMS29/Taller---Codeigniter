@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-03-2023 a las 04:57:30
+-- Tiempo de generación: 30-03-2023 a las 19:01:03
 -- Versión del servidor: 10.4.27-MariaDB
--- Versión de PHP: 8.2.0
+-- Versión de PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,12 +41,11 @@ CREATE TABLE `cargos` (
 --
 
 INSERT INTO `cargos` (`id`, `nombre`, `estado`, `fechaCrea`) VALUES
-(1, 'Director Ejecutivo', 'I', '2023-03-13 13:21:10'),
+(1, 'Director Ejecutivo', 'A', '2023-03-13 13:21:10'),
 (2, 'Director de Operaciones', 'A', '2023-03-13 13:21:10'),
 (3, 'Director Comercial', 'A', '2023-03-13 13:21:10'),
 (4, 'Director de Marketing', 'A', '2023-03-13 13:21:10'),
-(5, 'Director de Recursos Humanos', 'A', '2023-03-13 13:21:10'),
-(10, 'Director Informatico', 'A', '2023-03-28 03:26:39');
+(5, 'Director de Recursos Humanos', 'A', '2023-03-13 13:21:10');
 
 -- --------------------------------------------------------
 
@@ -67,7 +66,7 @@ CREATE TABLE `departamentos` (
 --
 
 INSERT INTO `departamentos` (`id`, `id_pais`, `nombre`, `estado`, `fechaCrea`) VALUES
-(1, 1, 'Atlantico', 'I', '2023-03-13 13:21:21'),
+(1, 1, 'Atlantico', 'A', '2023-03-13 13:21:21'),
 (2, 1, 'Antioquia', 'A', '2023-03-13 13:21:21'),
 (3, 2, 'Napo', 'A', '2023-03-13 13:21:21'),
 (4, 2, 'Esmeraldas', 'A', '2023-03-13 13:21:21'),
@@ -80,8 +79,12 @@ INSERT INTO `departamentos` (`id`, `id_pais`, `nombre`, `estado`, `fechaCrea`) V
 (11, 1, 'Putomayo', 'A', '2023-03-13 15:51:02'),
 (12, 1, 'Amazona', 'A', '2023-03-13 16:18:02'),
 (13, 4, 'Lile', 'A', '2023-03-13 16:19:14'),
-(14, 7, 'Chico', 'A', '2023-03-14 12:34:18'),
-(15, 6, 'Tuli', 'A', '2023-03-14 13:56:30');
+(14, 7, 'Chic', 'A', '2023-03-14 12:34:18'),
+(15, 6, 'Tuli', 'A', '2023-03-14 13:56:30'),
+(17, 2, '123', 'A', '2023-03-22 17:16:38'),
+(18, 3, 'Pana', 'A', '2023-03-27 20:15:49'),
+(19, 1, 'Juan Mina', 'A', '2023-03-27 21:30:36'),
+(20, 3, 'Amaz', 'A', '2023-03-27 21:46:36');
 
 -- --------------------------------------------------------
 
@@ -105,7 +108,7 @@ CREATE TABLE `empleados` (
 --
 
 INSERT INTO `empleados` (`id`, `nombres`, `apellidos`, `id_municipio`, `nacimientoAno`, `id_cargo`, `estado`, `fechaCrea`) VALUES
-(1, 'Andres', 'De la Hoz Martinez', 1, 1980, 1, 'A', '2023-03-13 13:20:54'),
+(1, 'Andres', 'De la Hoz Martinez', 5, 1980, 1, 'A', '2023-03-13 13:20:54'),
 (2, 'Jose Luis', 'Carrasco Mendez', 1, 1980, 1, 'A', '2023-03-13 13:20:54'),
 (3, 'Josefa Jose', 'Restrepo Vargas', 3, 1990, 1, 'A', '2023-03-13 13:20:54'),
 (4, 'Andrade', 'Perez Gomez', 10, 1999, 1, 'A', '2023-03-13 13:20:54'),
@@ -129,34 +132,8 @@ INSERT INTO `empleados` (`id`, `nombres`, `apellidos`, `id_municipio`, `nacimien
 (22, 'Juan', 'Mendoza Torres', 2, 1997, 5, 'A', '2023-03-13 13:20:54'),
 (23, 'Martha', 'Salazar Hurtado', 2, 1997, 5, 'A', '2023-03-13 13:20:54'),
 (24, 'Luis', 'Lopez Bayardo', 3, 1988, 5, 'A', '2023-03-13 13:20:54'),
-(25, 'Daniel Efren', 'Daza Timana', 7, 1985, 5, 'A', '2023-03-13 13:20:54'),
-(26, 'Moises', 'Prueba', 12, 2005, 1, 'A', '2023-03-14 14:41:40'),
-(27, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:44:41'),
-(28, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:49:33'),
-(29, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:49:43'),
-(30, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:49:47'),
-(31, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:49:52'),
-(32, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:50:00'),
-(33, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:50:17'),
-(34, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:50:18'),
-(35, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:50:46'),
-(36, 'asdasd', 'asdasd', 9, 2008, 2, 'A', '2023-03-14 19:52:20'),
-(37, 'asdsa', 'asdkjjklasd', 9, 2005, 1, 'A', '2023-03-14 19:52:38'),
-(38, 'asdsa', 'asdkjjklasd', 9, 2005, 1, 'A', '2023-03-14 19:53:16'),
-(39, 'asdsa', 'asdkjjklasd', 9, 2005, 1, 'A', '2023-03-14 19:53:33'),
-(40, 'fbfgn', 'mnbm,', 9, 2005, 3, 'A', '2023-03-14 19:53:43'),
-(41, 'assa', 'dadad', 9, 2008, 1, 'A', '2023-03-14 19:55:25'),
-(42, 'asdasd', 'asdasdasd', 8, 2010, 1, 'A', '2023-03-14 19:57:17'),
-(43, 'asdasd', 'asdasdasd', 8, 2010, 1, 'A', '2023-03-14 19:57:33'),
-(44, 'asdasd', 'asdasdasd', 9, 2007, 1, 'A', '2023-03-14 20:01:47'),
-(45, 'PPPPPP', 'asdasdasd', 9, 2007, 1, 'A', '2023-03-14 20:02:57'),
-(47, 'asdasd', 'sadasd', 2, 2022, 1, 'A', '2023-03-16 20:18:01'),
-(48, 'asdasd', 'sadasd', 2, 2022, 1, 'A', '2023-03-16 20:18:50'),
-(49, 'asdasd', 'sadasd', 2, 2022, 1, 'A', '2023-03-16 20:20:03'),
-(50, 'UUUUU', 'UUUUU', 3, 2010, 1, 'A', '2023-03-26 03:59:03'),
-(51, 'PPP', 'PPPPP', 4, 2011, 2, 'A', '2023-03-26 03:59:45'),
-(52, 'aaa', 'aaa', 2, 2009, 1, 'A', '2023-03-26 04:02:36'),
-(53, 'Tabla', 'aaa', 11, 2008, 1, 'A', '2023-03-26 04:03:25');
+(25, 'Daniel Efren', 'Daza Timana', 8, 1985, 5, 'A', '2023-03-13 13:20:54'),
+(59, 'acasdasd', 'asd', 1, 2008, 2, 'A', '2023-03-30 21:51:45');
 
 -- --------------------------------------------------------
 
@@ -177,7 +154,7 @@ CREATE TABLE `municipios` (
 --
 
 INSERT INTO `municipios` (`id`, `id_dpto`, `nombre`, `estado`, `fechaCrea`) VALUES
-(1, 1, 'Barranquilla', 'I', '2023-03-13 13:21:36'),
+(1, 1, 'Barranquilla', 'A', '2023-03-13 13:21:36'),
 (2, 2, 'Medellin', 'A', '2023-03-13 13:21:36'),
 (3, 3, 'Tena', 'A', '2023-03-13 13:21:36'),
 (4, 4, 'Esmeraldas', 'A', '2023-03-13 13:21:36'),
@@ -188,9 +165,12 @@ INSERT INTO `municipios` (`id`, `id_dpto`, `nombre`, `estado`, `fechaCrea`) VALU
 (9, 9, 'Osaka', 'A', '2023-03-13 13:21:36'),
 (10, 10, 'Toki', 'A', '2023-03-13 13:21:36'),
 (11, 1, 'Yuju', 'A', '2023-03-14 14:02:11'),
-(12, 15, 'Neymar', 'A', '2023-03-14 14:05:26'),
-(13, 1, 'Juan Mina', 'A', '2023-03-27 22:14:52'),
-(14, 1, 'Malambo', 'A', '2023-03-27 22:15:05');
+(12, 15, 'Neymar', 'I', '2023-03-14 14:05:26'),
+(13, 2, 'a', 'A', '2023-03-22 12:22:02'),
+(14, 14, 'a', 'A', '2023-03-22 14:22:59'),
+(15, 3, 'lalal', 'A', '2023-03-23 13:50:16'),
+(16, 4, 'yuñle', 'A', '2023-03-23 13:51:57'),
+(17, 11, 'JAJ', 'A', '2023-03-29 15:00:23');
 
 -- --------------------------------------------------------
 
@@ -211,9 +191,9 @@ CREATE TABLE `paises` (
 --
 
 INSERT INTO `paises` (`id`, `codigo`, `nombre`, `estado`, `fechaCrea`) VALUES
-(1, 123, 'Colombia', 'I', '2023-03-13 12:59:26'),
-(2, 3455, 'Ecuador', 'A', '2023-03-13 12:59:26'),
-(3, 747, 'Francia', 'A', '2023-03-13 12:59:26'),
+(1, 123, 'Colombia', 'A', '2023-03-13 12:59:26'),
+(2, 222, 'Ecuador', 'A', '2023-03-13 12:59:26'),
+(3, 5, 'Francia', 'A', '2023-03-13 12:59:26'),
 (4, 9098, 'Italia', 'A', '2023-03-13 12:59:26'),
 (5, 342, 'Japon', 'A', '2023-03-13 12:59:26'),
 (6, 45, 'Brasil', 'A', '2023-03-13 20:40:37'),
@@ -239,7 +219,7 @@ CREATE TABLE `salarios` (
 --
 
 INSERT INTO `salarios` (`id`, `periodoAno`, `id_empleado`, `sueldo`, `estado`, `fechaCrea`) VALUES
-(1, 2023, 1, '9000000.00', 'A', '2023-03-13 13:21:58'),
+(1, 2023, 1, '90111.00', 'A', '2023-03-13 13:21:58'),
 (2, 2023, 2, '10000000.00', 'A', '2023-03-13 13:21:58'),
 (3, 2023, 3, '12000000.00', 'A', '2023-03-13 13:21:58'),
 (4, 2023, 3, '13000000.00', 'A', '2023-03-13 13:21:58'),
@@ -266,7 +246,36 @@ INSERT INTO `salarios` (`id`, `periodoAno`, `id_empleado`, `sueldo`, `estado`, `
 (25, 2023, 24, '24000000.00', 'A', '2023-03-13 13:21:58'),
 (26, 2023, 25, '25000000.00', 'A', '2023-03-13 13:21:58'),
 (27, 2010, 49, '21313.00', 'A', '2023-03-16 20:20:03'),
-(28, 2023, 1, '200.00', 'A', '2023-03-27 07:13:34');
+(28, 2009, 50, '123123.00', 'A', '2023-03-16 21:54:29'),
+(29, 2008, 51, '3222222.00', 'A', '2023-03-21 19:34:54'),
+(30, 2011, 52, '123123.00', 'A', '2023-03-21 20:15:27'),
+(31, 2010, 53, '23.00', 'A', '2023-03-21 20:16:00'),
+(32, 2015, 54, '21312.00', 'A', '2023-03-21 20:16:40'),
+(33, 2018, 55, '123123.00', 'A', '2023-03-21 20:17:13'),
+(34, 2008, 56, '123.00', 'A', '2023-03-22 19:23:20'),
+(35, 2022, 1, '123123.00', 'I', '2023-03-27 17:29:25'),
+(36, 2018, 1, '22.00', 'A', '2023-03-27 17:29:58'),
+(37, 2023, 7, '1234.00', 'I', '2023-03-27 18:56:08'),
+(38, 2023, 57, '123.00', 'A', '2023-03-27 20:06:32'),
+(39, 2019, 55, '1000000.00', 'A', '2023-03-27 21:53:36'),
+(40, 2023, 58, '122.00', 'A', '2023-03-27 21:58:06');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE `usuarios` (
+  `id` smallint(2) NOT NULL,
+  `nombres` varchar(50) NOT NULL,
+  `apellidos` varchar(50) NOT NULL,
+  `n_iden` varchar(15) NOT NULL,
+  `contrasena` varchar(200) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `estado` char(2) NOT NULL DEFAULT 'A',
+  `fechaCrea` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
@@ -314,6 +323,13 @@ ALTER TABLE `salarios`
   ADD KEY `id_empleado` (`id_empleado`);
 
 --
+-- Indices de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -321,25 +337,25 @@ ALTER TABLE `salarios`
 -- AUTO_INCREMENT de la tabla `cargos`
 --
 ALTER TABLE `cargos`
-  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `departamentos`
 --
 ALTER TABLE `departamentos`
-  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- AUTO_INCREMENT de la tabla `municipios`
 --
 ALTER TABLE `municipios`
-  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `paises`
@@ -351,7 +367,13 @@ ALTER TABLE `paises`
 -- AUTO_INCREMENT de la tabla `salarios`
 --
 ALTER TABLE `salarios`
-  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
+--
+-- AUTO_INCREMENT de la tabla `usuarios`
+--
+ALTER TABLE `usuarios`
+  MODIFY `id` smallint(2) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas

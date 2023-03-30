@@ -61,3 +61,14 @@ nav {
     text-align: center;
     text-transform: uppercase;
 }
+
+/* -- FORMULARIO USUARIOS -- */
+small.valido{
+    color: green;
+}
+small.invalido{
+    color: red;
+}
+small.normal{
+    color: rgb(142, 142, 142);
+}

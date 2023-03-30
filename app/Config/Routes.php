@@ -31,6 +31,7 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Principal::index'); //Principal Vista
+$routes->get('/home', 'Principal::home'); //Principal Vista
 
 $routes->post('/instrPs', 'Paises::insertar'); //Insertar y Actualizar Pais
 $routes->post('/srchPs/(:num)', 'Paises::buscarPais/$1'); //Buscar Pais
@@ -60,6 +61,7 @@ $routes->get('/dltSala/(:num)/(:num)/(:alpha)/(:num)', 'Salarios::eliminarResLog
 $routes->get('/ver-salarios/(:num)', 'Salarios::index/$1'); //Vista Principal de Salario - Según el Empleado
 $routes->get('/salarios-eliminados/(:num)', 'Salarios::eliminados/$1'); //Vista Salarios Eliminados - Según el Empleado
 
+$routes->post('/instrUsu', 'Usuarios::insertar'); //Insertar y Actualizar Usuarios
 
 
 /*

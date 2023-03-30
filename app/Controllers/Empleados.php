@@ -55,18 +55,17 @@ class Empleados extends BaseController
             //     $data = 'error_insert_emple';
             //     return redirect()->to(base_url('principal/error' . '/' . $data));
             // } else {
-                //Si no es duplicado gaurdara al empleado
-                $data = [
-                    'cargo' => $cargo,
-                    'nombres' => $nombres,
-                    'apellidos' => $apellidos,
-                    'anoNac' => $anoNac,
-                    'municipio' => $municipio
-                ];
-                $res = $this->empleados->insertarEmpleado($data);
-                if ($res == 1) {
-                    return redirect()->to(base_url('/empleados'));
-                // }
+            //Si no es duplicado gaurdara al empleado
+            $data = [
+                'nombres' => $nombres,
+                'apellidos' => $apellidos,
+                'id_municipio' => $municipio,
+                'nacimientoAno' => $anoNac,
+                'id_cargo' => $cargo
+            ];
+            $res = $this->empleados->save($data);
+            if ($res == 1) {
+                return redirect()->to(base_url('/empleados'));
             }
         } else {
             $data = [

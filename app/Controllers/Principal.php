@@ -12,6 +12,11 @@ class Principal extends BaseController
 
     public function index()
     {
+        $data = ['titulo' => 'Login', 'nombre' => 'Moises Mazo'];
+        echo view('/principal/login');
+    }
+    public function home()
+    {
         $data = ['titulo' => 'Proyecto Taller', 'nombre' => 'Moises Mazo'];
         echo view('/principal/header', $data);
         echo view('/principal/principal');
