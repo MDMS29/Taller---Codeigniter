@@ -12,11 +12,14 @@ class Salarios extends BaseController
     protected $empleados;
     public function __construct()
     {
+        helper('sistema');
         $this->salarios = new SalariosModel();
         $this->empleados = new EmpleadosModel();
     }
     public function index($idEmpleado)
     {
+        $datosLogin = datosLogin();
+
         $empleados = $this->empleados->buscarEmpleado($idEmpleado);
         $salarios = $this->salarios->obtenerSalarios($idEmpleado, 'A');
         if (!empty($salarios)) {
@@ -26,7 +29,7 @@ class Salarios extends BaseController
         }
         $data = [
             'titulo' => 'Administrar Salarios - ' . $empleados[0]['nombresEmple'] . ' ' .  $empleados[0]['apellidosEmple'],
-            'nombre' => 'Moises Mazo', 'salarios' => $salario, 'empleado' => $empleados
+            'dataUser' => $datosLogin, 'salarios' => $salario, 'empleado' => $empleados
         ];
         echo view('/principal/header', $data);
         echo view('/salarios/salarios');
@@ -101,6 +104,7 @@ class Salarios extends BaseController
     }
     public function eliminados($idEmpleado)
     {
+        $datosLogin = datosLogin();
         $empleados = $this->empleados->buscarEmpleado($idEmpleado);
         $salarios = $this->salarios->obtenerSalarios($idEmpleado, 'I');
         if (!empty($salarios)) {
@@ -109,7 +113,7 @@ class Salarios extends BaseController
             $salario = [['periodoAno' => '', 'sueldo' => '', 'idSalario' => '', 'idEmpleado' => '', 'nombreEmpleado' => '', 'apellidoEmpleado' => '']];
         }
         $data = [
-            'titulo' => 'Administrar Salarios - '  . $empleados[0]['nombresEmple'] . ' ' .  $empleados[0]['apellidosEmple'], 'nombre' => 'Moises Mazo', 'salarios' => $salario, 'empleado' => $empleados
+            'titulo' => 'Administrar Salarios - '  . $empleados[0]['nombresEmple'] . ' ' .  $empleados[0]['apellidosEmple'], 'dataUser' => $datosLogin, 'salarios' => $salario, 'empleado' => $empleados
         ];
         echo view('/principal/header', $data);
         echo view('/salarios/salariosEliminados');

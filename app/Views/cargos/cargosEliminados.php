@@ -13,7 +13,9 @@
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>#</th>
                     <th>Nombre</th>
-                    <th colspan="2">Acciones</th>
+                    <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+                        <th colspan="2">Acciones</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">

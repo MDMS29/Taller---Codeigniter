@@ -19,7 +19,10 @@
                     <th>Municipio</th>
                     <th>Año Nacimiento</th>
                     <th>Cargo</th>
-                    <th colspan="2">Acciones</th>
+                    <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                        <th colspan="2">Acciones</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
@@ -55,10 +58,12 @@
                             <td class="text-center">
                                 <?php echo $valor['estadoCargo'] == 'A' ? $valor['nombreCargo'] : $valor['nombreCargo'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                             </td>
-                            <td class="text-center">
-                                <input href="#" data-href="<?php echo base_url('dltEpl') . '/' . $valor['id'] . '/' . 'A' . '/' . 2  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
-                            </td>
-    
+                            <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                                <td class="text-center">
+                                    <input href="#" data-href="<?php echo base_url('dltEpl') . '/' . $valor['id'] . '/' . 'A' . '/' . 2  ?>" data-bs-toggle="modal" data-bs-target="#eliminarEmple" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="16" height="16" title="Restaurar Registro"></input>
+                                </td>
+                            <?php } ?>
                         </tr>
                     <?php } ?>
                 <?php } ?>

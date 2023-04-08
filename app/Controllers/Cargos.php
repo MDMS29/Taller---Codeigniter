@@ -10,13 +10,15 @@ class Cargos extends BaseController
     protected $cargos;
     public function __construct()
     {
+        helper('sistema');
         $this->cargos = new CargosModel();
     }
     public function index()
     {
+        $datosLogin = datosLogin();
         $cargos = $this->cargos->obtenerCargos('A');
 
-        $data = ['titulo' => 'Administrar Cargos', 'nombre' => 'Moises Mazo', 'datos' => $cargos];
+        $data = ['titulo' => 'Administrar Cargos', 'dataUser' => $datosLogin, 'datos' => $cargos];
         echo view('/principal/header', $data);
         echo view('/cargos/cargos', $data);
     }
@@ -60,9 +62,11 @@ class Cargos extends BaseController
     }
     public function eliminados()
     {
+        $datosLogin = datosLogin();
+
         $cargos = $this->cargos->obtenerCargos('I');
 
-        $data = ['titulo' => 'Administrar Cargos Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $cargos];
+        $data = ['titulo' => 'Administrar Cargos Eliminados', 'dataUser' => $datosLogin, 'datos' => $cargos];
         echo view('/principal/header', $data);
         echo view('/cargos/cargosEliminados', $data);
     }

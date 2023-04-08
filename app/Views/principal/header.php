@@ -34,7 +34,7 @@
             <?= $titulo ?>
         </h1>
         <h3>
-            <?= $dataUser['nombres'] . ' ' . $dataUser['apellidos'] . ' - ' . $dataUser['rol']?>
+            <?= $dataUser['nombres'] . ' ' . $dataUser['apellidos'] . ' - ' . $dataUser['rol'] ?>
         </h3>
     </div>
     <a class="logo-sena" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="_blank">
@@ -75,9 +75,11 @@
                         <li class="nav-item dropdown-item">
                             <a class="nav-link active" aria-current="page" href="<?= base_url() ?>empleados">Empleados</a>
                         </li>
-                        <li class="nav-item dropdown-item">
-                            <a class="nav-link active" aria-current="page" href="<?= base_url() ?>usuarios">Usuarios</a>
-                        </li>
+                        <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+                            <li class="nav-item dropdown-item">
+                                <a class="nav-link active" aria-current="page" href="<?= base_url() ?>usuarios">Usuarios</a>
+                            </li>
+                        <?php } ?>
                     </ul>
                 </li>
             </ul>

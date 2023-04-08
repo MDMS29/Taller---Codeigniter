@@ -5,7 +5,7 @@
     <div>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarCargo" onclick="seleccionarCargo(<?php echo 1 . ',' . 1 ?>)"><i class="bi bi-clipboard-plus"></i> Agregar</button>
         <a href="<?php echo base_url('/cargos/eliminados'); ?>" type="button" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
-        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
+        <a href="<?php echo base_url('/home'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>
@@ -15,7 +15,10 @@
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>#</th>
                     <th>Nombre</th>
-                    <th colspan="2">Acciones</th>
+                    <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                        <th colspan="2">Acciones</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
@@ -29,10 +32,13 @@
                         <tr>
                             <td class="text-center"><?php echo $contador += 1 ?></td>
                             <td class="text-center"><?php echo $valor['nombre']; ?></td>
-                            <td class="text-center" colspan="2">
-                                <input href="#" onclick="seleccionarCargo(<?php echo $valor['id'] . ',' . 2 ?>)" data-bs-toggle="modal" data-bs-target="#AgregarCargo" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                                <input href="#" data-href="<?php echo base_url('dltCrg') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarCargo" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
-                            </td>
+                            <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                                <td class="text-center" colspan="2">
+                                    <input href="#" onclick="seleccionarCargo(<?php echo $valor['id'] . ',' . 2 ?>)" data-bs-toggle="modal" data-bs-target="#AgregarCargo" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                                    <input href="#" data-href="<?php echo base_url('dltCrg') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarCargo" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height=20" title="Eliminar Registro"></input>
+                                </td>
+                            <?php } ?>
                         </tr>
                     <?php } ?>
                 <?php } ?>

@@ -32,7 +32,7 @@ class DepartamentosModel extends Model
         if ($estado == 'I') {
             $this->select('departamentos.*,paises.nombre as nombrePais, paises.estado as estadoPais');
             $this->join('paises', 'paises.id = departamentos.id_pais');
-            $this->where('departamentos.estado', 'A');
+            $this->where('departamentos.estado', 'I');
             $this->orderBy('id');
             $datos = $this->findAll();
             return $datos;

@@ -7,7 +7,7 @@
     <div>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarMunicipios" onclick="seleccionarMunicipio(<?php echo 1 . ',' . 1 ?>)"><i class="bi bi-clipboard-plus"></i> Agregar</button>
         <a href="<?php echo base_url('/municipios/eliminados') ?>" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
-        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
+        <a href="<?php echo base_url('/home'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>
@@ -19,7 +19,9 @@
                     <th>Municipio</th>
                     <th>Departamento</th>
                     <th>País</th>
-                    <th colspan="2">Acciones</th>
+                    <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+                        <th colspan="2">Acciones</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
@@ -43,10 +45,13 @@
                             <td class="text-center">
                                 <?php echo $valor['estadoPais'] == 'A' ? $valor['nombrePais'] : $valor['nombrePais'] . ' - <span class="text-danger fw-bold">Inactivo</span>'; ?>
                             </td>
-                            <td class="text-center">
-                                <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro" onclick="seleccionarMunicipio(<?php echo $valor['id'] . ',' . 2 ?>)"></input>
-                                <input href="#" data-href="<?php echo base_url('dltMncp') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarMuni" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
-                            </td>
+                            <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                                <td class="text-center">
+                                    <input href="#" data-toggle="modal" data-target="#modal-confirma" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro" onclick="seleccionarMunicipio(<?php echo $valor['id'] . ',' . 2 ?>)"></input>
+                                    <input href="#" data-href="<?php echo base_url('dltMncp') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarMuni" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                                </td>
+                            <?php } ?>
                         </tr>
                     <?php } ?>
                 <?php }  ?>

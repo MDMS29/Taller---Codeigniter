@@ -90,8 +90,8 @@ class Departamentos extends BaseController
     public function eliminados()
     {
         $dataLogin = datosLogin();
-        $departamentos = $this->departamentos->obtenerDepartamentos('A');
-        $data = ['titulo' => 'Administrar Departamentos Eliminados', 'dataUser' => $dataLogin,, 'datos' => $departamentos];
+        $departamentos = $this->departamentos->obtenerDepartamentos('I');
+        $data = ['titulo' => 'Administrar Departamentos Eliminados', 'dataUser' => $dataLogin, 'datos' => $departamentos];
         echo view('/principal/header', $data);
         echo view('/departamentos/departamentosEliminados', $data);
     }

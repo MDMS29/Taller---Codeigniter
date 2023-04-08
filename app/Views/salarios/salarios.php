@@ -16,7 +16,10 @@
                     <th>#</th>
                     <th>Periodo (Año)</th>
                     <th>Salario</th>
-                    <th colspan="2">Acciones</th>
+                    <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                        <th colspan="2">Acciones</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;">
@@ -31,10 +34,13 @@
                             <td class="text-center"><?php echo $contador += 1; ?></td>
                             <td class="text-center"><?php echo $valor['periodoAno']; ?></td>
                             <td class="text-center">$ <?php echo $valor['sueldo']; ?></td>
-                            <td colspan="2" class="text-center">
-                                <input onclick="seleccionarSalario(<?php echo $valor['idSalario'] . ',' . $valor['idEmpleado'] . ',' .  2 ?>)" href="#" data-bs-toggle="modal" data-bs-target="#agregarSalario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
-                                <input href="#" data-href="<?php echo base_url('dltSala') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
-                            </td>
+                            <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                                <td colspan="2" class="text-center">
+                                    <input onclick="seleccionarSalario(<?php echo $valor['idSalario'] . ',' . $valor['idEmpleado'] . ',' .  2 ?>)" href="#" data-bs-toggle="modal" data-bs-target="#agregarSalario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar"></input>
+                                    <input href="#" data-href="<?php echo base_url('dltSala') . '/' . $valor['idEmpleado'] . '/' .  $valor['idSalario'] . '/' . 'I' . '/' . 1  ?>" data-bs-toggle="modal" data-bs-target="#eliminarSalario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro"></input>
+                                </td>
+                            <?php } ?>
                         </tr>
                     <?php } ?>
                 <?php } ?>

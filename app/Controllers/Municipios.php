@@ -14,16 +14,18 @@ class Municipios extends BaseController
     protected $municipios;
     public function __construct()
     {
+        helper('sistema');
         $this->paises = new PaisesModel();
         $this->departamentos = new DepartamentosModel();
         $this->municipios = new MunicipiosModel();
     }
     public function index()
     {
+        $dataLogin = datosLogin();
         $paises = $this->paises->obtenerPaises('');
         $municipios = $this->municipios->obtenerMunicipios('A');
 
-        $data = ['titulo' => 'Administrar Municipios', 'nombre' => 'Moises Mazo', 'datos' => $municipios, 'paises' => $paises,];
+        $data = ['titulo' => 'Administrar Municipios', 'dataUser' => $dataLogin, 'datos' => $municipios, 'paises' => $paises,];
         echo view('/principal/header', $data);
         echo view('/municipios/municipios', $data);
     }
@@ -114,9 +116,10 @@ class Municipios extends BaseController
 
     public function eliminados()
     {
+        $dataLogin = datosLogin();
         $municipios = $this->municipios->obtenerMunicipios('I');
 
-        $data = ['titulo' => 'Administrar Municipios', 'nombre' => 'Moises Mazo', 'datos' => $municipios];
+        $data = ['titulo' => 'Administrar Municipios', 'dataUser' => $dataLogin, 'datos' => $municipios];
         echo view('/principal/header', $data);
         echo view('/municipios/municipiosEliminados', $data);
     }

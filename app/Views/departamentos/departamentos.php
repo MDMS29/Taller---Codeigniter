@@ -5,7 +5,7 @@
     <div>
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarDepartamento" onclick="seleccionaDepartamento(<?php echo 1 . ',' . 1 ?>);"><i class="bi bi-clipboard-plus"></i> Agregar</button>
         <a href="<?php echo base_url('/departamentos/eliminados'); ?>" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
-        <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
+        <a href="<?php echo base_url('/home'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
     </div>
 
     <br>

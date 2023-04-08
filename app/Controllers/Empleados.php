@@ -18,6 +18,7 @@ class Empleados extends BaseController
     protected $paises;
     public function __construct()
     {
+        helper('sistema');
         $this->paises = new PaisesModel();
         $this->empleados = new EmpleadosModel();
         $this->cargos = new CargosModel();
@@ -26,12 +27,13 @@ class Empleados extends BaseController
     }
     public function index()
     {
+        $datosLogin = datosLogin();
         $paises = $this->paises->obtenerPaises('');
         $empleados = $this->empleados->obtenerEmpleados('A');
         $cargos = $this->cargos->obtenerCargos('');
         $municipios = $this->municipios->obtenerMunicipios('A');
         $data = [
-            'titulo' => 'Administrar Empleados', 'nombre' => 'Moises Mazo', 'datos' => $empleados,
+            'titulo' => 'Administrar Empleados', 'dataUser' => $datosLogin, 'datos' => $empleados,
             'cargos' => $cargos, 'municipios' => $municipios, 'paises' => $paises
         ];
         echo view('/principal/header', $data);
@@ -92,9 +94,11 @@ class Empleados extends BaseController
     }
     public function eliminados()
     {
+        $datosLogin = datosLogin();
+
         $empleados = $this->empleados->obtenerEmpleados('I');
         $data = [
-            'titulo' => 'Administrar Empleados Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $empleados
+            'titulo' => 'Administrar Empleados Eliminados', 'dataUser' => $datosLogin, 'datos' => $empleados
         ];
         echo view('/principal/header', $data);
         echo view('/empleados/empleadosEliminados', $data);
