@@ -12,15 +12,17 @@ class Departamentos extends BaseController
     protected $paises;
     public function __construct()
     {
+        helper('sistema');
         $this->departamentos = new DepartamentosModel();
         $this->paises = new PaisesModel();
     }
     public function index()
     {
+        $dataLogin = datosLogin();
         $departamentos = $this->departamentos->obtenerDepartamentos('A');
         $paises = $this->paises->obtenerPaises('');
 
-        $data = ['titulo' => 'Administrar Departamentos', 'nombre' => 'Moises Mazo', 'datos' => $departamentos, 'paises' => $paises];
+        $data = ['titulo' => 'Administrar Departamentos', 'dataUser' => $dataLogin, 'datos' => $departamentos, 'paises' => $paises];
         echo view('/principal/header', $data);
         echo view('/departamentos/departamentos', $data);
     }
@@ -87,8 +89,9 @@ class Departamentos extends BaseController
 
     public function eliminados()
     {
-        $departamentos = $this->departamentos->obtenerDepartamentos('I');
-        $data = ['titulo' => 'Administrar Departamentos Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $departamentos];
+        $dataLogin = datosLogin();
+        $departamentos = $this->departamentos->obtenerDepartamentos('A');
+        $data = ['titulo' => 'Administrar Departamentos Eliminados', 'dataUser' => $dataLogin,, 'datos' => $departamentos];
         echo view('/principal/header', $data);
         echo view('/departamentos/departamentosEliminados', $data);
     }

@@ -6,13 +6,10 @@
     </div>
     <div class="d-flex justify-content-between">
         <div>
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarUsuario"><i class="bi bi-clipboard-plus"></i> Agregar</button>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#agregarUsuario" onclick="seleccionarUsuario(<?php echo 1 . ',' . 1 ?>)"><i class="bi bi-clipboard-plus"></i> Agregar</button>
             <a href="<?php echo base_url('/usuarios/eliminados'); ?>" type="button" class="btn btn-secondary"><i class="bi bi-folder-x"></i> Eliminados</a>
             <a href="<?php echo base_url('/principal'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
 
-        </div>
-        <div>
-            <input class="form-control me-2" type="search" placeholder="Buscar por Nombre" aria-label="Search" id="srchNombre">
         </div>
     </div>
 
@@ -42,7 +39,7 @@
                                 <?php echo $contador += 1; ?>
                             </td>
                             <td class="text-center">
-                                + <?php echo $valor['nombres']; ?>
+                                <?php echo $valor['nombres']; ?>
                             </td>
                             <td class="text-center">
                                 <?php echo $valor['apellidos']; ?>
@@ -54,8 +51,9 @@
                                 <?php echo $valor['email']; ?>
                             </td>
                             <td class="text-center" colspan="2">
-                                <input href="#" onclick="seleccionaPais(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
-                                <input href="#" data-href="<?php echo base_url('dltPs') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarPais" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                                <input href="#" onclick="seleccionarUsuario(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+
+                                <input href="#" data-href="<?php echo base_url('dltUsu') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
                             </td>
                         </tr>
                     <?php } ?>
@@ -67,7 +65,7 @@
 
 
 
-<!-- MODAL AGREGAR - EDITAR PAIS -->
+<!-- MODAL AGREGAR - EDITAR USUARIO -->
 <form method="POST" action="<?php echo base_url('instrUsu'); ?>" autocomplete="off" id="formularioUsuarios">
     <div class="modal fade" id="agregarUsuario" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <input type="text" name="id" id="id" value="0" hidden>
@@ -96,9 +94,18 @@
                                 <input type="number" name="n_iden" class="form-control" id="n_iden">
                             </div>
                             <div class="mb-3" style="width: 100%">
-                                <label for="apellidos" class="col-form-label">Email:</label>
-                                <input type="email" name="email" class="form-control" id="email">
+                                <label for="apellidos" class="col-form-label">Rol:</label>
+                                <select class="form-select" name="rol" id="rol">
+                                    <option value="" selected> -- Seleccione un Rol --</option>
+                                    <option value="1">Super Administrador</option>
+                                    <option value="2">Administrador</option>
+                                </select>
+                                <!-- <input type="email" name="email" class="form-control" id="email"> -->
                             </div>
+                        </div>
+                        <div class="mb-3" style="width: 100%">
+                            <label for="apellidos" class="col-form-label">Email:</label>
+                            <input type="email" name="email" class="form-control" id="email">
                         </div>
                         <div class="d-flex column-gap-3" style="width: 100%">
                             <div class="mb-3" style="width: 100%">
@@ -125,8 +132,8 @@
     </div>
 </form>
 
-<!-- MODAL ELIMINAR PAISES -->
-<div class="modal fade" id="eliminarPais" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- MODAL ELIMINAR USUARIO -->
+<div class="modal fade" id="eliminarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div style="text-align:center;" class="modal-header">
@@ -175,7 +182,6 @@
         }
     }
 
-
     $('#confirContra').on('input', function(e) {
         verifiContra(2)
     })
@@ -189,22 +195,69 @@
         apellidos = $('#apellidos').val()
         n_iden = $('#n_iden').val()
         email = $('#email').val()
+        rol = $('#rol').val()
         contra = $('#contra').val()
         confirContra = $('#confirContra').val()
+        tp = $('#tp').val()
 
-        if ([nombres, apellidos, email, contra, contra, confirContra].includes('') || contra != confirContra) {
-            e.preventDefault()
-            return Swal.fire({
-                position: 'center',
-                icon: 'error',
-                text: '¡Hay campos vacios o las contraseña no coinciden!',
-                showConfirmButton: false,
-                timer: 1500
-            })
+        if (tp == 2) {
+            if ([nombres, apellidos, n_iden, email, rol].includes('')) {
+                e.preventDefault()
+                return Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    text: '¡Hay campos vacios o las contraseña no coinciden!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        } else {
+            if ([nombres, apellidos, n_iden, email, rol, contra, confirContra].includes('') || contra != confirContra) {
+                e.preventDefault()
+                return Swal.fire({
+                    position: 'center',
+                    icon: 'error',
+                    text: '¡Hay campos vacios o las contraseña no coinciden!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
         }
     })
 
     function seleccionarUsuario(id, tp) {
+        if (tp == 2) {
+            $.ajax({
+                type: 'POST',
+                url: "<?php echo base_url('srchUsu/') ?>" + id,
+                dataType: 'json',
+                success: function(res) {
+                    $('#tp').val(2)
+                    $('#id').val(res[0]['id'])
+                    $('#nombres').val(res[0]['nombres'])
+                    $('#apellidos').val(res[0]['apellidos'])
+                    $('#n_iden').val(res[0]['n_iden'])
+                    $('#rol').val(res[0]['id_rol'])
+                    $('#email').val(res[0]['email'])
+                    $('#contra').val('')
+                    $('#confirContra').val('')
+                }
+            })
 
+        } else {
+            $('#id').val('')
+            $('#tp').val(1)
+            $('#nombres').val('')
+            $('#apellidos').val('')
+            $('#n_iden').val('')
+            $('#rol').val('')
+            $('#email').val('')
+            $('#contra').val('')
+            $('#confirContra').val('')
+        }
     }
+
+    $('#eliminarUsuario').on('shown.bs.modal', function(e) {
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
+    })
 </script>

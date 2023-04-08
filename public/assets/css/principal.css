@@ -6,17 +6,22 @@
 
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
-.btn-delete, .btn-edit{
+.btn-delete,
+.btn-edit {
     width: 16px;
     height: 16px;
+}
+
+input::placeholder {
+    color: rgb(255, 255, 255);
 }
 
 /* -- HEADER --*/
@@ -63,12 +68,35 @@ nav {
 }
 
 /* -- FORMULARIO USUARIOS -- */
-small.valido{
+small.valido {
     color: green;
 }
-small.invalido{
+
+small.invalido {
     color: red;
 }
-small.normal{
+
+small.normal {
     color: rgb(142, 142, 142);
+}
+
+/* -- LOGIN -- */
+body.login {
+    height: 100vh !important;
+    background-color: rgba(243, 243, 243, 0.411);
+}
+
+body form{
+    background-color: white;
+}
+.btn-login{
+    width: 100%;
+    border-radius: none !important;
+    background-color: #008040;
+    border: none;
+    color: white;
+}
+.btn-login:hover{
+    transition: all .2s;
+    background-color: #025e30;
 }

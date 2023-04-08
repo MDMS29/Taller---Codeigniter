@@ -1,0 +1,21 @@
+CRITICAL - 2023-04-08 16:21:27 --> Undefined array key "nombreRol"
+in APPPATH\Controllers\Usuarios.php on line 121.
+ 1 APPPATH\Controllers\Usuarios.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nombreRol"', 'APPPATH\\Controllers\\Usuarios.php', 121)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Usuarios->login()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Usuarios))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run() 
+METODO DE CORRECCION, SE LE AGREGO : $this->select('usuarios.*, roles.nombre as nombreRol'); ---  $this->join('roles', 'roles.id = usuarios.id_rol');
+
+
+________________________________________________________________________________________________________________________________________________
+|ERROR DE SINTAXIS EN EL NOMBRE DE LA CLASE DEL ARCHIVO "App\Filters\SesionFilter" DEBIA SER "App\Filters\SessionFilter" CON DOBLE S            |
+|                                                                                                                                               |                       
+|    CRITICAL - 2023-04-08 17:07:36 --> Class "App\Filters\SesionFilter" not found                                                              |
+|    in SYSTEMPATH\Filters\Filters.php on line 166.                                                                                             |
+|     1 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('home', 'before')                                                     |
+|     2 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)                              |
+|     3 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()                                                                                    |
+|_______________________________________________________________________________________________________________________________________________|
+
+

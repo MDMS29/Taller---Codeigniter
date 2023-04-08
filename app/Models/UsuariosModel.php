@@ -14,7 +14,7 @@ class UsuariosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombres', 'apellidos', 'n_iden', 'contrasena', 'email', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombres', 'apellidos', 'n_iden', 'contrasena', 'email', 'id_rol', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
@@ -32,12 +32,40 @@ class UsuariosModel extends Model
             $this->where('estado', $estado);
             $datos = $this->findAll();
             return $datos;
+        } else {
+            $this->select('usuarios.*');
+            $this->where('estado', $estado);
+            $datos = $this->findAll();
+            return $datos;
         }
     }
-
-    public function insertar($data)
+    public function insertar($id, $data)
     {
-        $this->save($data);
+        if ($id == 0) {
+            $this->save($data);
+            return 1;
+        } else {
+            $this->update($id, $data);
+            return 1;
+        }
+    }
+    public function buscarUsuario($id, $n_iden, $user = '')
+    {
+        $this->select('usuarios.*, roles.nombre as nombreRol');
+        if ($id != 0) {
+            $this->where('id', $id);
+        } else if ($n_iden != 0) {
+            $this->where('n_iden', $n_iden);
+        } else if ($user != '') {
+            $this->join('roles', 'roles.id = usuarios.id_rol');
+            $this->where('email', $user);
+        }
+        $data = $this->first();
+        return $data;
+    }
+    public function eliminarResLogicModel($id, $estado)
+    {
+        $this->update($id, ['estado' => $estado]);
         return 1;
     }
 }

@@ -268,7 +268,7 @@ INSERT INTO `salarios` (`id`, `periodoAno`, `id_empleado`, `sueldo`, `estado`, `
 
 CREATE TABLE `usuarios` (
   `id` smallint(2) NOT NULL,
-  `nombres` varchar(50) NOT NULL,
+  `nombres` varchar(50) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `apellidos` varchar(50) NOT NULL,
   `n_iden` varchar(15) NOT NULL,
   `contrasena` varchar(200) NOT NULL,

@@ -62,6 +62,13 @@ $routes->get('/ver-salarios/(:num)', 'Salarios::index/$1'); //Vista Principal de
 $routes->get('/salarios-eliminados/(:num)', 'Salarios::eliminados/$1'); //Vista Salarios Eliminados - Según el Empleado
 
 $routes->post('/instrUsu', 'Usuarios::insertar'); //Insertar y Actualizar Usuarios
+$routes->post('/srchUsu/(:num)', 'Usuarios::buscarUsuario/$1'); //Buscar Usuario 
+$routes->get('/dltUsu/(:num)/(:alpha)/(:num)', 'Usuarios::eliminarResLogic/$1/$2/$3/$4'); //Eliminacion y Restauracion Logica Usuarios
+
+// $routes->get('/actUsu', 'Usuarios::activarUsuario'); //Eliminacion y Restauracion Logica Usuarios
+$routes->post('/login', 'Usuarios::login'); //Login de Usuarios
+
+
 
 
 /*

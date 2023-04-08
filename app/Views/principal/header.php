@@ -26,7 +26,7 @@
 </head>
 
 <header>
-    <a class="logo-empresa" href="<?= base_url()?>home">
+    <a class="logo-empresa" href="<?= base_url() ?>home">
         <img src="<?= base_url(); ?>assets/img/logoEmpresa.png" alt="logo empresa">
     </a>
     <div class="info-page ">
@@ -34,7 +34,7 @@
             <?= $titulo ?>
         </h1>
         <h3>
-            <?= $nombre ?>
+            <?= $dataUser['nombres'] . ' ' . $dataUser['apellidos'] . ' - ' . $dataUser['rol']?>
         </h3>
     </div>
     <a class="logo-sena" href="http://oferta.senasofiaplus.edu.co/sofia-oferta/" target="_blank">
@@ -46,7 +46,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse flex justify-content-between" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item hover:dropdown">
                     <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -80,8 +80,12 @@
                         </li>
                     </ul>
                 </li>
+            </ul>
 
-
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link fw-semibold" aria-current="page" href="<?= base_url() ?>usuarios/cerrarSesion"><i class="bi bi-building-fill-slash"></i> Cerrar Sesión</a>
+                </li>
             </ul>
         </div>
     </div>

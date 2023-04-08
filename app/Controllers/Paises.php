@@ -10,14 +10,16 @@ class Paises extends BaseController
     protected $pais;
     public function __construct()
     {
+        helper('sistema');
         $this->pais = new PaisesModel();
     }
 
     public function index()
     {
+        $dataLogin = datosLogin();
         $pais = $this->pais->obtenerPaises('A');
 
-        $data = ['titulo' => 'Administrar Países', 'nombre' => 'Moises Mazo', 'datos' => $pais];
+        $data = ['titulo' => 'Administrar Países', 'dataUser' => $dataLogin, 'datos' => $pais];
         echo view('/principal/header', $data);
         echo view('/paises/paises', $data);
     }
@@ -82,8 +84,9 @@ class Paises extends BaseController
     }
     public function eliminados()
     {
+        $dataLogin = datosLogin();
         $pais = $this->pais->obtenerEliminados();
-        $data = ['titulo' => 'Administrar Países Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $pais];
+        $data = ['titulo' => 'Administrar Países Eliminados', 'dataUser' => $dataLogin, 'datos' => $pais];
         echo view('/principal/header', $data);
         echo view('/paises/paisesEliminados', $data);
     }

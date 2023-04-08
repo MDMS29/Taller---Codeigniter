@@ -29,14 +29,14 @@ class DepartamentosModel extends Model
     //TOMAR TODOS LOS DEPARTAMENTOS
     public function obtenerDepartamentos($estado)
     {
-        if ($estado != 'A') {
+        if ($estado == 'I') {
             $this->select('departamentos.*,paises.nombre as nombrePais, paises.estado as estadoPais');
             $this->join('paises', 'paises.id = departamentos.id_pais');
-            $this->where('departamentos.estado', 'I');
+            $this->where('departamentos.estado', 'A');
             $this->orderBy('id');
             $datos = $this->findAll();
             return $datos;
-        } else {
+        } else if($estado == 'A') {
             $this->select('departamentos.*,paises.nombre as nombrePais, paises.estado as estadoPais');
             $this->join('paises', 'paises.id = departamentos.id_pais');
             $this->where('departamentos.estado', 'A');
