@@ -14,7 +14,7 @@ class MunicipiosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombre', 'id_dpto', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombre', 'id_dpto', 'estado', 'fechaCrea', 'usuarioCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = ''; /*fecha automatica para la creacion */
@@ -43,19 +43,21 @@ class MunicipiosModel extends Model
             return $datos;
         }
     }
-    public function insertarActuMunicipio($id = 0, $departamento, $nombre)
+    public function insertarActuMunicipio($id = 0, $departamento, $nombre, $idCrea)
     {
         if ($id != 0) { //Si hay un id actualizara ese registro.
             $this->update($id, [
                 'id_dpto' => $departamento,
-                'nombre' => $nombre
+                'nombre' => $nombre,
+                'usuarioCrea' => $idCrea
             ]);
             return 1;
         } else {
             //Si no hay id guardara un nuevo registro
             $this->save([
                 'id_dpto' => $departamento,
-                'nombre' => $nombre
+                'nombre' => $nombre,
+                'usuarioCrea' => $idCrea
             ]);
             return 1;
         }

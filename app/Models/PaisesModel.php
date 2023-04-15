@@ -14,7 +14,7 @@ class PaisesModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['nombre', 'estado', 'codigo', 'fechaCrea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombre', 'estado', 'codigo', 'fechaCrea', 'usuarioCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
@@ -27,34 +27,33 @@ class PaisesModel extends Model
 
     public function obtenerPaises($estado)
     {
-        if($estado == 'A'){
+        if ($estado == 'A') {
             $this->select('paises.*');
             $this->where('estado', 'A');
             $datos = $this->findAll();
             return $datos;
-        }else if($estado == ''){
+        } else if ($estado == '') {
             $this->select('paises.*, estado');
             $datos = $this->findAll();
             return $datos;
-        }else if($estado == 'I'){
+        } else if ($estado == 'I') {
             $this->select('paises.*');
             $this->where('estado', 'I');
             $datos = $this->findAll();
             return $datos;
         }
     }
-    public function insertarPais($codigo, $nombre, $tipe)
+    public function insertarPais($codigo, $nombre, $idCrea)
     {
-        if ($tipe == 1) {
-            $this->save([
-                'codigo' => $codigo,
-                'nombre' => $nombre
-            ]);
-            return 1;
-        }
+        $this->save([
+            'codigo' => $codigo,
+            'nombre' => $nombre,
+            'usuarioCrea' => $idCrea
+        ]);
+        return 1;
     }
     public function buscarPais($id = 0, $codigo = 0, $nombre = '')
-    { 
+    {
         if ($id != 0) {
             $this->select('paises.*');
             $this->where('id', $id);

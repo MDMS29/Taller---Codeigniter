@@ -43,10 +43,11 @@ class CargosModel extends Model
             return $datos;
         }
     }
-    public function insertarCargo($nombre)
+    public function insertarCargo($nombre, $idCrea)
     {
         $this->save([
-            'nombre' => $nombre
+            'nombre' => $nombre,
+            'usuarioCrea' => $idCrea
         ]);
         return 1;
     }
@@ -64,10 +65,11 @@ class CargosModel extends Model
             return $datos;
         }
     }
-    public function actualizarCargo($id, $nombre)
+    public function actualizarCargo($id, $nombre, $idCrea)
     {
         $this->update($id, [
-            'nombre' => $nombre
+            'nombre' => $nombre,
+            'usuarioCrea' => $idCrea
         ]);
         return 1;
     }

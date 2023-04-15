@@ -62,8 +62,11 @@
 <!-- MODAL AGREGAR DEPARTAMENTO -->
 <form method="POST" action="<?php echo base_url('instrDpt'); ?>" autocomplete="off" id="formularioDptos">
     <div class="modal fade" id="AgregarDepartamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
         <input hidden name="id" id="idDpto">
         <input hidden name="tipe" id="tipeFunct">
+        <input type="text" name="idCrea" id="idCrea" value="<?php echo $dataUser['id'] ?>" hidden >
+
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">

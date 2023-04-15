@@ -12,7 +12,7 @@ class Principal extends BaseController
     }
     public function index()
     {
-        $data = ['titulo' => 'Login', 'nombre' => 'Moises Mazo'];
+        $data = ['titulo' => 'Login', 'nombre' => 'Moises Mazo', 'error' => ''];
         echo view('login', $data);
     }
     public function home()

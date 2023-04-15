@@ -23,7 +23,10 @@
                     <th>Apellidos</th>
                     <th># Identificación</th>
                     <th>Email</th>
-                    <th colspan="2">Acciones</th>
+                    <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
+
+                        <th colspan="2">Acciones</th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;" id="tbodyT">
@@ -50,11 +53,14 @@
                             <td class="text-center">
                                 <?php echo $valor['email']; ?>
                             </td>
-                            <td class="text-center" colspan="2">
-                                <input href="#" onclick="seleccionarUsuario(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+                            <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
 
-                                <input href="#" data-href="<?php echo base_url('dltUsu') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
-                            </td>
+                                <td class="text-center" colspan="2">
+                                    <input href="#" onclick="seleccionarUsuario(<?php echo $valor['id'] . ',' . 2 ?>);" data-bs-toggle="modal" data-bs-target="#agregarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/editar.png" width="20" height="20" title="Editar Registro"></input>
+
+                                    <input href="#" data-href="<?php echo base_url('dltUsu') . '/' . $valor['id'] . '/' . 'I' . '/' . 1; ?>" data-bs-toggle="modal" data-bs-target="#eliminarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/delete.png" width="20" height="20" title="Eliminar Registro" value="<?php echo $valor['id']; ?>"></input>
+                                </td>
+                            <?php } ?>
                         </tr>
                     <?php } ?>
                 <?php } ?>
@@ -241,6 +247,7 @@
                     $('#email').val(res[0]['email'])
                     $('#contra').val('')
                     $('#confirContra').val('')
+                    $('#tituloModal').text('Editar Usuario - ' + res[0]['nombres'] + ' ' + res[0]['apellidos'])
                 }
             })
 
@@ -254,6 +261,7 @@
             $('#email').val('')
             $('#contra').val('')
             $('#confirContra').val('')
+            $('#tituloModal').text('Agregar Usuario')
         }
     }
 

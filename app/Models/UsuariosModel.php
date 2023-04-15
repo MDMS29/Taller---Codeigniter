@@ -49,16 +49,18 @@ class UsuariosModel extends Model
             return 1;
         }
     }
-    public function buscarUsuario($id, $n_iden, $user = '')
+    public function buscarUsuario($id, $n_iden, $email = '')
     {
-        $this->select('usuarios.*, roles.nombre as nombreRol');
         if ($id != 0) {
+            $this->select('usuarios.*');
             $this->where('id', $id);
         } else if ($n_iden != 0) {
+            $this->select('usuarios.*');
             $this->where('n_iden', $n_iden);
-        } else if ($user != '') {
+        } else if ($email != '') {
+            $this->select('usuarios.*, roles.nombre as nombreRol');
             $this->join('roles', 'roles.id = usuarios.id_rol');
-            $this->where('email', $user);
+            $this->where('email', $email);
         }
         $data = $this->first();
         return $data;

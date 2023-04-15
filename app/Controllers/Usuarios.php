@@ -15,9 +15,10 @@ class Usuarios extends BaseController
     }
     public function index()
     {
+        $datosLogin = datosLogin();
         $usuarios = $this->usuarios->obtenerUsuarios('A');
 
-        $data = ['titulo' => 'Administrar Usuarios', 'nombre' => 'Moises Mazo', 'datos' => $usuarios];
+        $data = ['titulo' => 'Administrar Usuarios', 'dataUser' => $datosLogin, 'datos' => $usuarios];
         echo view('/principal/header', $data);
         echo view('/usuarios/usuarios');
     }
@@ -100,9 +101,11 @@ class Usuarios extends BaseController
 
     public function eliminados()
     {
+        $datosLogin = datosLogin();
+
         $usuarios = $this->usuarios->obtenerUsuarios('I');
 
-        $data = ['titulo' => 'Administrar Usuarios Eliminados', 'nombre' => 'Moises Mazo', 'datos' => $usuarios];
+        $data = ['titulo' => 'Administrar Usuarios Eliminados', 'dataUser' => $datosLogin, 'datos' => $usuarios];
         echo view('/principal/header', $data);
         echo view('/usuarios/usuariosEliminados');
     }
@@ -110,12 +113,13 @@ class Usuarios extends BaseController
     function login()
     {
         $usuario = $this->request->getPost('user');
-        $contrasena = $contrasena = trim($this->request->getVar('pass', FILTER_SANITIZE_STRING));
+        $contrasena = $this->request->getVar('pass');
         $res = $this->usuarios->buscarUsuario(0, 0, $usuario);
 
-        if (count($res) > 0 && password_verify($contrasena, $res['contrasena'])) {
+        if (!empty($res) && password_verify($contrasena, $res['contrasena'])) {
 
             $dataUser = [
+                "id" => $res['id'],
                 "nombres" => $res['nombres'],
                 "apellidos" => $res['apellidos'],
                 "rol" => $res['nombreRol'],
@@ -126,7 +130,8 @@ class Usuarios extends BaseController
 
             return redirect()->to(base_url('principal/home'));
         } else {
-            return redirect()->to(base_url('principal'));
+            $data = ['titulo' => 'Login', 'nombre' => 'Moises Mazo', 'error' => '¡Correo o Contraseña son incorrectos!'];
+            return view('login', $data);
         }
     }
 
@@ -134,6 +139,6 @@ class Usuarios extends BaseController
     {
         $sesion = session();
         $sesion->destroy();
-        return redirect()->to(base_url('principal'));
+        return redirect()->to(base_url('/'));
     }
 }

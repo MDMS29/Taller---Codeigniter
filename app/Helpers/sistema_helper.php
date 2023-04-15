@@ -35,6 +35,7 @@ function enviarCodeActi($correo, $activacion)
 }
 function datosLogin(){
     return $dataUser = [
+        "id" => session('id'),
         'nombres' => session('nombres'),
         'apellidos' => session('apellidos'),
         'rol' => session('rol')

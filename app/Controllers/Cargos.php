@@ -28,6 +28,7 @@ class Cargos extends BaseController
         $tp = $this->request->getPost('tp');
         $id = $this->request->getPost('id');
         $nombre = $this->request->getPost('nombre');
+        $idCrea = $this->request->getPost('idCrea');
 
         if ($tp == 1) {
             $res = $this->cargos->buscarCargo(0, $nombre);
@@ -40,14 +41,14 @@ class Cargos extends BaseController
                     $data = 'error_name_cargo';
                     return redirect()->to(base_url('principal/error/' . $data));
                 } else {
-                    $res = $this->cargos->insertarCargo($nombre);
+                    $res = $this->cargos->insertarCargo($nombre, $idCrea);
                     if ($res == 1) {
                         return redirect()->to(base_url('/cargos'));
                     }
                 }
             }
         } else {
-            $res = $this->cargos->actualizarCargo($id, $nombre);
+            $res = $this->cargos->actualizarCargo($id, $nombre, $idCrea);
             if ($res == 1) {
                 return redirect()->to(base_url('/cargos'));
             }

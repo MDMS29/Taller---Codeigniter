@@ -73,6 +73,7 @@ class Filters extends BaseConfig
                 'cargos', 
                 'empleados', 
                 'usuarios', 
+                'historial', 
                 'paises/*', 
                 'departamentos/*', 
                 'municipios/*', 

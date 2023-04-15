@@ -62,12 +62,11 @@
     </div>
 </div>
 
-
-
 <!-- MODAL AGREGAR - EDITAR PAIS -->
 <form method="POST" action="<?php echo base_url('instrPs'); ?>" autocomplete="off" id="formularioPaises">
     <div class="modal fade" id="AgregarPais" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <input type="text" name="id" id="idPais" value="0" hidden>
+        <input type="text" name="idCrea" id="idCrea" value="<?php echo $dataUser['id'] ?>" hidden>
         <input type="text" name="tipe" id="tipeFunct" hidden>
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -115,7 +114,9 @@
     </div>
 </div>
 
+
 <script type="text/javascript">
+    /* -- BUSCADOR DE PAISES -- */
     $('#srchNombre').on('input', function() {
         nombre = $('#srchNombre').val()
         if (nombre.length > 0) {

@@ -86,6 +86,8 @@
             <div class="modal-content">
                 <input name="id" id="id" hidden>
                 <input name="tp" id="tp" hidden>
+                <input type="text" name="idCrea" id="idCrea" value="<?php echo $dataUser['id'] ?>" hidden>
+
                 <input id="idSalario" name="idSalario" hidden>
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="tituloModal">Agregar Nuevo Empleado</h1>

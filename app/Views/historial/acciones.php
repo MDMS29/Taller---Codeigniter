@@ -6,8 +6,11 @@
     </div>
     <div class="d-flex justify-content-between">
         <div>
-            <a href="<?php echo base_url('/usuarios'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
+            <a href="<?php echo base_url('/home'); ?>" class="btn btn-primary regresar_Btn"><i class="bi bi-arrow-counterclockwise"></i> Regresar</a>
         </div>
+        <!--<div>
+            <input class="form-control me-2" type="search" placeholder="Buscar por Fecha" aria-label="Search" id="srchNombre">
+        </div> -->
     </div>
 
     <br>
@@ -16,21 +19,18 @@
             <thead>
                 <tr style="color:#008040;font-weight:300;text-align:center;font-family:Arial;font-size:14px;">
                     <th>#</th>
-                    <th>Nombres</th>
-                    <th>Apellidos</th>
-                    <th># Identificación</th>
-                    <th>Email</th>
-                    <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
-
-                        <th colspan="2">Acciones</th>
-                    <?php } ?>
+                    <th>Tipo</th>
+                    <th>Sección</th>
+                    <th>Descripcion</th>
+                    <th>Fecha</th>
+                    <th>Acción</th>
                 </tr>
             </thead>
             <tbody style="font-family:Arial;font-size:12px;" id="tbodyT">
                 <?php $contador = 0 ?>
                 <?php if (empty($datos)) { ?>
                     <tr>
-                        <td colspan="6" class="text-center h4"><?php echo '¡No Hay Usuarios Eliminados!' ?></td>
+                        <td colspan="6" class="text-center h4"><?php echo '¡No Hay Acciones Realizadas!' ?></td>
                     </tr>
                 <?php } else { ?>
                     <?php foreach ($datos as $valor) { ?>
@@ -39,23 +39,20 @@
                                 <?php echo $contador += 1; ?>
                             </td>
                             <td class="text-center">
-                                <?php echo $valor['nombres']; ?>
+                                <?php echo $valor['tipo']; ?>
                             </td>
                             <td class="text-center">
-                                <?php echo $valor['apellidos']; ?>
+                                <?php echo $valor['tabla']; ?>
+                            </td>
+                            <td class="text-center descripcion">
+                                <?php echo $valor['accion']; ?>
                             </td>
                             <td class="text-center">
-                                <?php echo $valor['n_iden']; ?>
+                                <?php echo $valor['fechaCrea']; ?>
                             </td>
-                            <td class="text-center">
-                                <?php echo $valor['email']; ?>
+                            <td class="text-center" colspan="2">
+                                <button href="#" class="btn btn-primary" onclick="seleccionaItem(<?php echo $valor['id'] ?>);" data-bs-toggle="modal" data-bs-target="#verDetalles" type="image" width="20" height="20" title="Ver Detalles"><i class="bi bi-eye"></i> Ver Detalles</button>
                             </td>
-                            <?php if ($dataUser['rol'] == 'Super Administrador') { ?>
-
-                                <td class="text-center" colspan="2">
-                                    <input href="#" data-href="<?php echo base_url('dltUsu') . '/' . $valor['id'] . '/' . 'A' . '/' . 2; ?>" data-bs-toggle="modal" data-bs-target="#restaurarUsuario" type="image" src="<?php echo base_url(); ?>assets/img/restore.png" width="20" height="20" title="Restaurar Registro" value="<?php echo $valor['id']; ?>"></input>
-                                </td>
-                            <?php } ?>
                         </tr>
                     <?php } ?>
                 <?php } ?>
@@ -64,16 +61,16 @@
     </div>
 </div>
 
-<!-- MODAL RESTAURAR USUARIO -->
-<div class="modal fade" id="restaurarUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- MODAL ELIMINAR PAISES -->
+<div class="modal fade" id="verDetalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div style="text-align:center;" class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Restauración de Registro</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Eliminación de Registro</h5>
 
             </div>
             <div class="modal-body">
-                <p>Seguro Desea Restaurar éste Registro?</p>
+                <p>Seguro Desea Eliminar éste Registro?</p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</button>
@@ -83,8 +80,9 @@
     </div>
 </div>
 
+
 <script type="text/javascript">
-    $('#restaurarUsuario').on('shown.bs.modal', function(e) {
-        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'))
-    })
+    function seleccionaItem() {
+
+    }
 </script>

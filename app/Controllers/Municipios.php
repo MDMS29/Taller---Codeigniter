@@ -47,7 +47,6 @@ class Municipios extends BaseController
         }
         echo json_encode($municipios);
     }
-
     function obtenerMunicipio($id)
     {
         $returnData = array();
@@ -64,6 +63,7 @@ class Municipios extends BaseController
         $id = $this->request->getPost('id');
         $departamento = $this->request->getPost('departamento');
         $nombre = $this->request->getPost('nombre');
+        $idCrea = $this->request->getPost('idCrea');
 
         if ($tp == 1) {
             //Validacion del que el registro no este duplicado
@@ -73,7 +73,7 @@ class Municipios extends BaseController
                 return redirect()->to(base_url('principal/error' . '/' . $data));
             } else {
                 //Registrar nuevo municipio
-                $res = $this->municipios->insertarActuMunicipio(0, $departamento, $nombre);
+                $res = $this->municipios->insertarActuMunicipio(0, $departamento, $nombre, $idCrea);
                 if ($res == 1) {
                     return redirect()->to(base_url('/municipios'));
                 }
@@ -85,7 +85,7 @@ class Municipios extends BaseController
                 return redirect()->to(base_url('principal/error' . '/' . $data));
             } else {
                 //Actualizar el municipio
-                $res = $this->municipios->insertarActuMunicipio($id, $departamento, $nombre);
+                $res = $this->municipios->insertarActuMunicipio($id, $departamento, $nombre, $idCrea);
                 if ($res == 1) {
                     return redirect()->to(base_url('/municipios'));
                 }

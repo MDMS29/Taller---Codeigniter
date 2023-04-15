@@ -56,6 +56,8 @@
             <div class="modal-content">
                 <input id="id" name="id" hidden>
                 <input id="tp" name="tp" hidden>
+                <input type="text" name="idCrea" id="idCrea" value="<?php echo $dataUser['id'] ?>" hidden>
+
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="titulo">Agregar Cargo</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

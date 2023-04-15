@@ -14,7 +14,7 @@ class SalariosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['sueldo', 'periodoAno', 'id_empleado', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['sueldo', 'periodoAno', 'id_empleado', 'estado', 'fechaCrea', 'usuarioCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
@@ -50,14 +50,16 @@ class SalariosModel extends Model
             $this->save([
                 'id_empleado' => $dataSalario['id'],
                 'sueldo' => $dataSalario['salario'],
-                'periodoAno' => $dataSalario['periodo']
+                'periodoAno' => $dataSalario['periodo'],
+                'usuarioCrea' => $dataSalario['idCrea']
             ]);
             return 1;
         } else {
             $this->update($dataSalario['idSalario'], [
                 'id_empleado' => $dataSalario['idEmpleado'],
                 'sueldo' => $dataSalario['salario'],
-                'periodoAno' => $dataSalario['periodo']
+                'periodoAno' => $dataSalario['periodo'],
+                'usuarioCrea' => $dataSalario['idCrea']
             ]);
             return 1;
         }

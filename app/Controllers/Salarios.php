@@ -50,6 +50,7 @@ class Salarios extends BaseController
         $idSalario = $this->request->getPost('idSalario');
         $periodo = $this->request->getPost('periodo');
         $salario = $this->request->getPost('salario');
+        $idCrea = $this->request->getPost('idCrea');
 
         if ($tipo == 1) {
             $res = $this->salarios->buscarSalario($idEmpleado, $idSalario, $periodo, $salario);
@@ -60,7 +61,8 @@ class Salarios extends BaseController
                 $data = [
                     'id' => $idEmpleado,
                     'salario' => $salario,
-                    'periodo' => $periodo
+                    'periodo' => $periodo,
+                    'idCrea' => $idCrea,
                 ];
                 $res = $this->salarios->insertarSalario($tipo, $data);
                 if ($res == 1) {
@@ -72,7 +74,8 @@ class Salarios extends BaseController
                 'idEmpleado' => $idEmpleado,
                 'idSalario' => $idSalario,
                 'salario' => $salario,
-                'periodo' => $periodo
+                'periodo' => $periodo,
+                'idCrea' => $idCrea
             ];
             $res = $this->salarios->buscarSalario($idEmpleado, $idSalario, $periodo, $salario);
             if ($res) {

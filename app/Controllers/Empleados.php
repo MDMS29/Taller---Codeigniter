@@ -48,22 +48,16 @@ class Empleados extends BaseController
         $apellidos = $this->request->getPost('apellidos');
         $anoNac = $this->request->getPost('anoNac');
         $municipio = $this->request->getPost('municipio');
-        $salario = $this->request->getPost('salario');
-        $periodo = $this->request->getPost('periodo');
+        $idCrea = $this->request->getPost('idCrea');
+
         if ($tp == 1) {
-            //Verificar si el empleado no esta duplicado, por sus nombres, apellidos y cargo
-            // $res = $this->empleados->buscarEmpleado($idEmple, $nombres, $apellidos);
-            // if ($res) {
-            //     $data = 'error_insert_emple';
-            //     return redirect()->to(base_url('principal/error' . '/' . $data));
-            // } else {
-            //Si no es duplicado gaurdara al empleado
             $data = [
                 'nombres' => $nombres,
                 'apellidos' => $apellidos,
                 'id_municipio' => $municipio,
                 'nacimientoAno' => $anoNac,
-                'id_cargo' => $cargo
+                'id_cargo' => $cargo,
+                'usuarioCrea' => $idCrea
             ];
             $res = $this->empleados->save($data);
             if ($res == 1) {
@@ -76,7 +70,8 @@ class Empleados extends BaseController
                 'nombres' => $nombres,
                 'apellidos' => $apellidos,
                 'anoNac' => $anoNac,
-                'municipio' => $municipio
+                'municipio' => $municipio,
+                'usuarioCrea' => $idCrea
             ];
             //Actuliazar el empleado
             $respues = $this->empleados->actualizarEmpleado($data);

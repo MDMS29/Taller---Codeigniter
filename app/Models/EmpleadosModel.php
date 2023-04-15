@@ -8,7 +8,7 @@ class EmpleadosModel extends Model
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
-    protected $allowedFields = ['nombres', 'apellidos', 'id_municipio', 'nacimientoAno', 'id_cargo', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['nombres', 'apellidos', 'id_municipio', 'nacimientoAno', 'id_cargo', 'estado', 'fechaCrea', 'usuarioCrea']; /* relacion de campos de la tabla */
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
     protected $updatedField = ''; /*fecha automatica para la edicion */

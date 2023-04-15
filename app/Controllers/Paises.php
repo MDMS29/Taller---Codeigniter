@@ -29,13 +29,15 @@ class Paises extends BaseController
         $id = $this->request->getPost('id');
         $codigo = $this->request->getPost('codigo');
         $nombre = $this->request->getPost('nombre');
+        $idCrea = $this->request->getPost('idCrea');
+        
         if ($tipe == 1) {
             $res = $this->pais->buscarPais(0, $codigo, $nombre);
             if ($res) {
                 $data = 'error_insert_code';
                 return redirect()->to(base_url('principal/error' . '/' . $data));
             } else {
-                $res = $this->pais->insertarPais($codigo, $nombre, $tipe);
+                $res = $this->pais->insertarPais($codigo, $nombre, $idCrea);
                 if ($res == 1) {
                     return redirect()->to(base_url('/paises'));
                 }

@@ -12,7 +12,7 @@ class SessionFilter implements FilterInterface
     {
         // Do something here
         if (!session('rol') == 'Super Administrador' || !session('rol') == 'Administrador') {
-            return redirect()->to(base_url('principal'));
+            return redirect()->to(base_url('/'));
         }
     }
 

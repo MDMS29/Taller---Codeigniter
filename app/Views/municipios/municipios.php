@@ -68,6 +68,8 @@
             <div class="modal-content">
                 <input name="id" id="id" hidden>
                 <input name="tp" id="tp" hidden>
+                <input type="text" name="idCrea" id="idCrea" value="<?php echo $dataUser['id'] ?>" hidden>
+
                 <div class="modal-header">
                     <h1 class="modal-title fs-5" id="titulo">Agregar Municipio</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

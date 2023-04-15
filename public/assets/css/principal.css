@@ -68,35 +68,39 @@ nav {
 }
 
 /* -- FORMULARIO USUARIOS -- */
-small.valido {
+.valido {
     color: green;
 }
 
-small.invalido {
+.invalido {
     color: red;
 }
 
-small.normal {
-    color: rgb(142, 142, 142);
+.normal {
+    color: #8e8e8e;
 }
 
 /* -- LOGIN -- */
-body.login {
-    height: 100vh !important;
-    background-color: rgba(243, 243, 243, 0.411);
+.login {
+    position: absolute;
+    bottom: 35%;
 }
 
-body form{
+body form {
     background-color: white;
 }
-.btn-login{
+
+.btn-login {
     width: 100%;
     border-radius: none !important;
     background-color: #008040;
     border: none;
     color: white;
 }
-.btn-login:hover{
+
+.btn-login:hover {
     transition: all .2s;
     background-color: #025e30;
 }
+
+/* -- HISTORIAL -- */

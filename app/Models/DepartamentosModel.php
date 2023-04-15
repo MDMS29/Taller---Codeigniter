@@ -15,7 +15,7 @@ class DepartamentosModel extends Model
     protected $returnType = 'array'; /* forma en que se retornan los datos */
     protected $useSoftDeletes = false; /* si hay eliminacion fisica de registro */
 
-    protected $allowedFields = ['id_pais', 'nombre', 'estado', 'fechaCrea']; /* relacion de campos de la tabla */
+    protected $allowedFields = ['id_pais', 'nombre', 'estado', 'fechaCrea', 'usuarioCrea']; /* relacion de campos de la tabla */
 
     protected $useTimestamps = true; /*tipo de tiempo a utilizar */
     protected $createdField = 'fechaCrea'; /*fecha automatica para la creacion */
@@ -46,11 +46,12 @@ class DepartamentosModel extends Model
         }
     }
     //GUARDAR EL DEPARTAMENTO
-    public function insertarDepartamento($pais, $nombre)
+    public function insertarDepartamento($pais, $nombre, $idCrea)
     {
         $this->save([
             'id_pais' => $pais,
             'nombre' => $nombre,
+            'usuarioCrea' => $idCrea
         ]);
         return 1;
     }
