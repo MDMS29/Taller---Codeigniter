@@ -23,5 +23,12 @@ class Historial extends BaseController
         echo view('/principal/header', $data);
         echo view('/historial/acciones', $data);
     }
-    
+
+    function detalleHistorial($id)
+    {
+        $data = $this->historial->detalleHistorial($id);
+        if(!empty($data)){
+            return json_encode($data);
+        }
+    }
 }

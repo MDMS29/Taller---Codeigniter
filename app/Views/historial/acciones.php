@@ -51,7 +51,7 @@
                                 <?php echo $valor['fechaCrea']; ?>
                             </td>
                             <td class="text-center" colspan="2">
-                                <button href="#" class="btn btn-primary" onclick="seleccionaItem(<?php echo $valor['id'] ?>);" data-bs-toggle="modal" data-bs-target="#verDetalles" type="image" width="20" height="20" title="Ver Detalles"><i class="bi bi-eye"></i> Ver Detalles</button>
+                                <button href="#" class="btn btn-primary" onclick="seleccionaItem(<?php echo $valor['id'] ?>);" data-bs-toggle="modal" data-bs-target="#verDetalles" type="image" width="20" height="20" title="Ver Detalles"><i class="bi bi-eye"></i> Detalles</button>
                             </td>
                         </tr>
                     <?php } ?>
@@ -66,15 +66,14 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div style="text-align:center;" class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Eliminación de Registro</h5>
+                <h5 class="modal-title" id="tituloModal"></h5>
 
             </div>
             <div class="modal-body">
-                <p>Seguro Desea Eliminar éste Registro?</p>
+                <p id="informacion"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary close" data-bs-dismiss="modal">No</button>
-                <a class="btn btn-danger btn-ok">Si</a>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>
@@ -82,7 +81,15 @@
 
 
 <script type="text/javascript">
-    function seleccionaItem() {
-
+    function seleccionaItem(id) {
+        $.ajax({
+            url: "<?php echo base_url(); ?>/srchHst/" + id,
+            type: "POST",
+            dataType: "JSON",
+            success: function(data) {
+                $('#tituloModal').text('Detalle Historial - ' + data['tipo'] + ' - ' + data['tabla'])
+                $('#informacion').text(data['accion'])
+            }
+        })
     }
 </script>

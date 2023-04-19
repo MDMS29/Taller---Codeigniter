@@ -104,3 +104,9 @@ body form {
 }
 
 /* -- HISTORIAL -- */
+.descripcion{
+    width: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

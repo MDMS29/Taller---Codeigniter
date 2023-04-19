@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class HistorialModel extends Model
 {
-    protected $table = 'acciones'; /* nombre de la tabla modelada/*/
+    protected $table = 'historial'; /* nombre de la tabla modelada/*/
     protected $primaryKey = 'id';
 
     protected $useAutoIncrement = true; /* Si la llave primaria se genera con autoincremento*/
@@ -27,9 +27,16 @@ class HistorialModel extends Model
 
     public function obtenerHistorial()
     {
-        $this->select('acciones.*');
+        $this->select('historial.*');
         $this->orderBy('id', 'desc');
         $datos = $this->findAll();
+        return $datos;
+    }
+    public function detalleHistorial($id)
+    {
+        $this->select('historial.*');
+        $this->where('id', $id);
+        $datos = $this->first();
         return $datos;
     }
 }

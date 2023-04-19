@@ -68,6 +68,10 @@ $routes->get('/dltUsu/(:num)/(:alpha)/(:num)', 'Usuarios::eliminarResLogic/$1/$2
 // $routes->get('/actUsu', 'Usuarios::activarUsuario'); //Eliminacion y Restauracion Logica Usuarios
 $routes->post('/login', 'Usuarios::login'); //Login de Usuarios
 
+$routes->post('/srchHst/(:num)', 'Historial::detalleHistorial/$1'); //Buscar detalle Historial
+
+
+
 
 
 
